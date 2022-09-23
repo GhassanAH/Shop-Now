@@ -1,0 +1,215 @@
+.s-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: blue;
+    color: #fff;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #1488cc, #2b33b2 );
+
+}
+.s-footer .f-idea{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #fff;
+
+
+}
+.s-footer .f-idea .f-stat{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+    padding: 2rem;
+}
+.s-footer .f-idea .f-stat .f-he2{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.s-footer .f-idea .f-stat .f-p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: start;
+    margin-top: 10px;
+}
+.s-footer .f-body{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-bottom: 2rem;
+}
+.s-footer .f-body .f-cus{
+    width: 20%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+.s-footer .f-body .f-con{
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+.s-footer .f-body .f-ser-stat{
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+.s-footer .f-body .f-cus .f-he3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.s-footer .f-body .f-cus .f-li{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.s-footer .f-body .f-con .f-he3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+.s-footer .f-body .f-con .f-p{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.s-footer .f-body .f-ser-stat .f-he3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+.s-footer .f-body .f-ser-stat .f-p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 100%;
+}
+.s-footer .f-cop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 10px solid #fff;
+    padding: 2rem 0rem;
+}
+.s-footer .f-cop .f-cop-con{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+
+}
+.s-footer .f-cop .f-cop-con .f-copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.s-footer .f-cop .f-cop-con .f-icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 90%;
+
+}
+.s-footer .f-cop .f-cop-con .f-icons .f-icon{
+    width: 60px;
+    margin-right: 20px;
+    
+}
+
+@media (max-width: 1000px){
+    .s-footer .f-idea .f-stat{
+        width: 100%;
+        padding: 1rem;
+    }
+    .s-footer .f-idea .f-stat .f-he2{
+        font-size: 1.7rem;
+    }
+    .s-footer .f-idea .f-stat .f-p{
+        font-size: 1rem;
+    }
+    .s-footer .f-body{
+        width: 90%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .s-footer .f-body .f-cus{
+        width: 100%;
+    }
+    .s-footer .f-body .f-con{
+        width: 100%;
+
+    }
+    .s-footer .f-body .f-ser-stat{
+        width: 100%;
+
+    }
+    .s-footer .f-body .f-cus .f-he3{
+        font-size: 1.6rem;
+    }
+    .s-footer .f-body .f-cus .f-li{
+        font-size: 1rem;
+    }
+    .s-footer .f-body .f-con .f-he3{
+        font-size: 1.6rem;
+    }
+    .s-footer .f-body .f-con .f-p{
+        font-size: 1rem;
+    }
+    .s-footer .f-body .f-ser-stat .f-he3{
+        font-size: 1.6rem;
+    }
+    .s-footer .f-body .f-ser-stat .f-p{
+        font-size: 1rem;
+        text-align: center;
+
+    }
+    .s-footer .f-cop{
+        width: 100%;
+    }
+    .s-footer .f-cop .f-cop-con{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .s-footer .f-cop .f-cop-con .f-copyright{
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .s-footer .f-cop .f-cop-con .f-icons{
+        justify-content: center;
+        width: 100%;
+    
+    }
+    .s-footer .f-cop .f-cop-con .f-icons .f-icon{
+        width: 30px;
+        margin-right: 5px;
+        
+    }
+
+}

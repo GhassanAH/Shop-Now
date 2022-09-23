@@ -1,0 +1,136 @@
+.i-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: aliceblue;
+    background-image: linear-gradient(to right, rgb(202, 228, 250), #fff );
+    padding: 3rem 0rem;
+    flex-direction: column;
+    min-height: 50vh;
+
+}
+.i-con .i-cov{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    background-color: #fff;
+    padding: 3rem;
+}
+.i-con .i-cov .i-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem 1rem;
+    border-radius: 2%;
+    border: 1px solid #e8e9eb;
+
+}
+.i-con .i-cov .i-form .i-error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    width: 80%;
+}
+.i-con .i-cov .i-form .i-he2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: lightseagreen;
+    font-size: 2rem;
+}
+.i-con .i-cov .i-form .i-label{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: .5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: lightseagreen;
+}
+.i-con .i-cov .i-form .i-input{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 1rem 1rem;
+    color: lightseagreen;
+    border: 1px solid #e8e9eb;
+}
+.i-con .i-cov .i-form .i-input::placeholder {
+    color: lightseagreen;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+.i-con .i-cov .i-form .i-btn{
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+.i-con .i-cov .i-form .i-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: blue;
+}
+@media (max-width: 1000px){
+    .i-con .i-cov{
+        width: 90%;
+        padding: 0rem;
+        background-color: unset;
+
+    }
+    .i-con .i-cov .i-form{
+        border: none;
+    }
+    .i-con .i-cov .i-form .i-label{
+        font-size: 1.4rem;
+        font-weight: 600;
+
+    }
+    .i-con .i-cov .i-form .i-input{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .i-con .i-cov .i-form .i-input::placeholder {
+        font-size: 1.2rem;
+    }
+    .i-con .i-cov .i-form .i-btn{
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+    .i-con .i-cov .i-form .i-nav{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+}

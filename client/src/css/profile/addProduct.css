@@ -1,0 +1,343 @@
+.import::after{
+    content: "*";
+    font-size: 1.8rem;
+    font-weight: 400;
+    color:red;
+    padding: 3px;
+
+}
+.pa-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.pa-con .pa-cov{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 2rem 0rem;
+    padding: 2rem 0rem;
+    background-color:cornflowerblue;
+
+
+}
+.pa-con .pa-cov .pa-success{
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+.pa-con .pa-cov .pa-error{
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+
+
+}
+.pa-con .pa-cov .pa-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+    background-color:cornflowerblue;
+    color: #fff;
+    padding: 2rem;
+    border: 3px solid #e8e9eb;
+
+}
+.pa-con .pa-cov .pa-form .pa-he1{
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+
+}
+.pa-con .pa-cov .pa-form .pa-label{
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.pa-con .pa-cov .pa-form .pa-input{
+    width: 97%;
+    padding: 1rem 1rem; 
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 1rem 0rem;
+    border: 1px solid #e8e9eb;
+
+}
+
+.pa-con .pa-cov .pa-form .pa-select{
+    padding: 1rem 0rem; 
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1rem 0rem;
+    border: 1px solid #e8e9eb;
+}
+.pa-con .pa-cov .pa-form .pa-select:first-of-type {
+    color: black;
+    padding-left: 1rem;
+
+}
+.pa-con .pa-cov .pa-form .pa-select:not(first-of-type) {
+    color: black;
+    padding: 1rem 0rem;
+
+}
+.pa-con .pa-cov .pa-form .pa-image{
+    padding: 1rem 0rem; 
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1rem 0rem;
+    border: 1px solid #e8e9eb;
+    background-color: #fff;
+    color: #222;
+}
+.pa-con .pa-cov .pa-form .pa-image:before{
+    content: "";
+    padding-left: 1rem; 
+
+}
+.pa-con .pa-cov .pa-form .image-bar{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.pa-con .pa-cov .pa-form .image-bar .pa-img{
+    width: 90%;
+    height: 100px;
+    border: 1px solid #e8e9eb;
+}
+
+.pa-con .pa-cov .pa-form .image-bar .pa-cover{
+    width: 100%;
+    position: relative;
+
+}
+
+.pa-con .pa-cov .pa-form .image-bar .pa-cover .pa-img{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #e8e9eb;
+
+
+}
+.pa-con .pa-cov .pa-form .image-bar .pa-cover .pa-btn{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color:unset;
+    color: red;
+    padding: 0;
+    width: auto;
+
+}
+.pa-con .pa-cov .pa-form .pa-description{
+    padding: 1rem;
+    width: 97%;
+    min-height: 350px;
+    font-weight: 300;
+    margin: 1rem 0rem;
+    background-color: #fff;
+    color: #222;
+}
+.pa-con .pa-cov .pa-form .pa-check{
+    width: 97%;
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.pa-con .pa-cov .pa-form .pa-check .pa-ch-input{
+    width: 30px;
+    height: 30px;
+}
+.pa-con .pa-cov .pa-form .pa-check .pa-lab{
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+  
+
+}
+.pa-con .pa-cov .pa-form .pa-description .ql-toolbar{
+    height: 50px;
+}
+.pa-con .pa-cov .pa-form .pa-description .ql-container{
+    height: 300px;
+    font-size: 1.3rem;
+}
+.pa-con .pa-cov .pa-form .pa-btn{
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 50%;
+    text-transform: capitalize;
+}
+.pa-con .pa-cov .pa-form .pa-btn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+@media(max-width:1000px){
+    .import::after{
+        font-size: 1.1rem;
+        font-weight: 300;
+    
+    }
+    .pa-con .pa-cov{
+        width: 90%;
+        padding: 0rem 0rem;
+        background-color:unset;
+    
+    
+    }
+    .pa-con .pa-cov .pa-success{
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+    
+    }
+    .pa-con .pa-cov .pa-error{
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+    
+    }
+    .pa-con .pa-cov .pa-form{
+        width: 100%;
+        padding: 1rem;
+        border: none;
+    
+    }
+    .pa-con .pa-cov .pa-form .pa-he1{
+        font-size: 1.6rem;
+    
+    }
+    .pa-con .pa-cov .pa-form .pa-label{
+        font-size: 1.1rem;
+    }
+    .pa-con .pa-cov .pa-form .pa-input{
+        font-size: 1rem;
+    
+    }
+    
+    .pa-con .pa-cov .pa-form .pa-select{
+        font-size: 1rem;
+
+    }
+    .pa-con .pa-cov .pa-form .pa-image{
+        font-size: 1rem;
+    }
+    .pa-con .pa-cov .pa-form .pa-description .ql-toolbar{
+        height: 80px;
+    }
+    .pa-con .pa-cov .pa-form .pa-description .ql-container{
+        height: 400px;
+        font-size: 1rem;
+    }
+    .pa-con .pa-cov .pa-form .image-bar{
+        grid-template-columns: 32% 32% 32%;
+        width: 100%;
+        gap: 3px;
+    }
+    .pa-con .pa-cov .pa-form .pa-check{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+    .pa-con .pa-cov .pa-form .pa-check .pa-lab{
+        font-size: 1rem;
+        font-weight: 400;
+        width: 100%;
+        justify-content: flex-start;
+
+    }
+    .pa-con .pa-cov .pa-form .pa-btn{
+        font-size: 1.6rem;
+        width: 80%;
+
+    }
+}
+@media(max-width:500px){
+    .import::after{
+        font-size: 1rem;
+    
+    }
+    .pa-con .pa-cov .pa-form .pa-he1{
+        font-size: 1.3rem;
+    
+    }
+    .pa-con .pa-cov .pa-form .pa-label{
+        font-size: .9rem;
+    }
+    .pa-con .pa-cov .pa-form .pa-input{
+        font-size: .8rem;
+    
+    }
+    
+    .pa-con .pa-cov .pa-form .pa-select{
+        font-size:.8rem;
+
+    }
+    .pa-con .pa-cov .pa-form .pa-image{
+        font-size: .9rem;
+    }
+    .pa-con .pa-cov .pa-form .image-bar{
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        gap: 3px;
+    }
+    .pa-con .pa-cov .pa-form .image-bar .pa-img{
+        width: 90%;
+        height: 100px;
+    }
+    
+    
+    .pa-con .pa-cov .pa-form .image-bar .pa-cover .pa-img{
+        height: 100px;
+    }
+    .pa-con .pa-cov .pa-form .pa-check .pa-lab{
+        font-size: .8rem;
+
+    }
+    .pa-con .pa-cov .pa-form .pa-btn{
+        font-size: 1.1rem;
+    }
+}

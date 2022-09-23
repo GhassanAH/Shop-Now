@@ -1,0 +1,212 @@
+.io-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    min-height: 50vh;
+    padding: 3rem 0rem;
+
+
+}
+.io-con .io-cov{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    padding: 3rem 0rem;
+    background-color:cornflowerblue;
+    
+
+
+}
+.io-con .io-cov .io-success{
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.io-con .io-cov .io-error{
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+.io-con .io-cov .io-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    color: #fff;
+    background-color:cornflowerblue;
+    border: 1px solid #e8e9eb;
+    padding: 2rem;
+
+
+}
+.io-con .io-cov .io-info .io-he1{
+    font-size: 2.5rem;
+    font-weight: 500;
+
+}
+.io-con .io-cov .io-info .io-he2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    width: 80%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom:1px solid #e8e9eb;
+
+
+}
+.io-con .io-cov .io-info .io-he2 .io-inp{
+    padding: 10px;
+    width: 80%;
+    font-size: 1.4rem;
+    border:1px solid #e8e9eb;
+    background-color: #fff;
+    color: #222;
+
+
+}
+.io-con .io-cov .io-info .io-he2 .io-txt{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.io-con .io-cov .io-info .io-he2 .io-icon{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.io-con .io-cov .io-info .io-he2 .io-i{
+    color: #fff;
+    background-color: unset;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.io-con .io-cov .io-info .io-he2 .io-i:hover{
+    color: sandybrown;
+    cursor: pointer;
+}
+.io-con .io-cov .io-info .io-btns{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+.io-con .io-cov .io-info .io-btns .io-btn{
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 50%;
+}
+.io-con .io-cov .io-info .io-btns .io-btn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+@media (max-width: 1000px){
+    .io-con{
+        padding: 2rem 0rem;
+    
+    
+    }
+    .io-con .io-cov{
+        width: 90%;
+        padding: 0rem 0rem;
+        background-color:unset;
+    
+    }
+    .io-con .io-cov .io-success{
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .io-con .io-cov .io-error{
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .io-con .io-cov .io-info{
+        width: 98%;
+        border: none;
+        padding: 1rem;
+    
+    
+    }
+    .io-con .io-cov .io-info .io-he1{
+        font-size: 2rem;
+    
+    }
+    .io-con .io-cov .io-info .io-he2{
+        font-size: 1.3rem;
+        font-weight: 500;
+        width: 100%;
+        justify-content: space-between;
+
+    
+    }
+    .io-con .io-cov .io-info .io-he2 .io-inp{
+        width: 90%;
+        font-size: 1rem;
+    }
+    .io-con .io-cov .io-info .io-he2 .io-txt{
+        width: 90%;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .io-con .io-cov .io-info .io-he2 .io-icon{
+        width: 10%;
+    }
+    .io-con .io-cov .io-info .io-he2 .io-i{
+        font-size: 1rem;
+    }
+    .io-con .io-cov .io-info .io-btns{
+        padding: 1rem 0rem;
+    }
+    .io-con .io-cov .io-info .io-btns .io-btn{
+        padding: 10px;
+        font-size: 1.8rem;
+        width: 80%;
+    }
+}
+@media (max-width: 500px){
+    .io-con .io-cov .io-info .io-he1{
+        font-size: 1.4rem;
+    
+    }
+    .io-con .io-cov .io-info .io-he2{
+        font-size: 1rem;
+    
+    }
+    .io-con .io-cov .io-info .io-btns .io-btn{
+        font-size: 1.2rem;
+
+    }
+
+}
