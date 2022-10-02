@@ -1,6 +1,8 @@
 const User = require("../models/User")
 const Product = require("../models/Product")
+const Order = require("../models/Order")
 const isLogin = require("../middleware/auth").protect
+const isAdmin = require("../middleware/auth").isAdmin
 const keys = require("../config/keys")
 const AWS = require('aws-sdk')
 const { v4: uuidv4 } = require('uuid');
@@ -18,6 +20,7 @@ module.exports = profileRoutes = (app) => {
             const {information} = req.body
             const user = await User.findById({_id:information.id})
             user.phone = information.phone
+            user.name = information.name
             user.country = information.country
             user.address = information.address
             user.details = information.details
@@ -34,7 +37,7 @@ module.exports = profileRoutes = (app) => {
         }
     })
 
-    app.post("/api/addProduct",isLogin, async (req,res) => {
+    app.post("/api/addProduct",isLogin,isAdmin, async (req,res) => {
         try {
             const {information} = req.body
             const product = new Product({
@@ -58,7 +61,7 @@ module.exports = profileRoutes = (app) => {
         }
     })
 
-    app.post("/api/editProduct",isLogin, async (req,res) => {
+    app.post("/api/editProduct",isLogin, isAdmin, async (req,res) => {
         try {
             const {information} = req.body
             const product = await Product.findById({_id: information.id})
@@ -104,7 +107,7 @@ module.exports = profileRoutes = (app) => {
         }
     })
 
-    app.get('/api/uploadimage/:type',isLogin, (req,res) => {
+    app.get('/api/uploadimage/:type',isLogin,isAdmin, (req,res) => {
         const type = req.params.type
         const key = `${req.user.id}/${uuidv4()}.${type}`
         s3.getSignedUrl(
@@ -124,7 +127,7 @@ module.exports = profileRoutes = (app) => {
         )
     })
 
-    app.post('/api/deleteImage',isLogin, (req,res) => {
+    app.post('/api/deleteImage',isLogin,isAdmin, (req,res) => {
         const {imageUrl} = req.body;
         s3.deleteObject(
             {
@@ -141,8 +144,113 @@ module.exports = profileRoutes = (app) => {
         )
     })
 
+    app.get('/api/getOrders',isLogin,isAdmin, async (req,res) => {
+        try {
+            const orders = await Order.find();
+            var list_of_orders = []
+            if(orders){
+                for(var i = 0; i < orders.length; i++){
+                    const products = orders[i]._products
+                    
+                    var list_of_products = []
+                    for(var j = 0; j < products.length; j++){
+                        const product = await Product.findById({_id:products[j]})
+                        if(product){
+                            list_of_products = [...list_of_products, product]
+                        }
+                    }
+                    const finalOrder = {
+                        id:orders[i]._id,
+                        products:list_of_products,
+                        shipped:orders[i].shipped,
+                        payment_method:orders[i].payment_method,
+                        totalPaid:orders[i].totalPaid,
+                        discountApplied:orders[i].discountApplied,
+                        orderedAt: orders[i].orderedAt,
+                        email:orders[i].email,
+                        phone:orders[i].phone,
+                        size:orders[i].size,
+                        quantity:orders[i].quantity,
+                        country:orders[i].country,
+                        address:orders[i].address,
+                        details:orders[i].details,
+                        city:orders[i].city,
+                        postalCode:orders[i].postalCode,
+                        creditCardNumber:orders[i].creditCardNumber,
+                        cardName:orders[i].cardName,
+                    }
+                    list_of_orders = [...list_of_orders, finalOrder]
 
+                }
+               
+            }
+            return res.status(200).send({success:true, message:"orders successfully fetched", orders:list_of_orders})
+        } catch (error) {
+            return res.status(400).send({success:false, message:error.message})
+        }
+    })
+    app.get('/api/getMyOrders',isLogin, async (req,res) => {
+        try {
+            const orders = await Order.find();
+            var list_of_orders = []
+            if(orders){
+                for(var i = 0; i < orders.length; i++){
+                    const products = orders[i]._products
+                    
+                    var list_of_products = []
+                    for(var j = 0; j < products.length; j++){
+                        const product = await Product.findById({_id:products[j]})
+                        if(product){
+                            list_of_products = [...list_of_products, product]
+                        }
+                    }
+                    const finalOrder = {
+                        id:orders[i]._id,
+                        products:list_of_products,
+                        shipped:orders[i].shipped,
+                        payment_method:orders[i].payment_method,
+                        totalPaid:orders[i].totalPaid,
+                        discountApplied:orders[i].discountApplied,
+                        orderedAt: orders[i].orderedAt,
+                        email:orders[i].email,
+                        phone:orders[i].phone,
+                        size:orders[i].size,
+                        quantity:orders[i].quantity,
+                        country:orders[i].country,
+                        address:orders[i].address,
+                        details:orders[i].details,
+                        city:orders[i].city,
+                        postalCode:orders[i].postalCode,
+                        creditCardNumber:orders[i].creditCardNumber,
+                        cardName:orders[i].cardName,
+                    }
+                    list_of_orders = [...list_of_orders, finalOrder]
 
+                }
+               
+            }
+            return res.status(200).send({success:true, message:"orders successfully fetched", orders:list_of_orders})
+        } catch (error) {
+            return res.status(400).send({success:false, message:error.message})
+        }
+    })
+
+    app.post("/api/reduceAmount", async (req,res) => {
+        const { id , amount } = req.body;
+        try {
+            const product = await Product.findById({_id:id});
+            if(product && product.quantity > 0 && product.quantity - amount >= 0){
+                await Product.updateOne({_id: id},{$inc:{quantity: -amount}});
+                return res.status(200).send({message:"The product amount is updated", success:true})
+            }else{
+                return res.status(400).send({message:"The product amount is not updated", success:false})
+            }
+        } catch (error) {
+            console.log(error.message)
+            return res.status(500).send({message:"The product amount is not updated", success:false})
+            
+        }
+    });
 
 
 }

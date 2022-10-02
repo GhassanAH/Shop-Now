@@ -25,6 +25,7 @@ const Info = ({updateTheInfo, profile, auth}) => {
     const [card, setCard] = useState(auth.user.cardName)
     const [exp, setExp] = useState(auth.user.exp)
     const [cvc, setCvc] = useState(auth.user.cvc)
+    const [name, setName] = useState(auth.user.name)
     const [ch, setCh] = useState(false)
     const [ch1, setCh1] = useState(false)
     const [ch2, setCh2] = useState(false)
@@ -36,6 +37,7 @@ const Info = ({updateTheInfo, profile, auth}) => {
     const [ch8, setCh8] = useState(false)
     const [ch9, setCh9] = useState(false)
     const [ch10, setCh10] = useState(false)
+    const [ch11, setCh11] = useState(false)
     const options = countryList().getData()
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
@@ -48,8 +50,6 @@ const Info = ({updateTheInfo, profile, auth}) => {
 
     useEffect(() => {
         if(profile){
-            console.log(profile)
-            console.log(auth)
             setLoading(false)
             if(profile.success && profile.message === "information successfully added"){
                 setSuccess(true)
@@ -110,6 +110,9 @@ const Info = ({updateTheInfo, profile, auth}) => {
             case "10":
                 setCh10(true)
                 return
+            case "11":
+                setCh11(true)
+                return
         }
 
     }
@@ -160,6 +163,9 @@ const Info = ({updateTheInfo, profile, auth}) => {
             case "10":
                 setCh10(false)
                 return
+            case "11":
+                setCh11(false)
+                return
         }
 
     }
@@ -209,6 +215,7 @@ const Info = ({updateTheInfo, profile, auth}) => {
         if(!ch && !ch1 && !ch2 && !ch3 && !ch4 && !ch5 && !ch6 && !ch7 && !ch8 && !ch9 && !ch10){
             var information = {
                 id:auth.user._id,
+                name:name,
                 phone:phone,
                 country:country,
                 address:address,
@@ -240,6 +247,12 @@ const Info = ({updateTheInfo, profile, auth}) => {
                 {error && <div className="io-error">{message}</div>}
                 <div className="io-info">
                     <h1 className="io-he1">Your Information </h1>
+                    <div className="io-he2">
+                        {ch11 && <input value={name} className="io-inp" onChange={(e) => setName(e.target.value)}/>}
+                        {!ch11 && <div className="io-txt"><div>Name:</div> <div>{name}</div> </div>}
+                        {!ch11 && <div className="io-icon"><button className="io-i" onClick={(e) => handleOpen(e, "11")}><BsFillPencilFill /></button></div>} 
+                        {ch11 && <div className="io-icon"><button className="io-i" onClick={(e) => handleClose(e, "11")}><BsCheckSquareFill /></button></div> }
+                    </div>
                     <div className="io-he2">
                         {ch && <input value={email} className="io-inp" onChange={(e) => setEmail(e.target.value)}/>}
                         {!ch && <div className="io-txt"><div>Email:</div> <div>{email}</div> </div>}

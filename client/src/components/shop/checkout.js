@@ -3,40 +3,35 @@ import "../../css/products/checkout.css"
 import { Visa, Mastercard, Paypal, Applepay, Western, Googlepay,Discover } from "react-pay-icons";
 import { connect } from 'react-redux'
 import countryList from 'react-select-country-list'
-import axios from "axios"
 import Select from "react-select";
 import 'react-phone-number-input/style.css'
 import PhoneInput,{ isValidPhoneNumber } from 'react-phone-number-input'
 import {useNavigate} from "react-router-dom"
+import {getCode} from "country-list"
 
 
 
 
-const Checkout = ({checkout}) => {
+const Checkout = ({checkout, auth}) => {
     const [total, setTotal] = useState(null)
     const [subtotal, setSubtotal] = useState(null)
     const [shipping, setShipping] = useState(null)
     const [code, setCode] = useState(null)
     const [discountVal, setDiscountVal] = useState(null)
-    const [Name, setName] = useState('')
-    const [Email, setEmail] = useState('')
-    const [phone, setPhone] = useState("+")
-    const [country, setCountry] = useState('')
-    const [Address, setAddress] = useState('')
-    const [Details, setDetails] = useState('')
-    const [City, setCity] = useState('')
-    const [Postal, setPostal] = useState('')
+    const [Name, setName] = useState(auth.user?auth.user.name: '')
+    const [Email, setEmail] = useState(auth.user?auth.user.email: '')
+    const [phone, setPhone] = useState(auth.user?auth.user.phone.replace(" ","") : "+")
+    const [country, setCountry] = useState(auth.user?{label:auth.user.country,value:getCode(auth.user.country)}: '')
+    const [Address, setAddress] = useState(auth.user?auth.user.address:'')
+    const [Details, setDetails] = useState(auth.user?auth.user.details: '')
+    const [City, setCity] = useState(auth.user?auth.user.city: '')
+    const [Postal, setPostal] = useState(auth.user?auth.user.postalCode: '')
     const [Discount, setDiscount] = useState('')
+    const [items, setItems] = useState(null)
     const options = countryList().getData()
     const [dStatus, setDstatus] = useState(false)
     const [Error, setError] = useState("")
     const navigator = useNavigate();
-
-
-    useEffect(() => {
-        getCurrentCounty()
-        
-    },[])
 
     useEffect(() => {
         if(checkout){
@@ -45,19 +40,13 @@ const Checkout = ({checkout}) => {
             setShipping(checkout.shipping)
             setCode(checkout.code)
             setDiscountVal(checkout.discount)
+            setItems(checkout.items)
             
         }
     }, [checkout])
 
     const changeHandler = value => {
         setCountry(value)
-    }
-
-    const getCurrentCounty = async () => {
-        const data = await axios.get('https://ipapi.co/json/')
-        setCountry(data.data.country_name)
-        setPhone(data.data.country_calling_code)
-
     }
 
     const applyDiscount = () => {
@@ -81,7 +70,8 @@ const Checkout = ({checkout}) => {
                 Details:Details,
                 City:City,
                 PostalCode:Postal,
-
+                items:items,
+                discountApplied:dStatus
             }
             navigator("/payment", {state:{data:data}})
         }else if(!validateEmail(Email)){
@@ -127,7 +117,6 @@ const Checkout = ({checkout}) => {
                             <input type="email" placeholder="john@gmail.com" className="co-input"  value={Email}  onChange={val => setEmail(val.target.value)}/>
                             <label className="co-label">Phone Number</label>
                             <PhoneInput
-                                
                                 value={phone}
                                 onChange={phone => setPhone(phone)}
 
@@ -138,7 +127,7 @@ const Checkout = ({checkout}) => {
                         <form className="co-form">
                             <h2 className="co-he2">Shipping Information</h2>
                             <label className="co-label">Country</label>
-                            <Select value={country}  options={options} onChange={changeHandler}  className="co-input1"/>
+                            <Select defaultValue={country}   options={options} onChange={changeHandler}  className="co-input1"/>
                             <label className="co-label">Address</label>
                             <input type="text" placeholder="Address" className="co-input"  value={Address}  onChange={val => setAddress(val.target.value)}/>
                             <label className="co-label">Details</label>
@@ -190,7 +179,9 @@ const Checkout = ({checkout}) => {
 }
 const mapStateToProps = state => {
     return {
-        checkout: state.checkout
+        checkout: state.checkout,
+        auth:state.auth,
+
     }
   }
   

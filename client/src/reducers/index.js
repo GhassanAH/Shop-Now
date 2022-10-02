@@ -7,6 +7,8 @@ import  authReducer  from './authReducer'
 import profileReducer from "./profileReducer"
 import productsReducer from "./productsReducer"
 import loadingReducer from "./loadingReducer"
+import ordersReducer from "./ordersReducer"
+import productTypeReducer from "./productTypeReducer"
 
 
 
@@ -20,4 +22,6 @@ export default combineReducers({
     profile:profileReducer,
     products:productsReducer,
     loading:loadingReducer,
+    orders:ordersReducer,
+    prod:productTypeReducer
 })

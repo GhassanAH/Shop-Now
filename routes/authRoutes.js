@@ -3,11 +3,32 @@ const User =  require("../models/User")
 const { protect } = require("../middleware/auth");
 const sendEmail = require("../utils/sendEmail")
 const crypto = require("crypto");
+const jwt = require("jsonwebtoken");
+const { decode } = require("punycode");
+
 
 module.exports = authRoutes = (app) => {
     
-    app.get("/api/private", protect, (req,res) => {
-        return res.status(200).send({success: true,message: "You got access to the private data in this route", user:req.user});
+    app.get("/api/private", protect, async (req,res) => {
+        let token;
+  
+        if (
+          req.headers.authorization &&
+          req.headers.authorization.startsWith("Bearer")
+        ) {
+          token = req.headers.authorization.split(" ")[1];
+        }
+        try {
+          const decoded = jwt.verify(token, keys.JWTSECRET);
+          const admin = await User.findOne({email:"gassanalhttali@gmail.com"})
+          if(admin._id == decoded.id){
+             return res.status(200).send({success: true,message: "You got access to the private data in this route", user:req.user, admin:true});
+          }else{
+            return res.status(200).send({success: true,message: "You got access to the private data in this route", user:req.user, admin:false});
+          }
+        } catch (err) {
+            return res.status(401).send({message:"Sorry something went wrong", success:false})
+        }
     })
 
     app.post("/api/login", async(req, res) => {
@@ -62,7 +83,7 @@ module.exports = authRoutes = (app) => {
             const restToken = user.getRestPasswordToken()
             await user.save()
 
-            const redirectedUrl = `http://localhost:3000/resetPassword/${restToken}`
+            const redirectedUrl = `${keys.redirectedUrl}/${restToken}`
             const message = `
             <h1>You have requested a password reset</h1>
             <p>Please make a put request to the following link:</p>

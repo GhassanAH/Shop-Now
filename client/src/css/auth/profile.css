@@ -16,9 +16,9 @@
 }
 .pe-con .pe-cov .pe-tabs{
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-auto-flow: column;
+    grid-template-columns: unset;
     width: 100%;
-
 
 }
 .pe-con .pe-cov .pe-tabs .pe-tab{
@@ -64,7 +64,8 @@
 }
 @media (max-width: 1200px){
     .pe-con .pe-cov .pe-tabs{
-        grid-template-columns: auto auto auto auto;
+        grid-auto-flow: unset;
+        grid-template-columns: auto auto auto;
 
     }
     .pe-con .pe-cov .pe-tabs .pe-tab .pe-nav{
@@ -74,6 +75,7 @@
 }
 @media (max-width: 500px){
     .pe-con .pe-cov .pe-tabs{
+        grid-auto-flow: unset;
         grid-template-columns: auto auto;
 
     }

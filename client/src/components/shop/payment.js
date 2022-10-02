@@ -1,18 +1,18 @@
 import React,{useState, useEffect} from 'react'
 import "../../css/products/payment.css"
 import {Visa, Mastercard, Western, Discover } from "react-pay-icons";
-import GooglePayButton from "@google-pay/button-react"
 import { connect } from 'react-redux'
 import {payByPayPal, payByMasterCard, setInvoice} from '../../actions'
 import {useNavigate, useLocation} from "react-router-dom"
 import Loading from 'react-loading-components';
+import LoadingSpinner from '../../components/loadingSpinner';
 
 
-const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvoiceInfo}) => {
-    const [card, setCard] = useState('')
-    const [cvc, setCVC] = useState('')
-    const [cardName, setCardName] = useState('')
-    const [exp, setExpiryDate] = useState('')
+const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvoiceInfo, auth}) => {
+    const [card, setCard] = useState(auth.user?auth.user.creditCardNumber: '')
+    const [cvc, setCVC] = useState(auth.user? auth.user.exp: '')
+    const [cardName, setCardName] = useState(auth.user?auth.user.cardName: '')
+    const [exp, setExpiryDate] = useState(auth.user?auth.user.cvc: '')
     const [valid1, setValid1] = useState(true)
     const [valid2, setValid2] = useState(true)
     const [valid3, setValid3] = useState(true)
@@ -22,6 +22,8 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
     const [load, setLoad] = useState(false)
     const info = useLocation()
     const [CustomerData, setCustomerData] = useState(null)
+    const [loading, setLoading] = useState(false)
+
     
 
 
@@ -37,6 +39,7 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
             if(payment.message === "successfully paid"){
                 setLoad(false)
                 location("/success")
+            
             }else if(payment.message === "unsuccessfully paid"){
                 setLoad(false)
             }else if(payment.message === "unsuccessfully paid by paypal"){
@@ -45,12 +48,11 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                 setLoad(false)
                 location("/success")
             }else if(payment.message === "redirect url"){
+                setLoading(false)
                 window.location.href = payment.url
-
             }
             else{
                 setLoad(false)
-
             }
         }
     }, [payment])
@@ -86,7 +88,28 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
             var year = parseInt(expDate[1],10)
             var amount = Number(total)
             var description = "This is payment from ShopNow"
-            payByTheMasterCard(cardNumber, month, year, exp, amount, description)
+            var products = [];
+            var sizes = [];
+            var quantity = [];
+
+            for(var i = 0; i < CustomerData.items.length; i++){
+                products = [...products, CustomerData.items[i].id]
+                sizes = [...sizes, CustomerData.items[i].size]
+                quantity = [...quantity, CustomerData.items[i].quantity]
+                console.log(quantity)
+
+            }
+            const seller = {
+                email:CustomerData.Email,
+                phone:CustomerData.Phone,
+                country:CustomerData.Country,
+                address:CustomerData.Address,
+                details:CustomerData.Details,
+                city:CustomerData.City,
+                postal:CustomerData.PostalCode,
+            }
+            console.log(seller)
+            payByTheMasterCard(cardNumber, month, year, exp, amount, description, products, seller, CustomerData.discountApplied, sizes, quantity)
         }else{
             setLoad(false)
         }
@@ -94,17 +117,38 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
 
     const payByPayPal = (e) => {
         e.preventDefault()
+        setLoading(true)
+        var products = [];
+        var sizes = [];
+        var quantity = [];
+        for(var i = 0; i < CustomerData.items.length; i++){
+            products = [...products, CustomerData.items[i].id]
+            sizes = [...sizes, CustomerData.items[i].size]
+            quantity = [...quantity, CustomerData.items[i].quantity]
+
+        }
+
+        const seller = {
+            email:CustomerData.Email,
+            phone:CustomerData.Phone,
+            country:CustomerData.Country,
+            address:CustomerData.Address,
+            details:CustomerData.Details,
+            city:CustomerData.City,
+            postal:CustomerData.PostalCode,
+        }
         setInvoiceInfo(CustomerData)
         var amount = Number(total)
         var description = "This is payment from ShopNow"
-        var quantity = 3;
-        payByThePayPal(cardName, amount,quantity, description)
+
+        payByThePayPal(cardName, amount,quantity, description,products, seller, CustomerData.discountApplied, sizes, quantity)
     }
 
     const validate = () => {
         var valid1 = false;
         var valid2 = false;
         var valid3 = false;
+        const exp1 = new String(exp)
         if(card.length === 20){
             var cardNum = card.replaceAll(" ", "")
             var cardNum2 = Number(cardNum)
@@ -122,8 +166,8 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                     valid2 = true
                 }
             }
-        }if(exp.length === 3){
-            var f2 = Number(exp)
+        }if(exp1.length === 3){
+            var f2 = Number(exp1)
             if(Number.isInteger(f2)){
                 valid3 = true
             }
@@ -148,6 +192,8 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                             <Discover className="p-icon"/>
                         </div>
                     </div>
+                    {loading && <LoadingSpinner/>}
+
                     <form className="p-form">
                         <label className="p-label">Card Number</label>
                         <input type="card" className={`p-field ${!valid1? "alert":""}`}  placeholder="xxxx xxxx xxxx xxxx" value={handleCardDisplay()}  onChange={(e) => setCard(e.target.value)} maxLength="20"/>
@@ -174,47 +220,6 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                     <div className="p-footer">
                         <div className="p-btns">
                             <button className="p-btn" onClick={(e) => payByPayPal(e)}><img className="p-img" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png"/></button>
-                            {/* <div className="p-btn">
-                                <GooglePayButton 
-                                    environment="TEST" 
-                                    buttonSizeMode="fill"
-                                    className="p-img"
-                                    paymentRequest={{
-                                        apiVersion: 2,
-                                        apiVersionMinor: 0,
-                                        allowedPaymentMethods: [
-                                        {
-                                            type: 'CARD',
-                                            parameters: {
-                                            allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
-                                            allowedCardNetworks: ['MASTERCARD', 'VISA'],
-                                            },
-                                            tokenizationSpecification: {
-                                            type: 'PAYMENT_GATEWAY',
-                                            parameters: {
-                                                gateway: 'example',
-                                                gatewayMerchantId: 'exampleGatewayMerchantId',
-                                            },
-                                            },
-                                        },
-                                        ],
-                                        merchantInfo: {
-                                        merchantId: '12345678901234567890',
-                                        merchantName: 'Demo Merchant',
-                                        },
-                                        transactionInfo: {
-                                        totalPriceStatus: 'FINAL',
-                                        totalPriceLabel: 'Total',
-                                        totalPrice: '2.00',
-                                        currencyCode: 'USD',
-                                        countryCode: 'US',
-                                        },
-                                    }}
-                                    onLoadPaymentData={paymentRequest => {
-                                        console.log('load payment data', paymentRequest);
-                                    }}
-                                    />
-                            </div> */}
                         </div>
 
                     </div>
@@ -227,15 +232,17 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
 const mapStateToProps = state => {
     return {
         checkout: state.checkout,
-        payment:state.pay
+        payment:state.pay,
+        auth:state.auth
     }
   }
   
 const mapDispatchToProps = dispatch => {
     return {
-        payByTheMasterCard: (number, month, year, cvc, amount, description) => dispatch(payByMasterCard(number, month, year, cvc, amount, description)),
-        payByThePayPal: (name, price, quantity, description) => dispatch(payByPayPal(name, price, quantity, description)),
-        setInvoiceInfo:(item) => dispatch(setInvoice(item))
+        payByTheMasterCard: (number, month, year, cvc, amount, description, products, seller, discountApplied,size,quantity) => dispatch(payByMasterCard(number, month, year, cvc, amount, description, products, seller, discountApplied,size,quantity)),
+        payByThePayPal: (name, price, quantity, description, products, seller, discountApplied,size) => dispatch(payByPayPal(name, price, quantity, description, products, seller, discountApplied,size)),
+        setInvoiceInfo:(item) => dispatch(setInvoice(item)),
+    
     }
 }
 

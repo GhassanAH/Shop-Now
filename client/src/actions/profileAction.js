@@ -1,4 +1,4 @@
-import { UploadProduct, getProduct, updateProfile, updateProduct, loading } from './types'
+import { UploadProduct, getProduct, updateProfile, updateProduct, loading, orders } from './types'
 import axios from "axios"
 import ls from "local-storage"
 
@@ -114,6 +114,28 @@ export const getProducts = (type) => async dispatch => {
     const res = await axios.get(`/api/getProductByType/${type}`)
 
     dispatch({type:getProduct, payload:res.data})
+}
+
+export const getOrders = () => async dispatch => {
+    const token = ls.get("authToken")
+    try {
+        const res = await axios
+        .get(`/api/getOrders`,
+            {
+                headers:{
+                authorization: 'Bearer ' + token
+                }
+            }
+        )
+    
+        dispatch({type:orders, payload:res.data})
+    } catch (error) {
+        var payload = {
+            success:error.response.data.success,
+            message:error.response.data.message
+        }
+       dispatch({type:orders, payload:payload})
+    }
 }
 
 

@@ -34,10 +34,26 @@ exports.protect = async (req, res, next) => {
     }
   };
   
-  exports.isLogin = (req, res, next) => {
-      if(req.user){
-        next()
+  exports.isAdmin = async (req, res, next) => {
+    let token;
+  
+    if (
+      req.headers.authorization &&
+      req.headers.authorization.startsWith("Bearer")
+    ) {
+      token = req.headers.authorization.split(" ")[1];
+    }
+    try {
+      const decoded = jwt.verify(token, keys.JWTSECRET);
+  
+      const admin = await User.findOne({email:"gassanalhttali@gmail.com"})
+      if(admin._id == decoded.id){
+         next();
       }else{
-        return res.status(404).send({message:"You must be loged in", success:false})
+        return res.status(404).send({message:"Sorry this service is not avaliable", success:false})
       }
+    } catch (err) {
+        return res.status(401).send({message:"Sorry this service is not avaliable", success:false})
+    }
+
   }

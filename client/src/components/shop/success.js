@@ -2,18 +2,23 @@ import React,{useEffect, useState} from 'react'
 import {NavLink as Link} from "react-router-dom"
 import "../../css/products/success.css"
 import { connect } from 'react-redux'
+import {addNewItem} from '../../actions'
 import {BsFillCheckCircleFill, BsFillQuestionCircleFill} from "react-icons/bs"
 
 
 
 
-const Success = ({checkout, invoice}) => {
+const Success = ({checkout, invoice, addItemToCart}) => {
     const [CustomerData, setCustomerData] = useState(null)
     const [items, setItems] = useState([])
     const [total, setTotal] = useState(null)
     const [subtotal, setSubtotal] = useState(null)
     const [shipping, setShipping] = useState(null)
     const [discountVal, setDiscountVal] = useState(null)
+
+    useEffect(() => {
+        addItemToCart([])
+    },[])
 
     useEffect(() => {
         if(checkout && invoice){
@@ -98,6 +103,7 @@ const mapStateToProps = state => {
   
 const mapDispatchToProps = dispatch => {
     return {
+        addItemToCart: (item) => dispatch(addNewItem(item))
     }
 }
 

@@ -304,6 +304,10 @@
     font-weight: 500;
     width: 30%;
 }
+.co-con .co-cov .c-second .co-discount .co-form .co-btn:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
 .co-con .co-cov .c-second .co-btns{
     margin-top: 1rem;
     display: flex;
@@ -363,6 +367,10 @@
     font-size: 1.5rem;
     font-weight: 500;
     width: 80%;
+}
+.co-con .co-cov .c-second .co-btns .co-btn .co-pay:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }
 .co-con .co-cov .c-second .co-btns .co-btn .f-icons{
     display: flex;

@@ -14,7 +14,8 @@ export const checkAuthorization = () => async dispatch => {
         var payload = {
             success:res.data.success,
             message:res.data.message,
-            user:res.data.user
+            user:res.data.user,
+            admin:res.data.admin
         }
         dispatch({type:checkauthorization, payload:payload})
      

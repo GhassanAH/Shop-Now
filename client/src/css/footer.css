@@ -213,3 +213,33 @@
     }
 
 }
+@media (max-width: 1000px){
+    .s-footer .f-idea .f-stat .f-he2{
+        font-size: 1.3rem;
+    }
+    .s-footer .f-idea .f-stat .f-p{
+        font-size: .8rem;
+    }
+    .s-footer .f-body .f-cus .f-he3{
+        font-size: 1.2rem;
+    }
+    .s-footer .f-body .f-cus .f-li{
+        font-size: .8rem;
+    }
+    .s-footer .f-body .f-con .f-he3{
+        font-size: 1.2rem;
+    }
+    .s-footer .f-body .f-con .f-p{
+        font-size: .8rem;
+    }
+    .s-footer .f-body .f-ser-stat .f-he3{
+        font-size: 1.2rem;
+    }
+    .s-footer .f-body .f-ser-stat .f-p{
+        font-size: .8rem;
+    }
+    .s-footer .f-cop .f-cop-con .f-copyright{
+        font-size: 1rem;
+    }
+
+}

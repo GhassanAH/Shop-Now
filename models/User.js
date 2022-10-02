@@ -21,6 +21,7 @@ const UserSchema = new  mongoose.Schema({
         select: false,
     },
     phone:String,
+    name:String,
     country:String,
     address:String,
     details:String,

@@ -1,6 +1,4 @@
-body{
 
-}
 @keyframes spinner {
     0% {
       transform: rotate(0deg);
@@ -11,7 +9,6 @@ body{
   }
   .spinner-container{
       position: absolute;
-      top: 80%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -31,4 +28,28 @@ body{
       font-size: 2rem;
       font-weight: 600;
       color: rgb(93, 255, 44);
+  }
+  @media(max-width:700px) {
+    .loading-spinner {
+      width: 30px;
+      height: 30px;
+      border: 7px solid rgb(93, 255, 44); /* Light grey */
+      border-top: 7px solid #383636; /* Black */
+    }
+    .loading-txt{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+  }
+  @media(max-width:500px) {
+    .loading-spinner {
+      width: 20px;
+      height: 20px;
+      border: 5px solid rgb(93, 255, 44); /* Light grey */
+      border-top: 5px solid #383636; /* Black */
+    }
+    .loading-txt{
+        font-size: 1rem;
+        font-weight: 400;
+    }
   }

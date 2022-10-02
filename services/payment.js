@@ -38,7 +38,7 @@ module.exports = {
         }
     
     },
-    createPayPalObject: (name, price, quantity, description, returnUrl, cancelUrl) => {
+    createPayPalObject: (name, price, description, returnUrl, cancelUrl) => {
         var payment_json = {
             "intent": "sale",
             "payer": {
@@ -52,7 +52,7 @@ module.exports = {
                 "item_list": {
                     "items": [{
                         "name": name,
-                        "sku": String(quantity),
+                        "sku": "item",
                         "price": String(price),
                         "currency": "USD",
                         "quantity": 1

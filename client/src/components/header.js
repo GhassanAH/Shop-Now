@@ -5,12 +5,12 @@ import {CgProfile} from "react-icons/cg"
 import {GiHamburgerMenu} from "react-icons/gi"
 import {NavLink as Link} from "react-router-dom"
 import { connect } from 'react-redux' 
-import {checkAuthorization, getProducts} from '../actions'
+import {checkAuthorization, getProducts, getType} from '../actions'
 import Loading from 'react-loading-components';
 
 
 
-const Header = ({shop, auth, logoutHim, checkTheAuthorization, getTheProducts}) => {
+const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) => {
     const [show, setShow] = useState(false)
     const [itemSize, setItemSize] = useState(0)
     const [user, setUser] = useState(null)
@@ -22,8 +22,8 @@ const Header = ({shop, auth, logoutHim, checkTheAuthorization, getTheProducts}) 
     },[])
 
     useEffect(() => {
-        console.log(type)
         getTheProducts(type)
+        getTheType(type)
     },[type])
 
     const setNavMenuShow = () => {
@@ -119,6 +119,7 @@ const mapDispatchToProps = dispatch => {
     return {
         checkTheAuthorization: () => dispatch(checkAuthorization()),
         getTheProducts: (type) => dispatch(getProducts(type)),
+        getTheType: (type) => dispatch(getType(type)),
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Header)
