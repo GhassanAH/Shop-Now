@@ -35,6 +35,7 @@
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 .h-con .h-cov .h-title .h-he1:hover{
     cursor: pointer;
@@ -125,7 +126,65 @@ select {
     border: none;
     color:#fff;
     display:none;
-    width: 15%;
+    width: 10%;
+
+}
+.h-con .h-cov .h-sel1{
+    font-size: 1rem;
+    font-weight: bold;
+    width: 60%;
+    color:#222;
+    text-decoration: none;
+    background-color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 1rem;
+    display: none;
+
+
+}
+.h-con .h-cov .h-cart1{
+    font-weight: bold;
+    width: 5%;
+    color:#fff;
+    text-decoration: none;
+    padding: 1.5rem 0rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    display: none;
+}
+.h-con .h-cov .h-cart1 .h-c1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+}
+.h-con .h-cov .h-cart1 .h-c1 .h-icon1{
+    font-weight: bolder;
+    margin-right: 3px;
+    position: absolute;
+    font-size: 2rem;
+}
+.h-con .h-cov .h-cart1 .h-c1 .h-it1{
+    position: absolute;
+    background-color: red;
+    top: 0%;
+    bottom:20%;
+    left: 100%;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1em;
+    height: 1em;
+    font-weight: 700;
+    font-size: 1.5rem;
 
 }
 .h-con .h-navs2{
@@ -149,68 +208,13 @@ select {
     justify-content: flex-start;
 
 }
-.h-con .h-navs2 .h-sel{
-    font-size: 1.3rem;
-    font-weight: bold;
-    width: 90%;
-    color:#222;
-    text-decoration: none;
-    background-color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin-left: 1rem;
-
-
-}
-.h-con .h-navs2 .h-cart{
-    font-size: 1.3rem;
-    font-weight: bold;
-    width: 50%;
-    color:#fff;
-    text-decoration: none;
-    padding: 1.5rem 0rem;
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
 .h-con .h-navs2 .h-nav .h-icon{
     font-size: 2rem;
     font-weight: bolder;
     margin-right: 3px;
 
 }
-.h-con .h-navs2 .h-cart .h-c{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 25%;
 
-}
-.h-con .h-navs2 .h-cart .h-c .h-icon{
-    font-size: 2rem;
-    font-weight: bolder;
-    margin-right: 3px;
-    position: absolute;
-}
-.h-con .h-navs2 .h-cart .h-c .h-it{
-    position: absolute;
-    background-color: red;
-    top: 0%;
-    bottom:20%;
-    left: 30%;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 1em;
-    height: 1em;
-    font-weight: 700;
-    font-size: 1.6rem;
-
-}
 
 @media (max-width: 1200px){
     .h-con .h-cov .h-navs{
@@ -235,7 +239,13 @@ select {
 }
 @media (max-width: 700px){
     .h-con .h-cov .h-title{
-        width: 90%;
+        width: 30%;
+    }
+    .h-con .h-cov .h-title .h-he1{
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        font-size: .7rem;
     }
     .h-con .h-cov .h-navs{
         display: none;
@@ -243,10 +253,30 @@ select {
 
     .h-con .h-cov .h-ham{
         display:block;
+        font-size: 1.5rem;
     
+    }
+    .h-con .h-cov .h-sel1{
+        display:block;
+        font-size: .7rem;
+        padding: 1px 5px;
+
     }
     .h-con .h-navs2{
         display: var(--display-nav);
+    }
+    .h-con .h-cov .h-cart1{
+        display: block;
+        font-size: .7rem;
+
+    }
+    .h-con .h-cov .h-cart1 .h-c1 .h-icon1{
+        font-size: 1.5rem;
+    }
+    .h-con .h-cov .h-cart1 .h-c1 .h-it1{
+
+        font-size: 1rem;
+    
     }
 
 }

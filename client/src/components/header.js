@@ -70,7 +70,7 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) 
         <div className="h-con">
             <div className = "h-cov">
                 <div className="h-title">
-                <a href="/" className="h-he1"><h1 >ShopNow</h1></a>
+                    <a href="/" className="h-he1"><h1 >ShopNow</h1></a>
                 </div>
                {!load && <div className="h-navs">
                     <select className="h-sel" value={type} onChange={(e) => setType(e.target.value)}>
@@ -87,10 +87,7 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) 
                     <Link to="/cart" className="h-cart"><BsCart className="h-icon"/><span className="h-it">{itemSize}</span></Link>
                 </div>}
                 {load && <div className="h-loader"><Loading className="h-l" type='spinning_circles' width={40} height={40} fill='#ffffff' /></div>}
-                <button className="h-ham" onClick={setNavMenuShow}><GiHamburgerMenu color="#fff"/></button>
-            </div>
-            <div className="h-navs2">
-                <select className="h-sel" value={type} onChange={(e) => setType(e.target.value)}>
+                <select className="h-sel1" value={type} onChange={(e) => setType(e.target.value)}>
                         <option className="h-option">Shop All</option>
                         <option className="h-option">Hoodies</option>
                         <option className="h-option">Crewnecks</option>
@@ -98,11 +95,16 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) 
                         <option className="h-option">T-Shirts</option>
                         <option className="h-option">Accessories</option>
                 </select>
+                <Link to="/cart" className="h-cart1"><div className="h-c1"><BsCart className="h-icon1"/><span className="h-it1">{itemSize}</span></div></Link>
+                <button className="h-ham" onClick={setNavMenuShow}><GiHamburgerMenu color="#fff"/></button>
+            </div>
+
+            <div className="h-navs2">
+
                 <Link to="/" className="h-nav">Shop</Link>
-                {!user && <Link to="/signIn" className="h-nav">Sign in</Link>}
-                {!user && <Link to="/signUp" className="h-nav">Sign up</Link>}
+                {!user && <Link to="/signIn" className="h-nav">SignIn</Link>}
+                {!user && <Link to="/signUp" className="h-nav">SignUp</Link>}
                 {user && <Link to="/profile" className="h-nav"><CgProfile  className="h-icon"/> Profile</Link>}
-                <Link to="/cart" className="h-cart"><div className="h-c"><BsCart className="h-icon"/><span className="h-it">{itemSize}</span></div> Cart</Link>
             </div>
             
         </div>
