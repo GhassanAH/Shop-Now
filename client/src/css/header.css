@@ -6,7 +6,10 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    background-image: linear-gradient(to right, #1488cc, #2b33b2 );
+    background-image: linear-gradient(to right, #1488cc, #2b33b2);
+    position: relative;
+    height: 80px;
+
 
 
 
@@ -16,6 +19,8 @@
     align-items: center;
     justify-content: flex-start;
     width: 90%;
+    position: absolute;
+    z-index: 2;
 }
 .h-con .h-cov .h-title{
     width: 30%;
@@ -76,8 +81,9 @@
 }
 .h-con .h-cov .h-navs .h-cart .h-it{
     position: absolute;
-    right: 0.9rem;
-    top: 0.6rem;
+    top: 0%;
+    bottom:30%;
+    left: 60%;
     background-color: red;
     color: #fff;
     border-radius: 50%;
@@ -88,9 +94,17 @@
     height: 1em;
     font-weight: 700;
     font-size: 2rem;
+    z-index: 2;
+}
+.h-con .h-cov .h-cart .h-icon{
+    font-weight: bolder;
+    margin-right: 3px;
+    position: absolute;
+    font-size: 2rem;
+    z-index: 1;
+    left: 40%;
 }
 .h-con .h-cov .h-navs .h-sel{
-    font-size: 1.3rem;
     font-weight: bold;
     width: 50%;
     color:#222;
@@ -107,6 +121,8 @@
     outline: none;
     color: #222;
     padding: 16px;
+    font-size: 1.3rem;
+
 }
 
 select {
@@ -127,10 +143,11 @@ select {
     color:#fff;
     display:none;
     width: 10%;
+    display: none;
+
 
 }
 .h-con .h-cov .h-sel1{
-    font-size: 1rem;
     font-weight: bold;
     width: 60%;
     color:#222;
@@ -138,44 +155,42 @@ select {
     background-color: #fff;
     border: none;
     padding: 5px 10px;
-    margin-left: 1rem;
     display: none;
 
+
+}
+.h-con .h-cov .h-sel1 .h-option{
+    outline: none;
+    color: #222;
+    padding: 16px;
+    font-size: 1.3rem;
 
 }
 .h-con .h-cov .h-cart1{
     font-weight: bold;
-    width: 5%;
+    width: 40%;
     color:#fff;
     text-decoration: none;
-    padding: 1.5rem 0rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content:center;
     display: none;
-}
-.h-con .h-cov .h-cart1 .h-c1{
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    height: 30px;
 
 }
-.h-con .h-cov .h-cart1 .h-c1 .h-icon1{
+.h-con .h-cov .h-cart1 .h-icon1{
     font-weight: bolder;
-    margin-right: 3px;
     position: absolute;
     font-size: 2rem;
+    z-index: 1;
+    left: 20%;
 }
-.h-con .h-cov .h-cart1 .h-c1 .h-it1{
+.h-con .h-cov .h-cart1 .h-it1{
     position: absolute;
     background-color: red;
-    top: 0%;
-    bottom:20%;
-    left: 100%;
+    top: 10px;
+    left: 30%;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -185,6 +200,7 @@ select {
     height: 1em;
     font-weight: 700;
     font-size: 1.5rem;
+    z-index: 2;
 
 }
 .h-con .h-navs2{
@@ -193,26 +209,38 @@ select {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+
+    
 }
 .h-con .h-navs2 .h-nav{
     font-size: 1.3rem;
     font-weight: bold;
-    width: 90%;
+    width: 100%;
     color:#fff;
-    border-bottom: 1px solid #fff;
     text-decoration: none;
-    padding: 1.5rem 0rem;
-    margin-left: 1rem;
+    padding: 1rem 0rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 
+
+}
+.h-con .h-navs2 .h-nav:nth-child(2n + 1){
+    background-color: #1488cc;
+}
+.h-con .h-navs2 .h-nav:nth-child(2n){
+    background-image: linear-gradient(to right, #1488cc, #2b33b2 );
 }
 .h-con .h-navs2 .h-nav .h-icon{
     font-size: 2rem;
     font-weight: bolder;
-    margin-right: 3px;
 
+}
+.h-con .h-navs2 .h-nav .h-he3{
+    margin-left: 20px;
 }
 
 
@@ -234,10 +262,22 @@ select {
         font-size: 1.5rem;
     
     }
+    .h-con .h-cov .h-navs .h-cart{
+        font-size: 2rem;
+    }
+    .h-con .h-cov .h-navs .h-cart .h-it{
+        font-weight: 600;
+        font-size: 1.6rem;
+        z-index: 2;
+    }
 
 
 }
 @media (max-width: 700px){
+    .h-con .h-cov{
+        top:10px;
+
+    }
     .h-con .h-cov .h-title{
         width: 30%;
     }
@@ -245,37 +285,105 @@ select {
         font-weight: bold;
         color: #fff;
         text-decoration: none;
-        font-size: .7rem;
+        font-size: .8rem;
     }
     .h-con .h-cov .h-navs{
         display: none;
     }
 
     .h-con .h-cov .h-ham{
-        display:block;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         font-size: 1.5rem;
     
     }
     .h-con .h-cov .h-sel1{
         display:block;
-        font-size: .7rem;
-        padding: 1px 5px;
-
+        width: 50%;
+        
+    }
+    .h-con .h-cov .h-sel1 .h-option{
+        font-size: 1.3rem;
     }
     .h-con .h-navs2{
         display: var(--display-nav);
     }
     .h-con .h-cov .h-cart1{
         display: block;
-        font-size: .7rem;
+        margin-left: 0px;
+        width: 30%;
+    }
+
+    .h-con .h-cov .h-cart1 .h-icon1{
+        font-size: 1.8rem;
+        left: 40%;
 
     }
-    .h-con .h-cov .h-cart1 .h-c1 .h-icon1{
-        font-size: 1.5rem;
+    .h-con .h-cov .h-cart1 .h-it1{
+        top: 10px;
+        left: 50%;
+        font-weight: 400;
+        font-size: 1.4rem;
+        z-index: 2;
+    
     }
-    .h-con .h-cov .h-cart1 .h-c1 .h-it1{
 
+}
+
+@media (max-width: 500px){
+    .h-con .h-cov .h-title{
+        width: 50%;
+    }
+    .h-con .h-cov .h-ham{
+        font-size: 1.4rem;
+    }
+    .h-con .h-cov .h-sel1{
+        display:block;   
+    }
+    .h-con .h-cov .h-sel1 .h-option{
         font-size: 1rem;
+    }
+    .h-con .h-cov .h-cart1 .h-icon1{
+        left: 30%;
+
+    }
+    .h-con .h-cov .h-cart1 .h-it1{
+        top: 10px;
+        left: 50%;
+        font-weight: 400;
+        font-size: 1.1rem;
+        z-index: 2;
+    
+    }
+
+}
+@media (max-width: 300px){
+    .h-con .h-cov .h-title{
+        width: 40%;
+    }
+    .h-con .h-cov .h-title .h-he1{
+        font-size: .5rem;
+    }
+    .h-con .h-cov .h-ham{
+        font-size: 1.4rem;
+    }
+    .h-con .h-cov .h-sel1{
+        display:block;   
+    }
+    .h-con .h-cov .h-sel1 .h-option{
+        font-size: .6rem;
+    }
+    .h-con .h-cov .h-cart1 .h-icon1{
+        left: 30%;
+
+    }
+    .h-con .h-cov .h-cart1 .h-it1{
+        top: 10px;
+        left: 50%;
+        font-weight: 400;
+        font-size: 1.1rem;
+        z-index: 2;
     
     }
 

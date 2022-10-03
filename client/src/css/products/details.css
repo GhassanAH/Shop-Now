@@ -180,9 +180,6 @@
         width: 30px;
         height: 30px;
         margin-right:5px;
-
-
-
     }
     .d-con .d-cov{
         align-items: flex-start;
@@ -205,6 +202,11 @@
     .d-con .d-cov .d-detal .d-he3{
         font-size: 1rem;
         width: 100%;
+    }
+    .d-con .d-cov .d-detal .d-desc{
+        font-size: 1rem;
+
+    
     }
     .d-con .d-cov .d-detal .d-size .d-he3{
         font-size: 1rem;

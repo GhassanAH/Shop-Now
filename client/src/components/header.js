@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import "../css/header.css"
-import {BsCart} from "react-icons/bs"
+import {BsFillCartFill} from "react-icons/bs"
 import {CgProfile} from "react-icons/cg"
 import {GiHamburgerMenu} from "react-icons/gi"
 import {NavLink as Link} from "react-router-dom"
@@ -68,6 +68,13 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) 
 
     return (
         <div className="h-con">
+            <div className="h-navs2">
+                    <Link to="/" className="h-nav"><div className="h-he3">Shop</div></Link>
+                    {!user && <Link to="/signIn" className="h-nav"><div className="h-he3">SignIn</div></Link>}
+                    {!user && <Link to="/signUp" className="h-nav"><div className="h-he3">SignUp</div></Link>}
+                    {user && <Link to="/profile" className="h-nav"><CgProfile  className="h-icon"/> <div className="h-he3">Profile</div></Link>}
+            </div>  
+            
             <div className = "h-cov">
                 <div className="h-title">
                     <a href="/" className="h-he1"><h1 >ShopNow</h1></a>
@@ -84,7 +91,7 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) 
                     {!user && <Link to="/signIn" className="h-nav">Sign in</Link>}
                     {!user && <Link to="/signUp" className="h-nav">Sign up</Link>}
                     {user && <Link to="/profile/info" className="h-nav"><CgProfile  className="h-icon"/></Link>}
-                    <Link to="/cart" className="h-cart"><BsCart className="h-icon"/><span className="h-it">{itemSize}</span></Link>
+                    <Link to="/cart" className="h-cart"><BsFillCartFill className="h-icon"/><span className="h-it">{itemSize}</span></Link>
                 </div>}
                 {load && <div className="h-loader"><Loading className="h-l" type='spinning_circles' width={40} height={40} fill='#ffffff' /></div>}
                 <select className="h-sel1" value={type} onChange={(e) => setType(e.target.value)}>
@@ -95,18 +102,10 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) 
                         <option className="h-option">T-Shirts</option>
                         <option className="h-option">Accessories</option>
                 </select>
-                <Link to="/cart" className="h-cart1"><div className="h-c1"><BsCart className="h-icon1"/><span className="h-it1">{itemSize}</span></div></Link>
+                <Link to="/cart" className="h-cart1"><BsFillCartFill className="h-icon1"/><span className="h-it1">{itemSize}</span></Link>
                 <button className="h-ham" onClick={setNavMenuShow}><GiHamburgerMenu color="#fff"/></button>
             </div>
-
-            <div className="h-navs2">
-
-                <Link to="/" className="h-nav">Shop</Link>
-                {!user && <Link to="/signIn" className="h-nav">SignIn</Link>}
-                {!user && <Link to="/signUp" className="h-nav">SignUp</Link>}
-                {user && <Link to="/profile" className="h-nav"><CgProfile  className="h-icon"/> Profile</Link>}
-            </div>
-            
+              
         </div>
     )
 }

@@ -36,17 +36,19 @@ const AllProducts = ({products, productType}) => {
                 <h2 className="ap-he2">{productType}</h2>
             </div>
             <div className="ap-prod">
-                <div className="ap-grid">
-                    {data && data.map((item, index) => {
-                        return  <Link  key={index} to={item.quantity?"/productDetails":""} state={{ data: item }} className="ap-item">
-                                    <img className="ap-img" src={item.cover}/>
-                                    <div className="ap-details">
-                                        <h3 className="ap-he3">{item.name}</h3>
-                                        <h3 className="ap-he3">{item.price} $</h3>
-                                        {item.quantity === 0 && <h3 className="ap-sold"> Sold Out</h3>}
-                                    </div>
-                                </Link>
-                    })}
+                <div className="ap-prod-cov">
+                    <div className="ap-grid">
+                        {data && data.map((item, index) => {
+                            return  <Link  key={index} to={item.quantity?"/productDetails":""} state={{ data: item }} className="ap-item">
+                                        <img className="ap-img" src={item.cover}/>
+                                        <div className="ap-details">
+                                            <h3 className="ap-he3">{item.name}</h3>
+                                            <h3 className="ap-he3">{item.price} $</h3>
+                                            {item.quantity === 0 && <h3 className="ap-sold"> Sold Out</h3>}
+                                        </div>
+                                    </Link>
+                        })}
+                    </div>
                 </div>
             </div>
             {loading && <LoadingSpinner/>}

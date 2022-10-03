@@ -113,7 +113,7 @@
     .u-con .u-cov .u-form{
         border: none;
     }
-    .u-con .u-cov .u-form .i-label{
+    .u-con .u-cov .u-form .u-label{
         font-size: 1.4rem;
         font-weight: 600;
 
@@ -132,5 +132,28 @@
     .u-con .u-cov .u-form .u-nav{
         font-size: 1.2rem;
         font-weight: 400;
+    }
+}
+@media (max-width: 400px){
+    .u-con .u-cov .u-form .u-label{
+        font-size: 1.2rem;
+        font-weight: 400;
+
+    }
+    .u-con .u-cov .u-form .u-input{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .u-con .u-cov .u-form .u-input::placeholder {
+        font-size: 1rem;
+    }
+    .u-con .u-cov .u-form .u-btn{
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    .u-con .u-cov .u-form .u-nav{
+        font-size: 1rem;
+        font-weight: 200;
+        width: 95%;
     }
 }

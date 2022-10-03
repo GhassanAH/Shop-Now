@@ -1,9 +1,6 @@
 .l-con{
     width: 100%;
     height: auto;
-    
-
-
 }
 .l-con .l-imgs{
     position: relative;
@@ -104,6 +101,13 @@
 
 }
 @media (max-width: 600px){
+    .l-con .l-imgs{
+        height: 500px; 
+    
+    }
+    .l-con .l-imgs .l-img{
+        height: 500px;
+    }
     .l-con .l-imgs .l-before .l-f1{
         font-size: 4rem;
     }
@@ -124,6 +128,23 @@
     .l-con .l-imgs .l-after .l-f3{
         font-size: 4rem;
     
+    }
+
+}
+@media (max-width: 400px){
+    .l-con .l-imgs{
+        height: 400px; 
+    
+    }
+    .l-con .l-imgs .l-img{
+        height: 400px;
+    }
+    .l-con .l-imgs .l-before .l-f1{
+        font-size: 3rem;
+    }
+
+    .l-con .l-imgs .l-after .l-f3{
+        font-size: 3rem;
     }
 
 }

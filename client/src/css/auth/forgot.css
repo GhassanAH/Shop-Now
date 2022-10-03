@@ -133,3 +133,22 @@
         font-weight: 400;
     } 
 }
+@media (max-width: 1000px){
+
+    .ft-con .ft-cov .ft-form .ft-label{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .ft-con .ft-cov .ft-form  .ft-input{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .ft-con .ft-cov .ft-form  .ft-input::placeholder {
+        font-size: 1rem;
+
+    }
+    .ft-con .ft-cov .ft-form  .ft-btn{
+        font-size: 1.4rem;
+        font-weight: 400;
+    } 
+}

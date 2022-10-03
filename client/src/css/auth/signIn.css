@@ -134,3 +134,27 @@
     }
 
 }
+@media (max-width: 400px){
+    .i-con .i-cov .i-form .i-label{
+        font-size: 1.2rem;
+        font-weight: 400;
+
+    }
+    .i-con .i-cov .i-form .i-input{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .i-con .i-cov .i-form .i-input::placeholder {
+        font-size: 1rem;
+    }
+    .i-con .i-cov .i-form .i-btn{
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    .i-con .i-cov .i-form .i-nav{
+        font-size: 1rem;
+        font-weight: 200;
+        width: 95%;
+    }
+
+}
