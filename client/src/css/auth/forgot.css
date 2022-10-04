@@ -101,10 +101,23 @@
     justify-content: center;
     margin: 1rem 0rem;
 }
+.ft-con .ft-cov .ft-form  .ft-btn .ft-he2{
+    margin-left: 5px;
+    width: auto;
+    color: #fff;
+}
 @media (max-width: 1000px){
     .ft-con{
         padding: 1rem 0rem;
 
+    }
+    .ft-con .ft-cov .ft-form .ft-error{
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .ft-con .ft-cov .ft-form .ft-success{
+        font-size: 1rem;
+        padding: 10px;
     }
     .ft-con .ft-cov{
         width: 90%;
@@ -136,19 +149,19 @@
 @media (max-width: 1000px){
 
     .ft-con .ft-cov .ft-form .ft-label{
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
     }
     .ft-con .ft-cov .ft-form  .ft-input{
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 300;
     }
     .ft-con .ft-cov .ft-form  .ft-input::placeholder {
-        font-size: 1rem;
+        font-size: .8rem;
 
     }
     .ft-con .ft-cov .ft-form  .ft-btn{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
     } 
 }

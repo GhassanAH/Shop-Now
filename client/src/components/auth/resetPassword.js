@@ -46,7 +46,10 @@ const ResetPassword = ({sendEmail, auth}) => {
                     <h1 className="ft-he2">Reset Password</h1>
                     <label className="ft-label">Email</label>
                     <input type="email" placeholder="   john@gmail.com" className="ft-input"  value={Email}  onChange={val => setEmail(val.target.value)}/>
-                    <button className="ft-btn" onClick={(e) => handleSubmmision(e)}>Send Email {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}</button>
+                    <button className="ft-btn" onClick={(e) => handleSubmmision(e)}>
+                        {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}
+                        <span className="ft-he2">Send Email</span>
+                    </button>
                 </form>
             </div>
         </div>

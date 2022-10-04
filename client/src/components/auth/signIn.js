@@ -54,7 +54,10 @@ const SignIn = ({Login, auth, runCheck}) => {
                     <input type="password" placeholder="   password" className="i-input" value={Password}  onChange={val => setPassword(val.target.value)}/>
                     <Link to="/signUp" className="i-nav"> Do you not already have an account? Sign up</Link>
                     <Link to="/forgotpassword" className="i-nav"> Forgot your password? Reset Password</Link>
-                    <button className="i-btn" onClick={(e) => handleSubmmision(e)}>Sign In {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}</button>
+                    <button className="i-btn" onClick={(e) => handleSubmmision(e)}>
+                        {load && <Loading  type='oval' width={20} height={20} fill='#ffffff' />} 
+                        <span className="i-he2">Sign In</span>
+                    </button>
                 </form>
 
             </div>

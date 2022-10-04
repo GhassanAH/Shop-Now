@@ -94,6 +94,11 @@
     align-items: center;
     justify-content: center;
 }
+.u-con .u-cov .u-form .u-btn .u-he2{
+    margin-left: 5px;
+    width: auto;
+    color: #fff;
+}
 .u-con .u-cov .u-form .u-nav{
     display: flex;
     align-items: center;
@@ -109,6 +114,11 @@
         width: 90%;
         background-color: unset;
         padding: 0;
+    }
+    .u-con .u-cov .u-form .u-error{
+        font-size: 1rem;
+        padding: 10px;
+
     }
     .u-con .u-cov .u-form{
         border: none;
@@ -134,25 +144,25 @@
         font-weight: 400;
     }
 }
-@media (max-width: 400px){
+@media (max-width: 600px){
     .u-con .u-cov .u-form .u-label{
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
 
     }
     .u-con .u-cov .u-form .u-input{
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 300;
     }
     .u-con .u-cov .u-form .u-input::placeholder {
-        font-size: 1rem;
+        font-size: .8rem;
     }
     .u-con .u-cov .u-form .u-btn{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
     }
     .u-con .u-cov .u-form .u-nav{
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 200;
         width: 95%;
     }

@@ -1,3 +1,6 @@
+h1,h2,h3,h4,h5,h6, p{
+    margin: 0;
+}
 .d-con{
     display: flex;
     justify-content: center;
@@ -34,13 +37,16 @@
 
 }
 .d-con .d-cov .d-detal .d-he2{
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: lightseagreen;
+
 }
 .d-con .d-cov .d-detal .d-he3{
-    font-size: 1.6rem;
-    font-weight: 400;
+    font-size: 1.3rem;
     width: 100%;
+    margin-bottom: 20px;
+
 }
 .d-con .d-cov .d-detal .d-size{
     display: flex;
@@ -51,11 +57,9 @@
     margin: 1rem 0rem;
 
 }
-.d-con .d-cov .d-detal .d-size .d-he3{
+.d-con .d-cov .d-detal .d-size .d-he2{
     font-size: 1.5rem;
-    font-weight: 400;
-    width: 15%;
-    margin: .5rem 0rem;
+    margin-bottom: 10px;
 }
 .d-con .d-cov .d-detal .d-size .d-form{
     width: 100%; 
@@ -64,8 +68,7 @@
     justify-content: flex-start;
 }
 .d-con .d-cov .d-detal .d-size .d-form .d-label{
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.3rem;
     width: 20%;
     display: flex;
     justify-content: flex-start;
@@ -92,16 +95,7 @@
     flex-direction: column;
     width: 100%;
     font-size: 1.3rem;
-    font-weight: 400;
     color: black;
-
-}
-.d-con .d-cov .d-detal .d-desc .d-list{
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 1rem 0rem;
-
 
 }
 .d-con .d-cov .d-detal .d-count{
@@ -113,11 +107,9 @@
     margin: 1rem 0rem;
 
 }
-.d-con .d-cov .d-detal .d-count .d-he3{
+.d-con .d-cov .d-detal .d-count .d-he2{
     font-size: 1.5rem;
-    font-weight: 400;
-    width: 15%;
-    margin: .5rem 0rem;
+    margin-bottom: 10px;
 }
 .d-con .d-cov .d-detal .d-count .d-count-box{
     width: 100%;
@@ -131,8 +123,7 @@
     color: #fff;
     border: 1px solid #fff;
     padding: 10px;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,8 +138,7 @@
     background-color: #fff;
     color: lightseagreen;
     padding: 10px;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.5rem;
     text-align: center;
 
 }
@@ -162,8 +152,8 @@
 }
 .d-con .d-cov .d-detal .d-add-cart .d-btn{
     width: 80%;
-    padding: 20px;
-    font-size: 1.5rem;
+    padding: 10px;
+    font-size: 2rem;
     font-weight: 400;
     color: #fff;
     background-color: lightseagreen;
@@ -208,8 +198,9 @@
 
     
     }
-    .d-con .d-cov .d-detal .d-size .d-he3{
-        font-size: 1rem;
+    .d-con .d-cov .d-detal .d-size .d-he2{
+        font-size: 1.5rem;
+        font-weight: 400;
     }
     .d-con .d-cov .d-detal .d-size .d-form{
         display: flex;
@@ -227,8 +218,9 @@
     .d-con .d-cov .d-detal .d-desc .d-list{
         font-size: 1rem;
     }
-    .d-con .d-cov .d-detal .d-count .d-he3{
-        font-size: 1rem;
+    .d-con .d-cov .d-detal .d-count .d-he2{
+        font-size: 1.5rem;
+        font-weight: 400;
     }
 
     .d-con .d-cov .d-detal .d-count .d-count-box .d-box{
@@ -236,14 +228,14 @@
         width: 20%;
     }
     .d-con .d-cov .d-detal .d-count .d-count-box .d-btn{
-        width: 20%;
+        width: 15%;
         font-size: 1.5rem;
 
     }
     .d-con .d-cov .d-detal .d-add-cart .d-btn{
         width: 100%;
         padding: 10px;
-        font-size: 1rem;
+        font-size: 1.5rem;
     
     }
 }

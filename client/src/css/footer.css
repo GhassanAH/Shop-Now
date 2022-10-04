@@ -43,7 +43,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
-    padding-bottom: 2rem;
+    padding: 2rem 0rem;
 }
 .s-footer .f-body .f-cus{
     width: 20%;
@@ -90,6 +90,8 @@
 .s-footer .f-body .f-con .f-p{
     font-size: 1.3rem;
     font-weight: bold;
+    margin-bottom: 1rem;
+
 }
 .s-footer .f-body .f-ser-stat .f-he3{
     font-size: 1.6rem;
@@ -157,6 +159,8 @@
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
+        padding: 1rem 0rem;
+
     }
     .s-footer .f-body .f-cus{
         width: 100%;

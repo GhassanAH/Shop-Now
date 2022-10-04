@@ -92,6 +92,13 @@
     justify-content: center;
     margin: 1rem 0rem;
 }
+.i-con .i-cov .i-form .i-btn .i-he2{
+    margin-left: 5px;
+    width: auto;
+    color: #fff;
+
+    
+}
 .i-con .i-cov .i-form .i-nav{
     display: flex;
     align-items: center;
@@ -107,6 +114,11 @@
         width: 90%;
         padding: 0rem;
         background-color: unset;
+
+    }
+    .i-con .i-cov .i-form .i-error{
+        font-size: 1rem;
+        padding: 10px;
 
     }
     .i-con .i-cov .i-form{
@@ -134,25 +146,25 @@
     }
 
 }
-@media (max-width: 400px){
+@media (max-width: 600px){
     .i-con .i-cov .i-form .i-label{
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
 
     }
     .i-con .i-cov .i-form .i-input{
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 300;
     }
     .i-con .i-cov .i-form .i-input::placeholder {
-        font-size: 1rem;
+        font-size: .8rem;
     }
     .i-con .i-cov .i-form .i-btn{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
     }
     .i-con .i-cov .i-form .i-nav{
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 200;
         width: 95%;
     }

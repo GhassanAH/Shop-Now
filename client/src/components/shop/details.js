@@ -92,13 +92,18 @@ const Details = ({addItemToCart, shop}) => {
                 </div>
 
                 <div className="d-detal">
-                    <h2 className="d-he2">Item Name: {data.name}</h2>
-                    <h2 className="d-he3">Item Price: $  {data.price} </h2>
-                    <h2 className="d-he3">Item Shipping: $  {data.shipping} </h2>
-                    <h2 className="d-he3">Item Type: {data.type} </h2>
+                    <h2 className="d-he2">Product Name:</h2>
+                    <h2 className="d-he3">{data.name}</h2>
+                    <h2 className="d-he2">Product Price:</h2>
+                    <h2 className="d-he3">$ {data.price}</h2>
+                    <h2 className="d-he2">Product Shipping Price:</h2>
+                    <h2 className="d-he3">$ {data.shipping}</h2>
+                    <h2 className="d-he2">Product Type:</h2>
+                    <h2 className="d-he3">{data.type}</h2>
+                    <h2 className="d-he2">Product Description:</h2>
                     <div className="d-desc" dangerouslySetInnerHTML={createMarkup(data.description)}></div>
                     <div className="d-size">
-                        <h3 className="d-he3">Size</h3>
+                        <h2 className="d-he2">Product Size</h2>
                         <form className="d-form">
                         {data.sizes.map((sizeValue, index) => {
                             return <label key={index} className="d-label">
@@ -115,7 +120,7 @@ const Details = ({addItemToCart, shop}) => {
                         
                     </div>
                     <div className="d-count">
-                        <h3 className="d-he3">Quantity</h3>
+                        <h3 className="d-he2"> Product Quantity</h3>
                         <div className="d-count-box">
                             <button className="d-btn" onClick={(e) =>  onDecrease(e)}>-</button>
                             <div className="d-box">{quantity}</div>

@@ -9,10 +9,6 @@
     background-image: linear-gradient(to right, #1488cc, #2b33b2);
     position: relative;
     height: 80px;
-
-
-
-
 }
 .h-con .h-cov{
     display: flex;
@@ -21,13 +17,13 @@
     width: 90%;
     position: absolute;
     z-index: 2;
+    height:50px;
 }
 .h-con .h-cov .h-title{
     width: 30%;
 }
 .h-con .h-cov .h-loader{
     width: 70%;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +150,7 @@ select {
     text-decoration: none;
     background-color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 10px;
     display: none;
 
 
@@ -225,6 +221,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: unset;
 
 
 }
@@ -241,6 +238,9 @@ select {
 }
 .h-con .h-navs2 .h-nav .h-he3{
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -358,7 +358,7 @@ select {
     }
 
 }
-@media (max-width: 300px){
+@media (max-width: 350px){
     .h-con .h-cov .h-title{
         width: 40%;
     }
@@ -366,7 +366,7 @@ select {
         font-size: .5rem;
     }
     .h-con .h-cov .h-ham{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     .h-con .h-cov .h-sel1{
         display:block;   
@@ -384,7 +384,6 @@ select {
         font-weight: 400;
         font-size: 1.1rem;
         z-index: 2;
-    
     }
 
 }

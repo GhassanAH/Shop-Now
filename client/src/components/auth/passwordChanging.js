@@ -46,7 +46,10 @@ const PasswordChanging = ({resetThePassword, auth, match}) => {
                     <h1 className="ft-he2">Reset Password</h1>
                     <label className="ft-label">New Password</label>
                     <input type="password" placeholder="Password" className="ft-input"  value={Password}  onChange={val => setPassword(val.target.value)}/>
-                    <button className="ft-btn" onClick={(e) => handleSubmmision(e)}>Reset Password {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}</button>
+                    <button className="ft-btn" onClick={(e) => handleSubmmision(e)}> 
+                        {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}
+                        <span className="ft-he2">Reset Password</span>
+                    </button>
                 </form>
             </div>
         </div>

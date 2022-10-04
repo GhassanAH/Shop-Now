@@ -46,12 +46,13 @@
     font-size: 2.5rem;
     font-weight: 900;
     color: #2b33b2;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
     text-transform: uppercase;
     width: 60%;
     text-align: center;
-    border-bottom: 10px double #2b33b2;
+    border-bottom: 5px solid #2b33b2;
     line-height: 70px;
+    margin-bottom: 2rem;
 
 
 }
@@ -60,7 +61,6 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-
 }
 .l-con .ap-con .ap-prod .ap-prod-cov{
     width: 99%;
@@ -73,9 +73,6 @@
     grid-template-columns: 24% 24% 24% 24%;
     width: 100%;
     gap: 10px;
-
-    
-
 }
 .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item{
     display: flex;
@@ -93,7 +90,7 @@
 }
 .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-img{
     width: 100%;
-    height: 300px;
+    height: 200px;
 }
 .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-details{
     display: flex;
@@ -123,9 +120,12 @@
         width: 100%;
     }
     .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-img{
-        height: 200px;
+        height: 150px;
     }
     .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-details .ap-he3{
+        font-size: 1.2rem;
+    }
+    .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-details .ap-sold{
         font-size: 1.2rem;
     }
 }
@@ -137,19 +137,21 @@
         width: 90%;
         line-height: 50px;
     
-    
     }
     .l-con .ap-con .ap-title .ap-he2{
         font-size: 2rem;
     }
     .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid{
-        grid-template-columns: 45% 45%;
+        grid-template-columns: 50% 50%;
         width: 100%;
     }
     .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-img{
-        height: 150px;
+        height: 130px;
     }
     .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-details .ap-he3{
+        font-size: 1rem;
+    }
+    .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-details .ap-sold{
         font-size: 1rem;
     }
 }
@@ -170,6 +172,9 @@
         height: 120px;
     }
     .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-details .ap-he3{
+        font-size: .8rem;
+    }
+    .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item .ap-details .ap-sold{
         font-size: .8rem;
     }
 }

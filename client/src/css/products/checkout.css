@@ -196,8 +196,8 @@
 
 }
 .co-con .co-cov .c-first .co-shipping .co-form .co-input1{
-    padding: 0rem;
-    width: 100%;
+    padding: 1rem 0rem;
+    width: 96%;
     font-size: 1.1rem;
     font-weight: 300;
     margin: 1rem 0rem;
@@ -229,6 +229,7 @@
 }
 .co-con .co-cov .c-first .co-shipping .co-form .co-input{
     padding: 1rem;
+    padding-right: 0rem;
     width: 96%;
     font-size: 1.1rem;
     font-weight: 300;
@@ -487,7 +488,7 @@
     .co-con .co-cov .c-first .co-shipping .co-form .co-input{
         padding: .8rem;
         font-size: 1rem;
-        width: 90%;
+    
 
     }
     .co-con .co-cov .c-second .co-discount .co-form{

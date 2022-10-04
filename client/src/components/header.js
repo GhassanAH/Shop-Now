@@ -5,12 +5,12 @@ import {CgProfile} from "react-icons/cg"
 import {GiHamburgerMenu} from "react-icons/gi"
 import {NavLink as Link} from "react-router-dom"
 import { connect } from 'react-redux' 
-import {checkAuthorization, getProducts, getType} from '../actions'
+import {checkAuthorization, getProducts, getType, logout} from '../actions'
 import Loading from 'react-loading-components';
 
 
 
-const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) => {
+const Header = ({shop, auth, checkTheAuthorization, getTheProducts, getTheType, logoutHim}) => {
     const [show, setShow] = useState(false)
     const [itemSize, setItemSize] = useState(0)
     const [user, setUser] = useState(null)
@@ -64,6 +64,12 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) 
         }
       },[auth])
 
+      const handleLogout = (e) => {
+        e.preventDefault()
+        logoutHim()
+        navigator("/")
+    }
+
 
 
     return (
@@ -72,7 +78,12 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts,getTheType}) 
                     <Link to="/" className="h-nav"><div className="h-he3">Shop</div></Link>
                     {!user && <Link to="/signIn" className="h-nav"><div className="h-he3">SignIn</div></Link>}
                     {!user && <Link to="/signUp" className="h-nav"><div className="h-he3">SignUp</div></Link>}
-                    {user && <Link to="/profile" className="h-nav"><CgProfile  className="h-icon"/> <div className="h-he3">Profile</div></Link>}
+                    {user && <Link to="/profile/info" className="h-nav"><div className="h-he3">Info</div></Link>}
+                    {user && auth.admin && <Link to="/profile/add_products" className="h-nav"><div className="h-he3">Add Product</div></Link>}
+                    {user && auth.admin && <Link to="/profile/edit_products" className="h-nav"><div className="h-he3">Edit Product</div></Link>}
+                    {user && auth.admin && <Link to="/profile/orders" className="h-nav"><div className="h-he3">Orders</div></Link>}
+                    {user && <Link to="/profile/history" className="h-nav"><div className="h-he3">Analysis</div></Link>}
+                    {user && <button onClick={handleLogout} className="h-nav"><div className="h-he3">Logout</div></button>}
             </div>  
             
             <div className = "h-cov">
@@ -121,6 +132,7 @@ const mapDispatchToProps = dispatch => {
         checkTheAuthorization: () => dispatch(checkAuthorization()),
         getTheProducts: (type) => dispatch(getProducts(type)),
         getTheType: (type) => dispatch(getType(type)),
+        logoutHim: () => dispatch(logout()),
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Header)

@@ -44,7 +44,10 @@ const SignUp = ({register, auth, runCheck}) => {
                     <label className="u-label">Password</label>
                     <input type="password" placeholder="   Password" className="u-input" value={Password}  onChange={val => setPassword(val.target.value)}/>
                     <Link to="/signIn" className="u-nav"> Do you already have an account? Sign in</Link>
-                    <button className="u-btn" onClick={(e) => handleSubmmision(e)}>Sign Up {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}</button>
+                    <button className="u-btn" onClick={(e) => handleSubmmision(e)}>
+                         {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}
+                         <span className="u-he2">Sign Up</span>
+                    </button>
                 </form>
 
             </div>

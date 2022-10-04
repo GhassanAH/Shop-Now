@@ -63,24 +63,16 @@
     width: 100%;
 }
 @media (max-width: 1200px){
-    .pe-con .pe-cov .pe-tabs{
-        grid-auto-flow: unset;
-        grid-template-columns: auto auto auto;
-
-    }
-    .pe-con .pe-cov .pe-tabs .pe-tab .pe-nav{
-        font-size: 1rem;
-        font-weight: 400;
-    }
-}
-@media (max-width: 500px){
-    .pe-con .pe-cov .pe-tabs{
-        grid-auto-flow: unset;
-        grid-template-columns: auto auto;
-
-    }
     .pe-con .pe-cov .pe-tabs .pe-tab .pe-nav{
         font-size: .8rem;
         font-weight: 300;
     }
+}
+
+@media (max-width: 700px){
+    .pe-con .pe-cov .pe-tabs{
+       display: none;
+
+    }
+
 }

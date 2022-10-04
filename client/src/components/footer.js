@@ -27,7 +27,6 @@ const Footer = () => {
                 <div className="f-ser-stat">
                     <h3 className="f-he3">Processing Time</h3>
                     <div className="f-p">We process and fulfill items within 24 hours then domestic First Class shipping takes 3-7 days and Priority shipping takes 3-5 days. For special or limited drops the fulfillment can take 15 business days.</div>
-
                 </div>
             </div>
             <div className="f-cop">
