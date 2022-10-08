@@ -22,7 +22,8 @@ import Orders from "./profile/orders"
 import ProductAddition from "./profile/productAddition"
 import ProductEditing from "./profile/productEditing"
 import Editing from "./profile/editing"
-import Sales from "./profile/sales"
+import History from "./profile/history"
+import Analysis from "./profile/analysis"
 
 
 
@@ -47,7 +48,8 @@ function App({checkTheAuthorization, auth}) {
                       <Route path="/profile/add_products"  element={<ProductAddition/>}/>
                       <Route path="/profile/edit_products"  element={<ProductEditing/>}/>
                       <Route path="/profile/orders"  element={<Orders/>}/>
-                      <Route path="/profile/history"  element={<Sales/>}/>
+                      <Route path="/profile/history"  element={<History/>}/>
+                      <Route path="/profile/analysis"  element={<Analysis/>}/>
                       <Route path="/profile/edit"  element={<Editing/>}/>
                     </Route>
                     <Route path="/cart"  element={<Cart/>}></Route>

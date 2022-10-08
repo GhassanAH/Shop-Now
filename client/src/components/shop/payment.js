@@ -96,7 +96,6 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                 products = [...products, CustomerData.items[i].id]
                 sizes = [...sizes, CustomerData.items[i].size]
                 quantity = [...quantity, CustomerData.items[i].quantity]
-                console.log(quantity)
 
             }
             const seller = {
@@ -108,7 +107,6 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                 city:CustomerData.City,
                 postal:CustomerData.PostalCode,
             }
-            console.log(seller)
             payByTheMasterCard(cardNumber, month, year, exp, amount, description, products, seller, CustomerData.discountApplied, sizes, quantity)
         }else{
             setLoad(false)

@@ -80,7 +80,6 @@ const Editing = ({update_product, profile}) => {
 
     }
     useEffect(() => {
-        console.log("p ",profile)
         if(profile){
             setLoading(false)
             if(profile.success && profile.message === "Product Successfully Eidted"){

@@ -40,7 +40,6 @@ const deduct = async (quantity, products) => {
         try {
             await axios.post("/api/reduceAmount", {id, amount});
         } catch (error) {
-            console.log(error.message)
             continue
         }
     }

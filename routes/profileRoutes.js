@@ -146,6 +146,7 @@ module.exports = profileRoutes = (app) => {
 
     app.get('/api/getOrders',isLogin,isAdmin, async (req,res) => {
         try {
+
             const orders = await Order.find();
             var list_of_orders = []
             if(orders){
@@ -190,8 +191,9 @@ module.exports = profileRoutes = (app) => {
         }
     })
     app.get('/api/getMyOrders',isLogin, async (req,res) => {
+
         try {
-            const orders = await Order.find();
+            const orders = await Order.find({email:req.user.email});
             var list_of_orders = []
             if(orders){
                 for(var i = 0; i < orders.length; i++){
@@ -246,7 +248,6 @@ module.exports = profileRoutes = (app) => {
                 return res.status(400).send({message:"The product amount is not updated", success:false})
             }
         } catch (error) {
-            console.log(error.message)
             return res.status(500).send({message:"The product amount is not updated", success:false})
             
         }

@@ -1,4 +1,4 @@
-import { UploadProduct, getProduct, updateProfile, updateProduct, loading, orders } from './types'
+import { UploadProduct, getProduct, updateProfile, updateProduct, loading, orders, userOrders } from './types'
 import axios from "axios"
 import ls from "local-storage"
 
@@ -61,7 +61,6 @@ export const updateTheProduct = (id, name, productType,sizes, oldCover, coverIma
                 coverImageUrl = result.url
                 const deleteCover = await deleteImages(oldCover);
                 if(!deleteCover){
-                     console.log("a ", deleteCover)
                      dispatch({type:updateProduct, payload:{message:"Note cover image is not deleted due to some errors", success:false}})
                 }
             }
@@ -135,6 +134,28 @@ export const getOrders = () => async dispatch => {
             message:error.response.data.message
         }
        dispatch({type:orders, payload:payload})
+    }
+}
+
+export const getUserOrders = () => async dispatch => {
+    const token = ls.get("authToken")
+    try {
+        const res = await axios
+        .get(`/api/getMyOrders`,
+            {
+                headers:{
+                authorization: 'Bearer ' + token
+                }
+            }
+        )
+    
+        dispatch({type:userOrders, payload:res.data})
+    } catch (error) {
+        var payload = {
+            success:error.response.data.success,
+            message:error.response.data.message
+        }
+       dispatch({type:userOrders, payload:payload})
     }
 }
 

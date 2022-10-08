@@ -13,19 +13,19 @@ import LoadingSpinner from '../loadingSpinner';
 
 const Info = ({updateTheInfo, profile, auth}) => {
 
-    const [email, setEmail] = useState(auth.user.email)
-    const [phone, setPhone] = useState(auth.user.phone)
-    const [country, setCountry] = useState(auth.user.country)
-    const [address, setAddress] = useState(auth.user.address)
-    const [details, setDetails] = useState(auth.user.details)
-    const [city, setCity] = useState(auth.user.city)
-    const [postal, setPostal] = useState(auth.user.postalCode)
+    const [email, setEmail] = useState(auth.user.email || "")
+    const [phone, setPhone] = useState(auth.user.phone || "")
+    const [country, setCountry] = useState(auth.user.country || "")
+    const [address, setAddress] = useState(auth.user.address || "")
+    const [details, setDetails] = useState(auth.user.details || "")
+    const [city, setCity] = useState(auth.user.city || "")
+    const [postal, setPostal] = useState(auth.user.postalCode || "")
     const [selCoun, setSelCoun] = useState(null)
-    const [credit, setCredit] = useState(auth.user.creditCardNumber)
-    const [card, setCard] = useState(auth.user.cardName)
-    const [exp, setExp] = useState(auth.user.exp)
-    const [cvc, setCvc] = useState(auth.user.cvc)
-    const [name, setName] = useState(auth.user.name)
+    const [credit, setCredit] = useState(auth.user.creditCardNumber || "")
+    const [card, setCard] = useState(auth.user.cardName || "")
+    const [exp, setExp] = useState(auth.user.exp || "")
+    const [cvc, setCvc] = useState(auth.user.cvc || "")
+    const [name, setName] = useState(auth.user.name || "")
     const [ch, setCh] = useState(false)
     const [ch1, setCh1] = useState(false)
     const [ch2, setCh2] = useState(false)
@@ -150,8 +150,6 @@ const Info = ({updateTheInfo, profile, auth}) => {
                 var cardNum = credit.replaceAll(" ", "")
                 var cardTest = Number(cardNum)
                 var cardlength = credit.length < 20
-                console.log(cardlength)
-                console.log(cardTest)
                 setCh7(!Number.isInteger(cardTest) || cardlength)
                 return
             case "8":
