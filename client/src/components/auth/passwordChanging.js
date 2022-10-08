@@ -5,6 +5,7 @@ import {resetPassword} from '../../actions'
 import Loading from 'react-loading-components';
 import { useParams } from "react-router-dom";
 
+
 const PasswordChanging = ({resetThePassword, auth, match}) => {
     const [Password, setPassword] = useState('')
     const [load, setLoad] = useState(false)
@@ -43,9 +44,10 @@ const PasswordChanging = ({resetThePassword, auth, match}) => {
                 <form className="ft-form">
                     {Error && <div className="ft-error">{Error}</div>}
                     {Success && <div className="ft-success">{Success}</div>}
-                    <h1 className="ft-he2">Reset Password</h1>
+                    <h1 className="ft-he2">Change Your Password</h1>
                     <label className="ft-label">New Password</label>
                     <input type="password" placeholder="Password" className="ft-input"  value={Password}  onChange={val => setPassword(val.target.value)}/>
+                   
                     <button className="ft-btn" onClick={(e) => handleSubmmision(e)}> 
                         {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}
                         <span className="ft-he2">Reset Password</span>

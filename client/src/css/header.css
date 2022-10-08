@@ -222,6 +222,7 @@ select {
     align-items: center;
     justify-content: flex-start;
     background-color: unset;
+    border: none;
 
 
 }

@@ -16,7 +16,7 @@
     flex-direction: column;
     width: 80%;
     padding: 3rem 0rem;
-    background-color:cornflowerblue;
+    background-color:beige;
     
 
 
@@ -51,9 +51,9 @@
     align-items: center;
     flex-direction: column;
     width: 90%;
-    color: #fff;
-    background-color:cornflowerblue;
-    border: 1px solid #e8e9eb;
+    color: cornflowerblue;
+    background-color:beige;
+    border: 1px solid cornflowerblue;
     padding: 2rem;
 
 
@@ -61,6 +61,7 @@
 .io-con .io-cov .io-info .io-he1{
     font-size: 2.5rem;
     font-weight: 500;
+    border-bottom: 3px solid cornflowerblue;
 
 }
 .io-con .io-cov .io-info .io-he2{
@@ -99,7 +100,7 @@
     align-items: flex-end;
 }
 .io-con .io-cov .io-info .io-he2 .io-i{
-    color: #fff;
+    color: cornflowerblue;
     background-color: unset;
     border: none;
     font-size: 1.5rem;

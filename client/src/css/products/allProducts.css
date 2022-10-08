@@ -82,6 +82,7 @@
     color: black;
     text-decoration: none;
     border: 5px double #e8e9eb;
+    padding: .5rem 0rem;
 }
 .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid .ap-item:hover{
     cursor: pointer; 
@@ -163,7 +164,7 @@
         width: 95%;
     }
     .l-con .ap-con .ap-prod .ap-prod-cov .ap-grid{
-        grid-template-columns: 50% 50%;
+        grid-template-columns: auto auto;
         width: 100%;
         gap:5px;
 

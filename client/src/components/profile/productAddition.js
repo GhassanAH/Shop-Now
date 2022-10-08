@@ -62,7 +62,7 @@ const ProductAddition = ({UploadTheProduct, profile}) => {
                 setError(false)
                 setMessage(profile.message)
                 window.scrollTo(0, 0);
-            }else{
+            }else if(profile.success === false && profile.message === "Product Unsuccessfully Added"){
                 setSuccess(false)
                 setError(true)
                 setMessage(profile.message)

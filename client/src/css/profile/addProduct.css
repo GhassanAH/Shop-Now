@@ -21,7 +21,7 @@
     width: 80%;
     margin: 2rem 0rem;
     padding: 2rem 0rem;
-    background-color:cornflowerblue;
+    background-color:beige;
 
 
 }
@@ -60,14 +60,13 @@
     align-items: center;
     width: 90%;
     flex-direction: column;
-    background-color:cornflowerblue;
-    color: #fff;
+    background-color:beige;
+    color:cornflowerblue;
     padding: 2rem;
-    border: 3px solid #e8e9eb;
+    border: 3px solid cornflowerblue;
 
 }
 .pa-con .pa-cov .pa-form .pa-he1{
-    width: 100%;
     font-size: 2.5rem;
     font-weight: 500;
     display: flex;
@@ -75,7 +74,8 @@
     justify-content: center;
     text-transform: capitalize;
     margin-bottom: 1rem;
-    text-decoration: underline;
+    border-bottom: 3px solid cornflowerblue;
+
 
 }
 .pa-con .pa-cov .pa-form .pa-label{

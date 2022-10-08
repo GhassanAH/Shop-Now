@@ -7,7 +7,7 @@ import LoadingSpinner from '../loadingSpinner';
 
 
 
-const ProductEditing = ({products}) => {
+const ProductEditing = ({products, productType}) => {
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState([]);
@@ -34,12 +34,13 @@ const ProductEditing = ({products}) => {
 
     return (
         <div className="ep-con">
+            <div className="ep-title">
+                <h2 className="ep-he2">{productType}</h2>
+            </div>
             {loading && <LoadingSpinner/>}
             {success && <div className="ep-success">product successfully published</div>}
             {error && <div className="ep-error">product unsuccessfully published</div>}
-            <div className="ep-title">
-                <h2 className="ep-he2">All Products</h2>
-            </div>
+   
             <div className="ep-prod">
                 <div className="ep-grid">
                     {data && data.map((item, index) => {
@@ -59,7 +60,9 @@ const ProductEditing = ({products}) => {
 
 const mapStateToProps = state => {
     return {
-        products:state.products
+        products:state.products,
+        productType:state.prod
+
     }
   }
   

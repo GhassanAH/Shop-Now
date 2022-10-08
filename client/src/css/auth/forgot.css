@@ -5,7 +5,6 @@
     width: 100%;
     min-height: 60vh;
     background-color: aliceblue;
-    background-image: linear-gradient(to right, rgb(202, 228, 250), #fff );
     padding: 3rem 0rem;
     flex-direction: column;
 }
@@ -59,6 +58,7 @@
     font-weight: bold;
     color: lightseagreen;
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 .ft-con .ft-cov .ft-form .ft-label{
     width: 90%;
@@ -93,7 +93,6 @@
     color: #fff;
     padding: 10px;
     border: none;
-    font-size: 2rem;
     font-weight: 500;
     width: 80%;
     display: flex;
@@ -105,7 +104,21 @@
     margin-left: 5px;
     width: auto;
     color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0px;
+
 }
+.ft-con .ft-cov .ft-form  .ft-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: blue;
+}
+
 @media (max-width: 1000px){
     .ft-con{
         padding: 1rem 0rem;
@@ -120,7 +133,7 @@
         padding: 10px;
     }
     .ft-con .ft-cov{
-        width: 90%;
+        width: 85%;
         background-color: unset;
         padding: 0rem;
     }
@@ -142,9 +155,18 @@
         font-size: 1.2rem;
     }
     .ft-con .ft-cov .ft-form  .ft-btn{
-        font-size: 1.8rem;
         font-weight: 400;
     } 
+    .ft-con .ft-cov .ft-form  .ft-btn .ft-he2{
+        font-size: 1.5rem;
+    
+    }
+    .ft-con .ft-cov .ft-form  .ft-nav{
+        font-size: 1.2rem;
+        font-weight: 400;
+        width: 90%;
+
+    }
 }
 @media (max-width: 1000px){
 
@@ -161,7 +183,14 @@
 
     }
     .ft-con .ft-cov .ft-form  .ft-btn{
-        font-size: 1.2rem;
         font-weight: 400;
     } 
+    .ft-con .ft-cov .ft-form  .ft-btn .ft-he2{
+        font-size: 1.2rem;
+    
+    }
+    .ft-con .ft-cov .ft-form  .ft-nav{
+        font-size: .9rem;
+        font-weight: 400;
+    }
 }

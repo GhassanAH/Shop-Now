@@ -88,7 +88,13 @@ const Editing = ({update_product, profile}) => {
                 setError(false)
                 setMessage(profile.message)
                 window.scrollTo(0, 0);
-            }else if(profile.success === false){
+            }else if(profile.success === false && profile.message === "Product Unsuccessfully Eidted: Server Error Try Again"){
+                setSuccess(false)
+                setError(true)
+                setMessage(profile.message)
+                window.scrollTo(0, 0);
+                
+            }else if(profile.success === false && profile.message === "Product Unsuccessfully Eidted: Unexpected Error Try Again"){
                 setSuccess(false)
                 setError(true)
                 setMessage(profile.message)

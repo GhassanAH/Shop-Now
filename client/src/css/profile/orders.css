@@ -45,17 +45,20 @@
     align-items: center;
     flex-direction: column;
     width: 90%;
-    color: #fff;
     padding: 2rem;
 
 
 }
 .or-con .or-cov .or-orders .or-order-list:nth-child(even){
-    background-color:#0e9cee;
+    background-color:aliceblue;
+    color:#222;
 
 }
 .or-con .or-cov .or-orders .or-order-list:nth-child(odd){
-    background-color:#b4b8e6;
+    background-color:#c7cbfa;
+    color:#222;
+
+
 
 }
 .or-con .or-cov .or-orders .or-order-list{
@@ -65,6 +68,8 @@
     flex-direction: column;
     width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
+
 }
 .or-con .or-cov .or-orders .or-order-list .or-order{
     display: flex;
@@ -99,16 +104,15 @@
 .or-he2{
     font-size: 2rem;
     font-weight: 500;
-    background-color: rgb(206, 221, 0);
+    background-color: rgb(226, 240, 29);
     padding: 10px;
-
+    margin-bottom: 10px;
 
 }
 .or-he3{
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 300;
     margin-bottom: 10px;
-
 
 }
 .or-con .or-cov .or-orders .or-order-list .or-product{
@@ -128,7 +132,7 @@
     border-bottom: 1px solid #e8e9eb;
     border-top: 1px solid #e8e9eb;
     margin-bottom: 30px;
-    background-color: rgb(206, 221, 0);
+    background-color: rgb(226, 240, 29);
     padding: 1rem 0rem;
 
 }
@@ -162,7 +166,7 @@
     width: 100%;
     margin-bottom: 10px;
     padding: 10px 0px;
-    background-color: rgba(0, 128, 0, 0.5);
+    background-color: beige;
 
 }
 .or-con .or-cov .or-orders .or-order-list .or-product .or-item .or-rank{
@@ -236,22 +240,18 @@
 }
 
 @media(max-width:1100px){
-    .or-con{
-        min-height: 50vh;
-        padding: 3rem 0rem;
-    }
     .or-con .or-cov{
         width: 99%;
         padding: 1rem 0rem;
     }
-    .or-con .or-cov .io-success{
+    .or-con .or-cov .or-success{
         width: 90%;
         padding: 0.5rem;
         margin-bottom: 1rem;
         font-size: 1.1rem;
         font-weight: 400;
     }
-    .or-con .or-cov .io-error{
+    .or-con .or-cov .or-error{
         width: 90%;
         padding: 0.5rem;
         margin-bottom: 1rem;
@@ -259,13 +259,13 @@
         font-weight: 400;
     }
     .or-con .or-cov .or-orders{
-        width: 100%;
+        width: 95%;
         padding: 0rem;
     }
     .or-con .or-cov .or-orders .or-order-list{
         justify-content: center;
         align-items: center;
-        padding: 0px;
+        padding: 5px;
     }
     .or-con .or-cov .or-orders .or-order-list .or-order{
         justify-content: center;
@@ -291,14 +291,14 @@
 
     }
     .or-he2{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 400;
         padding: 5px;
     
     
     }
     .or-he3{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 400;
     }
     .or-con .or-cov .or-orders .or-order-list .or-product .or-header{
@@ -341,13 +341,13 @@
     .or-con{
         padding: 1rem 0rem;
     }
-    .or-con .or-cov .io-success{
+    .or-con .or-cov .or-success{
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 300;
     }
-    .or-con .or-cov .io-error{
+    .or-con .or-cov .or-error{
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 300;
     }
     .or-he2{
         font-size: 1.1rem;
@@ -388,19 +388,19 @@
 
     }
     .or-con .or-cov .or-orders .or-order-list .or-product .or-header .or-hd1{
-        font-size: 1rem;
+        font-size: .7rem;
         
     }
     .or-con .or-cov .or-orders .or-order-list .or-product .or-header .or-hd2{
-        font-size: 1rem;
+        font-size: .7rem;
     }
     .or-con .or-cov .or-orders .or-order-list .or-product .or-item .or-img{
         height: 50px;
     }
     .or-con .or-cov .or-orders .or-order-list .or-product .or-item .or-pod .or-pod-it{
-        font-size: .8rem;
+        font-size: .6rem;
     }
     .or-con .or-cov .or-orders .or-order-list .or-product .or-item .or-por{
-        font-size: .8rem;
+        font-size: .6rem;
     }
 }

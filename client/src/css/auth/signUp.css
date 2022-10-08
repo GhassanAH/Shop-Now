@@ -4,7 +4,6 @@
     align-items: center;
     width: 100%;
     background-color: aliceblue;
-    background-image: linear-gradient(to right, rgb(202, 228, 250), #fff );
     padding: 3rem 0rem;
     flex-direction: column;
     min-height: 50vh;
@@ -87,7 +86,6 @@
     color: #fff;
     padding: 10px;
     border: none;
-    font-size: 2rem;
     font-weight: 500;
     width: 80%;
     display: flex;
@@ -98,6 +96,8 @@
     margin-left: 5px;
     width: auto;
     color: #fff;
+    font-size: 2rem;
+
 }
 .u-con .u-cov .u-form .u-nav{
     display: flex;
@@ -111,7 +111,7 @@
 }
 @media (max-width: 1000px){
     .u-con .u-cov{
-        width: 90%;
+        width: 85%;
         background-color: unset;
         padding: 0;
     }
@@ -136,8 +136,11 @@
         font-size: 1.2rem;
     }
     .u-con .u-cov .u-form .u-btn{
-        font-size: 1.8rem;
         font-weight: 400;
+    }
+    .u-con .u-cov .u-form .u-btn .u-he2{
+        font-size: 1.5rem;
+    
     }
     .u-con .u-cov .u-form .u-nav{
         font-size: 1.2rem;
@@ -162,8 +165,12 @@
         font-weight: 400;
     }
     .u-con .u-cov .u-form .u-nav{
-        font-size: .8rem;
+        font-size: .9rem;
         font-weight: 200;
         width: 95%;
+    }
+    .u-con .u-cov .u-form .u-btn .u-he2{
+        font-size: 1.2rem;
+    
     }
 }

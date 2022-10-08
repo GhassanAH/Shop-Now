@@ -33,7 +33,7 @@ module.exports = profileRoutes = (app) => {
             await user.save()
             return res.status(200).send({success:true, message:"information successfully added"})
         } catch (error) {
-            return res.status(400).send({success:false, message:error.message}) 
+            return res.status(400).send({success:false, message:"information unsuccessfully added"}) 
         }
     })
 
@@ -54,9 +54,9 @@ module.exports = profileRoutes = (app) => {
                 discountCode:information.discountCode
             })
             product.save()
-            return res.status(200).send({success:true, message:"product successfully added"})
+            return res.status(200).send({success:true, message:"Product Unsuccessfully Added"})
         } catch (error) {
-            return res.status(400).send({success:false, message:error.message}) 
+            return res.status(400).send({success:false, message:"Product Unsuccessfully Added"}) 
             
         }
     })
@@ -80,11 +80,11 @@ module.exports = profileRoutes = (app) => {
                 product.save()
                 return res.status(200).send({success:true, message:"Product Successfully Eidted"})
             }else{
-                 return res.status(400).send({success:false, message:"Server Error try again"}) 
+                 return res.status(400).send({success:false, message:"Product Unsuccessfully Eidted: Server Error Try Again"}) 
 
             }
         } catch (error) {
-            return res.status(400).send({success:false, message:error.message}) 
+            return res.status(400).send({success:false, message:"Product Unsuccessfully Eidted: Unexpected Error Try Again"}) 
             
         }
     })
@@ -102,7 +102,7 @@ module.exports = profileRoutes = (app) => {
             }
 
         } catch (error) {
-            return res.status(400).send({success:false, message:error.message}) 
+            return res.status(400).send({success:false, message:"product unsuccessfully fetched"}) 
             
         }
     })
@@ -186,7 +186,7 @@ module.exports = profileRoutes = (app) => {
             }
             return res.status(200).send({success:true, message:"orders successfully fetched", orders:list_of_orders})
         } catch (error) {
-            return res.status(400).send({success:false, message:error.message})
+            return res.status(400).send({success:false, message:"orders unsuccessfully fetched"})
         }
     })
     app.get('/api/getMyOrders',isLogin, async (req,res) => {

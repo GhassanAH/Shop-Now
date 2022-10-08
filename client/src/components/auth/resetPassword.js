@@ -3,6 +3,8 @@ import "../../css/auth/forgot.css"
 import {connect} from "react-redux"
 import {forgotPassword} from '../../actions'
 import Loading from 'react-loading-components';
+import {NavLink as Link} from "react-router-dom"
+
 
 
 const ResetPassword = ({sendEmail, auth}) => {
@@ -46,6 +48,8 @@ const ResetPassword = ({sendEmail, auth}) => {
                     <h1 className="ft-he2">Reset Password</h1>
                     <label className="ft-label">Email</label>
                     <input type="email" placeholder="   john@gmail.com" className="ft-input"  value={Email}  onChange={val => setEmail(val.target.value)}/>
+                    <Link to="/signIn" className="ft-nav"> Sign In Now</Link>
+                    <Link to="/signUp" className="ft-nav"> Create An Account Now</Link>
                     <button className="ft-btn" onClick={(e) => handleSubmmision(e)}>
                         {load && <Loading type='oval' width={20} height={20} fill='#ffffff' />}
                         <span className="ft-he2">Send Email</span>

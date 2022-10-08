@@ -23,7 +23,7 @@ const Orders = ({getTheOrders, order}) => {
                 setSuccess(true)
                 setError(false)
                 setMessage(order.message)
-            }else{
+            }else if(order.success === false && order.message === "orders unsuccessfully fetched"){
                 setMessage(order.message)
                 setError(true)
                 setSuccess(false)
