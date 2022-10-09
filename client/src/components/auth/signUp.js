@@ -5,6 +5,7 @@ import Loading from 'react-loading-components';
 import {useNavigate} from "react-router-dom"
 import {signUp, checkAuthorization} from '../../actions'
 import {connect} from "react-redux"
+import logo from "../../img/logo.png"
 
 
 const SignUp = ({register, auth, runCheck}) => {
@@ -38,6 +39,7 @@ const SignUp = ({register, auth, runCheck}) => {
             <div className="u-cov">
                 <form className="u-form">
                     {Error && <div className="u-error">{Error}</div>}
+                    <img src={logo} alt="logo" className="u-logo"/>
                     <h1 className="u-he2">Sign Up</h1>
                     <label className="u-label">Email</label>
                     <input type="email" placeholder="   john@gmail.com" className="u-input"  value={Email}  onChange={val => setEmail(val.target.value)}/>

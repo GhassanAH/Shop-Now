@@ -30,6 +30,9 @@
     border: 1px solid #e8e9eb;
 
 }
+.i-con .i-cov .i-form .i-logo{
+    margin-bottom: 1rem;
+}
 .i-con .i-cov .i-form .i-error{
     display: flex;
     align-items: center;

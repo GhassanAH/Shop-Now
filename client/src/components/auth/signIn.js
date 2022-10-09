@@ -5,6 +5,7 @@ import {connect} from "react-redux"
 import {signIn, checkAuthorization} from '../../actions'
 import {useNavigate} from "react-router-dom"
 import Loading from 'react-loading-components';
+import logo from "../../img/logo.png"
 
 
 
@@ -46,8 +47,9 @@ const SignIn = ({Login, auth, runCheck}) => {
         <div className="i-con">
             <div className="i-cov">
                 <form className="i-form">
-                {Error && <div className="i-error">{Error}</div>}
-                <h1 className="i-he2">Sign In</h1>
+                    {Error && <div className="i-error">{Error}</div>}
+                    <img src={logo} alt="logo" className="i-logo"/>
+                    <h1 className="i-he2">Sign In</h1>
                     <label className="i-label">Email</label>
                     <input type="email" placeholder="   john@gmail.com" className="i-input"  value={Email}  onChange={val => setEmail(val.target.value)}/>
                     <label className="i-label">Password</label>

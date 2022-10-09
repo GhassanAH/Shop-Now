@@ -50,6 +50,9 @@
     padding: 20px;
     width: 80%;
 }
+.ft-con .ft-cov .ft-form .ft-logo{
+    margin-bottom: 1rem;
+}
 .ft-con .ft-cov .ft-form .ft-he2{
     width: 100%;
     display: flex;

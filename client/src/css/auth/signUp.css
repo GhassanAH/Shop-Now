@@ -40,6 +40,9 @@
     padding: 20px;
     width: 80%;
 }
+.u-con .u-cov .u-form .u-logo{
+    margin-bottom: 1rem;
+}
 .u-con .u-cov .u-form .u-he2{
     width: 100%;
     display: flex;

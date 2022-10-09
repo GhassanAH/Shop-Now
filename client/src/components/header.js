@@ -7,6 +7,7 @@ import {NavLink as Link} from "react-router-dom"
 import { connect } from 'react-redux' 
 import {checkAuthorization, getProducts, getType, logout} from '../actions'
 import Loading from 'react-loading-components';
+import logo from "../img/logo.png"
 
 
 
@@ -82,12 +83,14 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts, getTheType, 
                     {user && auth.admin && <Link to="/profile/add_products" className="h-nav"><div className="h-he3">Add Product</div></Link>}
                     {user && auth.admin && <Link to="/profile/edit_products" className="h-nav"><div className="h-he3">Edit Product</div></Link>}
                     {user && auth.admin && <Link to="/profile/orders" className="h-nav"><div className="h-he3">Orders</div></Link>}
-                    {user && <Link to="/profile/history" className="h-nav"><div className="h-he3">Analysis</div></Link>}
+                    {user && auth.admin && <Link to="/profile/analysis" className="h-nav"><div className="h-he3">Analysis</div></Link>}
+                    {user && <Link to="/profile/history" className="h-nav"><div className="h-he3">My Orders</div></Link>}
                     {user && <button onClick={handleLogout} className="h-nav"><div className="h-he3">Logout</div></button>}
             </div>  
             
             <div className = "h-cov">
                 <div className="h-title">
+                    <img src={logo} alt="logo" className="h-logo"/>
                     <a href="/" className="h-he1"><h1 >ShopNow</h1></a>
                 </div>
                {!load && <div className="h-navs">

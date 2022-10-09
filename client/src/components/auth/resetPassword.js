@@ -4,6 +4,7 @@ import {connect} from "react-redux"
 import {forgotPassword} from '../../actions'
 import Loading from 'react-loading-components';
 import {NavLink as Link} from "react-router-dom"
+import logo from "../../img/logo.png"
 
 
 
@@ -45,6 +46,7 @@ const ResetPassword = ({sendEmail, auth}) => {
                 <form className="ft-form">
                     {Error && <div className="ft-error">{Error}</div>}
                     {Success && <div className="ft-success">{Success}</div>}
+                    <img src={logo} alt="logo" className="ft-logo"/>
                     <h1 className="ft-he2">Reset Password</h1>
                     <label className="ft-label">Email</label>
                     <input type="email" placeholder="   john@gmail.com" className="ft-input"  value={Email}  onChange={val => setEmail(val.target.value)}/>
