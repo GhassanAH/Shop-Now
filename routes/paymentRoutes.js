@@ -7,10 +7,7 @@ var paypal = require('paypal-rest-sdk');
 const keys = require("../config/keys")
 const Order =  require("../models/Order")
 const paymentEmail = require("../utils/paymentEmail")
-
-
-
-
+const isPaymentValid = require("../middleware/payment").isPaymentValid
 
 var t = "0"
 var products1;
@@ -18,7 +15,9 @@ var seller1;
 var discountApplied1;
 var amount1;
 var size1;
-var quantity11;
+var quantity1;
+var discountCode1;
+var discountPercentage1;
 
 paypal.configure({
     'mode': 'sandbox',
@@ -29,8 +28,8 @@ paypal.configure({
 
 module.exports = paymentRoutes = (app) => {
 
-    app.post('/api/payment', async (req, res) => {
-        const {number, cardName, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity} = req.body
+    app.post('/api/payment', isPaymentValid, async (req, res) => {
+        const {number, cardName, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity, discountCode, discountPercentage} = req.body
         const token = await getToken(number, month, year, cvc)
         if(token.message === "successfully created"){
             const payment = await charge(token.token.id, amount, description)
@@ -46,6 +45,8 @@ module.exports = paymentRoutes = (app) => {
                     phone:seller.phone,
                     size:size,
                     quantity:quantity,
+                    discountCode:discountCode,
+                    discountPercentage:discountPercentage,
                     country:seller.country,
                     address:seller.address,
                     details:seller.details,
@@ -55,7 +56,7 @@ module.exports = paymentRoutes = (app) => {
                     cardName:cardName,
                   })
                   await order.save();
-                  await paymentEmail({
+                  paymentEmail({
                     to: seller.email,
                     subject: "Sending Template",
                     
@@ -74,8 +75,8 @@ module.exports = paymentRoutes = (app) => {
     })
 
 
-    app.post('/api/paypal', (req, res) => {
-        const {name, price, quantity, description, products, seller, discountApplied, size} = req.body
+    app.post('/api/paypal', isPaymentValid, (req, res) => {
+        const {name, price, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage} = req.body
         t = String(price)
         products1 = products;
         seller1 = seller;
@@ -83,6 +84,8 @@ module.exports = paymentRoutes = (app) => {
         amount1 = price;
         size1 = size;
         quantity1 = quantity;
+        discountCode1 = discountCode;
+        discountPercentage1 = discountPercentage;
 
         const create_payment_json = payPal(name, price, description, keys.RETURN_URL, keys.CANCEL_URL)
         try {
@@ -119,6 +122,8 @@ module.exports = paymentRoutes = (app) => {
           phone:seller1.phone,
           size:size1,
           quantity:quantity1,
+          discountCode:discountCode1,
+          discountPercentage:discountPercentage1,
           country:seller1.country,
           address:seller1.address,
           details:seller1.details,

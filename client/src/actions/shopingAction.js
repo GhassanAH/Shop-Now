@@ -16,17 +16,37 @@ export const setInvoice = (item) => dispatch => {
 }
 
 
-export const payByMasterCard = (number, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity) => async dispatch => {
-    await deduct(quantity, products);
-    const res = await axios.post("/api/payment", {number, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity})
-    dispatch({type:payMster, payload:res.data})
+export const payByMasterCard = (number, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity, discountCode, discountPercentage) => async dispatch => {
+    try {
+        await deduct(quantity, products);
+        const res = await axios.post("/api/payment", {number, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity, discountCode, discountPercentage})
+        dispatch({type:payMster, payload:res.data})
+        
+    } catch (error) {
+        var payload = {
+            success:error.response.data.success,
+            message:error.response.data.message
+        }
+        dispatch({type:payMster, payload:payload})
+    }
+    
 }
 
-export const payByPayPal = (name, price, quantity, description, products, seller, discountApplied, size) => async dispatch => {
-    await deduct(quantity, products);
-    const res = await axios.post("/api/paypal", {name, price, quantity, description, products, seller, discountApplied, size})
+export const payByPayPal = (name, price, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage) => async dispatch => {
+    try {
+        await deduct(quantity, products);
+        const res = await axios.post("/api/paypal", {name, price, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage})
+        
+        dispatch({type:payPal, payload:res.data})
+        
+    } catch (error) {
+        var payload = {
+            success:error.response.data.success,
+            message:error.response.data.message
+        }
+        dispatch({type:payPal, payload:payload})
+    }
     
-    dispatch({type:payPal, payload:res.data})
 }
 
 export const getType = (type) => dispatch => {

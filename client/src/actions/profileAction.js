@@ -47,7 +47,7 @@ export const uploadProduct =  (name, productType,sizes, coverImage, extraImages,
     
 }
 
-export const updateTheProduct = (id, name, productType,sizes, oldCover, coverImage, oldExtra, extraImages, extraList, productPrice, shippingPrice, quantity, description, discountPercentage, discountCode) => async dispatch => {
+export const updateTheProduct = (id, name, productType, sizes, oldCover, coverImage, oldExtra, extraImages, extraList, productPrice, shippingPrice, quantity, description, discountPercentage, discountCode) => async dispatch => {
     try {
         const token = ls.get("authToken")
         dispatch({type:loading, payload:"2%"})
@@ -84,6 +84,7 @@ export const updateTheProduct = (id, name, productType,sizes, oldCover, coverIma
 
         //updating the information
         const information = {id: id, name:name, type:productType, price:productPrice, shipping:shippingPrice, quantity:quantity,sizes:sizes, cover:coverImageUrl, extraImages:extraImagesList, description:description, discountPercentage:discountPercentage, discountCode:discountCode}
+        console.log(information);
         try {
             const res = await axios.post("/api/editProduct", {information},
             {

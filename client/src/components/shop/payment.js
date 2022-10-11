@@ -23,6 +23,8 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
     const info = useLocation()
     const [CustomerData, setCustomerData] = useState(null)
     const [loading, setLoading] = useState(false)
+    const [Error, setError] = useState('')
+
 
     
 
@@ -39,7 +41,6 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
             if(payment.message === "successfully paid"){
                 setLoad(false)
                 location("/success")
-            
             }else if(payment.message === "unsuccessfully paid"){
                 setLoad(false)
             }else if(payment.message === "unsuccessfully paid by paypal"){
@@ -50,6 +51,10 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
             }else if(payment.message === "redirect url"){
                 setLoading(false)
                 window.location.href = payment.url
+            }else if(payment.message === "Sorry this service is not avaliable"){
+                setLoading(false)
+                setError(payment.message)
+                setLoad(false)
             }
             else{
                 setLoad(false)
@@ -107,7 +112,7 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                 city:CustomerData.City,
                 postal:CustomerData.PostalCode,
             }
-            payByTheMasterCard(cardNumber, month, year, exp, amount, description, products, seller, CustomerData.discountApplied, sizes, quantity)
+            payByTheMasterCard(cardNumber, month, year, exp, amount, description, products, seller, CustomerData.discountApplied, sizes, quantity, CustomerData.discountCode, CustomerData.discountPercentage)
         }else{
             setLoad(false)
         }
@@ -139,7 +144,7 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
         var amount = Number(total)
         var description = "This is payment from ShopNow"
 
-        payByThePayPal(cardName, amount,quantity, description,products, seller, CustomerData.discountApplied, sizes, quantity)
+        payByThePayPal(cardName, amount,quantity, description,products, seller, CustomerData.discountApplied, sizes, quantity, CustomerData.discountCode, CustomerData.discountPercentage)
     }
 
     const validate = () => {
@@ -193,6 +198,7 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                     {loading && <LoadingSpinner/>}
 
                     <form className="p-form">
+                        {Error && <div className="p-error">{Error}</div>}
                         <label className="p-label">Card Number</label>
                         <input type="card" className={`p-field ${!valid1? "alert":""}`}  placeholder="xxxx xxxx xxxx xxxx" value={handleCardDisplay()}  onChange={(e) => setCard(e.target.value)} maxLength="20"/>
                         {!valid1 && <div className="stat">Please enter valid Card Number</div>}
@@ -237,8 +243,8 @@ const mapStateToProps = state => {
   
 const mapDispatchToProps = dispatch => {
     return {
-        payByTheMasterCard: (number, month, year, cvc, amount, description, products, seller, discountApplied,size,quantity) => dispatch(payByMasterCard(number, month, year, cvc, amount, description, products, seller, discountApplied,size,quantity)),
-        payByThePayPal: (name, price, quantity, description, products, seller, discountApplied,size) => dispatch(payByPayPal(name, price, quantity, description, products, seller, discountApplied,size)),
+        payByTheMasterCard: (number, month, year, cvc, amount, description, products, seller, discountApplied,size,quantity, discountCode, discountPercentage) => dispatch(payByMasterCard(number, month, year, cvc, amount, description, products, seller, discountApplied,size,quantity, discountCode, discountPercentage)),
+        payByThePayPal: (name, price, quantity, description, products, seller, discountApplied,size, discountCode, discountPercentage) => dispatch(payByPayPal(name, price, quantity, description, products, seller, discountApplied,size, discountCode, discountPercentage)),
         setInvoiceInfo:(item) => dispatch(setInvoice(item)),
     
     }

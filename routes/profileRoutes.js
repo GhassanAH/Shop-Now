@@ -75,7 +75,7 @@ module.exports = profileRoutes = (app) => {
                 product.cover = information.cover
                 product.extraImages = information.extraImages
                 product.description = information.description
-                product.discountPercentage = information.discountPercentage
+                product.discountPercentage = new Number(information.discountPercentage)
                 product.discountCode = information.discountCode
                 product.save()
                 return res.status(200).send({success:true, message:"Product Successfully Eidted"})
@@ -167,6 +167,8 @@ module.exports = profileRoutes = (app) => {
                         payment_method:orders[i].payment_method,
                         totalPaid:orders[i].totalPaid,
                         discountApplied:orders[i].discountApplied,
+                        discountCode:orders[i].discountCode,
+                        discountPercentage:orders[i].discountPercentage,
                         orderedAt: orders[i].orderedAt,
                         email:orders[i].email,
                         phone:orders[i].phone,
@@ -213,6 +215,8 @@ module.exports = profileRoutes = (app) => {
                         payment_method:orders[i].payment_method,
                         totalPaid:orders[i].totalPaid,
                         discountApplied:orders[i].discountApplied,
+                        discountCode:orders[i].discountCode,
+                        discountPercentage:orders[i].discountPercentage,
                         orderedAt: orders[i].orderedAt,
                         email:orders[i].email,
                         phone:orders[i].phone,

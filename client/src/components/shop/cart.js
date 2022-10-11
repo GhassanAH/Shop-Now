@@ -30,12 +30,12 @@ const Cart = ({shop, addItemToCart, sendCheckOut}) => {
     }
     const checkout = () => {
         var checkoutfee = 0;
-        var discount = 0;
-        var code = "";
+        var discount = [];
+        var code = [];
         for(var i = 0; i<items.length; i++){
             checkoutfee = checkoutfee + items[i].shipping
-            discount = items[i].discount
-            code = items[i].code
+            discount = [...discount, items[i].discount]
+            code = [...code, items[i].code]
         }
         
         var total = subTotal + checkoutfee;

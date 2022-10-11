@@ -60,6 +60,17 @@
     border: 1px solid #e8e9eb;
 
 }
+.p-con .p-cov .p-msc .p-form .p-error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    width: 80%;
+}
 .p-con .p-cov .p-msc .p-form .p-label{
     font-size: 1.3rem;
     font-weight: 400;

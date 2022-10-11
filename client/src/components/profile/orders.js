@@ -43,7 +43,7 @@ const Orders = ({getTheOrders, order}) => {
                 {loading && <LoadingSpinner/>}
                 {success && <div className="or-success">{message}</div>}
                 {error && <div className="or-error">{message}</div>}
-                {order && <div className="or-orders">
+                {orders && <div className="or-orders">
                     {orders.map((order, index) => {
                         return <div className="or-order-list" key={index}>
                                     <div className="or-order"> 
@@ -68,6 +68,8 @@ const Orders = ({getTheOrders, order}) => {
                                         <div className="or-ordered">
                                             <h2  className="or-he2">Order Information</h2>
                                             <div className="or-he3">Discount: {order.discountApplied?"applied":"not applied"}</div>
+                                            {order.discountApplied && <div className="or-he3">Discount Code: {order.discountCode.join(" ")}</div>}
+                                            {order.discountApplied && <div className="or-he3">Discount Percentage: {order.discountPercentage.join("% ")}%</div>}
                                             <div className="or-he3">Shipped: {order.shipped? "Yes":"No"}</div>
                                             <div className="or-he3">Total: ${order.totalPaid}</div>
                                         </div>

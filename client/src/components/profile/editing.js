@@ -23,8 +23,8 @@ const Editing = ({update_product, profile}) => {
     const [shippingPrice, setShippingPrice] = useState(data.shipping)
     const [quantity, setQuantity] = useState(data.quantity)
     const [description, setDescription] = useState(data.description);
-    const [discountPercentage, setDiscountPercentage] = useState(data.discountPercentage)
-    const [discountCode, setDiscountCode] = useState(data.discountCode)
+    const [discountPercentage, setDiscountPercentage] = useState(data.discountPercentage || 0)
+    const [discountCode, setDiscountCode] = useState(data.discountCode || "")
     const [sizes, setSizes] = useState(data.sizes || [])
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
@@ -126,6 +126,7 @@ const Editing = ({update_product, profile}) => {
                 } if(ref7.current.checked){
                     sizes2 = [...sizes2, ref7.current.value]
                 }
+
                 update_product(
                     data._id,
                     name, 
@@ -236,7 +237,7 @@ const mapStateToProps = state => {
   
 const mapDispatchToProps = dispatch => {
     return {
-        update_product: (name, productType,oldCover, coverImage, oldExtra, extraImages,extraList, productPrice, shippingPrice, quantity, description, discountPercentage, discountCode) => dispatch(updateTheProduct(name, productType,oldCover, coverImage, oldExtra, extraImages,extraList, productPrice, shippingPrice, quantity, description, discountPercentage, discountCode)),
+        update_product: (id, name, productType, sizes, oldCover, coverImage, oldExtra, extraImages, extraList, productPrice, shippingPrice, quantity, description, discountPercentage, discountCode) => dispatch(updateTheProduct(id, name, productType, sizes, oldCover, coverImage, oldExtra, extraImages, extraList, productPrice, shippingPrice, quantity, description, discountPercentage, discountCode)),
     }
 }
 

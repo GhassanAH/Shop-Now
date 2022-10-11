@@ -14,7 +14,8 @@ const Success = ({checkout, invoice, addItemToCart}) => {
     const [total, setTotal] = useState(null)
     const [subtotal, setSubtotal] = useState(null)
     const [shipping, setShipping] = useState(null)
-    const [discountVal, setDiscountVal] = useState(null)
+    const [discountVal, setDiscountVal] = useState([])
+    const [discountCode, setDiscountCode] = useState([])
 
     useEffect(() => {
         addItemToCart([])
@@ -26,6 +27,7 @@ const Success = ({checkout, invoice, addItemToCart}) => {
             setSubtotal(checkout.subTotal)
             setShipping(checkout.shipping)
             setDiscountVal(checkout.discount)
+            setDiscountCode(checkout.code)
             setItems(checkout.items)
             setCustomerData(invoice)
         }
@@ -78,7 +80,8 @@ const Success = ({checkout, invoice, addItemToCart}) => {
                 <div className="s-sec2">
                     <div className="s-in-del"><div>Subtotal</div> <span>${subtotal}</span></div>
                     <div className="s-in-del"><div>Shipping</div> <span>${shipping}</span></div>
-                    {/* <div className="s-in-del"><div>Discount</div> <span>${discountVal}</span></div> */}
+                    <div className="s-in-del"><div>Discount Percentage</div> <span>{discountVal.join("% ")}%</span></div>
+                    <div className="s-in-del"><div>Discount Code</div> <span>{discountCode.join(" ")}</span></div>
                     <div className="s-in-del"><div>Total</div> <span>${total}</span></div>
                     <div className="s-in-sh">Tax included. Shipping is calculated at checkout.</div>
                     <div className="s-in-btns">

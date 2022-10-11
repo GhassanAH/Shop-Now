@@ -27,7 +27,7 @@ const Profile = ({logoutHim, auth}) => {
                     {auth.admin && <div className={`pe-tab ${tabsStatus === "productAddition"?"pe-tabed":""}`}><Link to="/profile/add_products" className="pe-nav" onClick={(e) => changeMyTab("productAddition")}><BsUpload/> Add Products</Link></div>}
                     {auth.admin && <div className={`pe-tab ${tabsStatus === "productEditing"?"pe-tabed":""}`}><Link to="/profile/edit_products" className="pe-nav" onClick={(e) => changeMyTab("productEditing")}><BsScissors/> Edit Products</Link></div>}
                     {auth.admin && <div className={`pe-tab ${tabsStatus === "Order"?"pe-tabed":""}`}><Link to="/profile/orders" className="pe-nav" onClick={(e) => changeMyTab("Order")}><BsFillCartCheckFill/> Orders</Link></div>}
-                    {!auth.admin && <div className={`pe-tab ${tabsStatus === "Order"?"pe-tabed":""}`}><Link to="/profile/history" className="pe-nav" onClick={(e) => changeMyTab("Order")}><BsFillCartCheckFill/> My Orders</Link></div>}
+                    {<div className={`pe-tab ${tabsStatus === "MyOrder"?"pe-tabed":""}`}><Link to="/profile/history" className="pe-nav" onClick={(e) => changeMyTab("MyOrder")}><BsFillCartCheckFill/> My Orders</Link></div>}
                     {auth.admin && <div className={`pe-tab ${tabsStatus === "Analysis"?"pe-tabed":""}`}><Link to="/profile/analysis" className="pe-nav" onClick={(e) => changeMyTab("Analysis")}><BsPieChartFill/> Analysis</Link></div>}
                     <div className="pe-tab"><button className="pe-nav" onClick={handleLogout}><BsArrowBarLeft/> Logout</button></div>
                 </div>

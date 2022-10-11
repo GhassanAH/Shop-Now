@@ -17,6 +17,8 @@ const orderSchema = new  mongoose.Schema({
     phone:String,
     size:[String],
     quantity:[Number],
+    discountCode:[String],
+    discountPercentage:[Number],
     country:String,
     address:String,
     details:String,

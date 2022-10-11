@@ -8,11 +8,13 @@ import 'react-phone-number-input/style.css'
 import PhoneInput,{ isValidPhoneNumber } from 'react-phone-number-input'
 import {useNavigate} from "react-router-dom"
 import {getCode} from "country-list"
+import {getCheckOut} from '../../actions'
 
 
 
 
-const Checkout = ({checkout, auth}) => {
+
+const Checkout = ({checkout, auth, sendCheckOut}) => {
     const [total, setTotal] = useState(null)
     const [subtotal, setSubtotal] = useState(null)
     const [shipping, setShipping] = useState(null)
@@ -50,12 +52,18 @@ const Checkout = ({checkout, auth}) => {
     }
 
     const applyDiscount = () => {
-        if(Discount === code){
-            const discountValue = total * (discountVal / 100)
-            const newTotal = total - discountValue
-            setTotal(newTotal)
-            setDstatus(true)
+        var t = total
+        for(var i = 0; i<code.length; i++){
+            if(Discount === code[i]){
+                const discountValue = items[i].total * (discountVal[i] / 100)
+                t = t - discountValue
+                setDstatus(true)
+
+            }
         }
+        setTotal(t)
+
+       
     }
 
     const handleFormSubmmision = () => {
@@ -71,8 +79,22 @@ const Checkout = ({checkout, auth}) => {
                 City:City,
                 PostalCode:Postal,
                 items:items,
-                discountApplied:dStatus
+                discountApplied:dStatus,
+                discountCode:code, 
+                discountPercentage:discountVal
             }
+            if(dStatus){
+                const data = {
+                    subTotal:subtotal,
+                    shipping:shipping,
+                    total:total,
+                    discount:discountVal,
+                    code:code,
+                    items:items
+                }
+                sendCheckOut(data)
+            }
+           
             navigator("/payment", {state:{data:data}})
         }else if(!validateEmail(Email)){
             setError("Please provide a valid email address")
@@ -187,6 +209,7 @@ const mapStateToProps = state => {
   
 const mapDispatchToProps = dispatch => {
     return {
+        sendCheckOut: (item) => dispatch(getCheckOut(item))
     }
 }
 

@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGOURI || keys.MONGO_URL,{
 
 
 app.use(cors());
-app.use(express.json({limit:"200mb"}))
+app.use(express.json({limit:"500mb"}))
 
 
 
