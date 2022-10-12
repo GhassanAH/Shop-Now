@@ -55,7 +55,7 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
         var t = total
         for(var i = 0; i<code.length; i++){
             if(Discount === code[i]){
-                const discountValue = items[i].total * (discountVal[i] / 100)
+                const discountValue = items[i].price * (discountVal[i] / 100)
                 t = t - discountValue
                 setDstatus(true)
 
