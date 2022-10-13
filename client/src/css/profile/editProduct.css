@@ -18,6 +18,8 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 600;
+    text-transform: capitalize;
+
 }
 .ep-con .ep-error{
     width: 80%;
@@ -30,6 +32,8 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
+    text-transform: capitalize;
+
 }
 .ep-con .ep-title{
     display: flex;

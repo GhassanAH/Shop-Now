@@ -112,7 +112,7 @@ const Payment = ({checkout, payment, payByThePayPal, payByTheMasterCard, setInvo
                 city:CustomerData.City,
                 postal:CustomerData.PostalCode,
             }
-            payByTheMasterCard(cardNumber, month, year, exp, amount, description, products, seller, CustomerData.discountApplied, sizes, quantity, CustomerData.discountCode, CustomerData.discountPercentage)
+            payByTheMasterCard(cardNumber,cardName, month, year, exp, amount, description, products, seller, CustomerData.discountApplied, sizes, quantity, CustomerData.discountCode, CustomerData.discountPercentage)
         }else{
             setLoad(false)
         }

@@ -15,6 +15,63 @@
     width: 95%;
     padding: 3rem 0rem;
 }
+.or-con .or-cov .or-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 2rem;
+    border: 3px double #e8e9eb;
+    padding: 10px;
+}
+.or-con .or-cov .or-search .or-sec{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    
+}
+.or-con .or-cov .or-search .or-sec .or-search-inp{
+    width: 80%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #e8e9eb;
+
+
+}
+.or-con .or-cov .or-search .or-sec .or-search-btn{
+    width: 20%;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: green;
+    color: #fff;
+
+}
+.or-con .or-cov .or-search .or-sec2{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    width: 100%; 
+    row-gap: 10px;
+    column-gap: 5px;
+    margin-top: 1rem;
+}
+.or-con .or-cov .or-search .or-sec2 .or-label{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.or-con .or-cov .or-search .or-sec2 .or-label input[type="radio"]{
+    font: inherit;
+    margin: 0;
+    margin-right:5px;
+    color: lightseagreen;
+    width: 20px;
+    height: 20px;
+    border: 0.15em solid lightseagreen;
+    border-radius: 50%;
+}
 .or-con .or-cov .or-success{
     width: 80%;
     padding: 1rem;
@@ -26,6 +83,7 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 600;
+    text-transform: capitalize;
 }
 .or-con .or-cov .or-error{
     width: 80%;
@@ -38,6 +96,8 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
+    text-transform: capitalize;
+
 }
 .or-con .or-cov .or-orders{
     display: flex;
@@ -84,22 +144,30 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 30%;
+    width: 60%;
 }
-.or-con .or-cov .or-orders .or-order-list .or-order .or-payment{
+.or-con .or-cov .or-orders .or-order-list .or-order .or-extra{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
+}
+.or-con .or-cov .or-orders .or-order-list .or-order .or-extra .or-payment{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
 
 }
-.or-con .or-cov .or-orders .or-order-list .or-order .or-ordered{
+.or-con .or-cov .or-orders .or-order-list .or-order .or-extra .or-ordered{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 25%;
+    width: 100%;
 }
 .or-he2{
     font-size: 2rem;
@@ -207,6 +275,7 @@
     text-align: center;
 }
 @media(max-width:1500px){
+
     .or-he2{
         font-size: 1.5rem;
         font-weight: 400;
@@ -244,6 +313,16 @@
         width: 99%;
         padding: 1rem 0rem;
     }
+    .or-con .or-cov .or-search .or-sec2{
+        grid-template-columns: 30% 30% 30%;
+    }
+    .or-con .or-cov .or-search .or-sec2 .or-label{
+        font-size:1rem;
+    }
+    .or-con .or-cov .or-search .or-sec2 .or-label input[type="radio"]{
+        width: 10px;
+        height: 10px;
+    }
     .or-con .or-cov .or-success{
         width: 90%;
         padding: 0.5rem;
@@ -262,6 +341,7 @@
         width: 95%;
         padding: 0rem;
     }
+
     .or-con .or-cov .or-orders .or-order-list{
         justify-content: center;
         align-items: center;
@@ -279,13 +359,17 @@
         align-items: center;
         
     }
-    .or-con .or-cov .or-orders .or-order-list .or-order .or-payment{
+    .or-con .or-cov .or-orders .or-order-list .or-order .or-extra{
+        width: 100%;
+        align-items: center;
+    }
+    .or-con .or-cov .or-orders .or-order-list .or-order .or-extra .or-payment{
         width: 100%;
         align-items: center;
 
     
     }
-    .or-con .or-cov .or-orders .or-order-list .or-order .or-ordered{
+    .or-con .or-cov .or-orders .or-order-list .or-order .or-extra .or-ordered{
         width: 100%;
         align-items: center;
 
@@ -341,6 +425,21 @@
     .or-con{
         padding: 1rem 0rem;
     }
+    .or-con .or-cov .or-search{
+        width: 90%;
+    }
+    .or-con .or-cov .or-search .or-sec .or-search-inp{
+        width: 80%;
+        padding: .5rem;
+        font-size: .8rem;
+    }
+    .or-con .or-cov .or-search .or-sec .or-search-btn{
+        width: 20%;
+        padding: .5rem;
+        font-size: .8rem;
+    
+    }
+
     .or-con .or-cov .or-success{
         font-size: 1rem;
         font-weight: 300;
@@ -377,6 +476,16 @@
     }
 }
 @media(max-width:400px){
+    .or-con .or-cov .or-search .or-sec .or-search-inp{
+        font-size: .6rem;
+    }
+    .or-con .or-cov .or-search .or-sec .or-search-btn{
+        font-size: .6rem;
+    
+    }
+    .or-con .or-cov .or-search .or-sec2 .or-label{
+        font-size:.6rem;
+    }
     .or-he2{
         font-size: 1rem;
     }

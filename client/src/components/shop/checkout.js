@@ -88,6 +88,7 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
                     subTotal:subtotal,
                     shipping:shipping,
                     total:total,
+                    discountApplied:dStatus,
                     discount:discountVal,
                     code:code,
                     items:items

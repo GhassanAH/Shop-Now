@@ -21,6 +21,9 @@ const History = ({getTheOrders, order}) => {
                 setSuccess(true)
                 setError(false)
                 setMessage(order.message)
+                setInterval(() => {
+                    setSuccess(false)
+                },[5000])
             }else if(order.success === false && order.message === "orders unsuccessfully fetched"){
                 setMessage(order.message)
                 setError(true)

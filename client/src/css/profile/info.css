@@ -32,6 +32,8 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 600;
+    text-transform: capitalize;
+
 }
 .io-con .io-cov .io-error{
     width: 80%;
@@ -44,6 +46,8 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
+    text-transform: capitalize;
+
 }
 .io-con .io-cov .io-info{
     display: flex;

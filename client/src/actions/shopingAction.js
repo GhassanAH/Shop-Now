@@ -16,10 +16,10 @@ export const setInvoice = (item) => dispatch => {
 }
 
 
-export const payByMasterCard = (number, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity, discountCode, discountPercentage) => async dispatch => {
+export const payByMasterCard = (number,cardName, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity, discountCode, discountPercentage) => async dispatch => {
     try {
         await deduct(quantity, products);
-        const res = await axios.post("/api/payment", {number, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity, discountCode, discountPercentage})
+        const res = await axios.post("/api/payment", {number,cardName, month, year, cvc, amount, description, products, seller, discountApplied, size, quantity, discountCode, discountPercentage})
         dispatch({type:payMster, payload:res.data})
         
     } catch (error) {

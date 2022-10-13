@@ -291,41 +291,42 @@
         padding: .8rem;
     }
     .s-con .s-cov .s-success .s-he1{
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 400;
 
     }
     .s-con .s-cov .s-success .s-he2{
-        font-size: 1rem;
-        font-weight: 300;
+        font-size: .8rem;
+        font-weight: 200;
 
     }
     .s-con .s-cov .s-header .s-hd1{
         font-size: 1rem;
     }
     .s-con .s-cov .s-header .s-hd2{
-        font-size: 1rem;
+        font-size: .8rem;
+
     }
     .s-con .s-cov  .s-item .s-pod .s-pod-it{
-        font-size: .8rem;
+        font-size: .6rem;
     }
     .s-con .s-cov  .s-item .s-por{
-        font-size: .8rem;
+        font-size: .6rem;
     }
     .s-con .s-cov .s-invoice .s-sec1 .s-in-del{
-        font-size: 1.1rem;
-        font-weight: 400;
+        font-size: 1rem;
+        font-weight: 300;
     }
     .s-con .s-cov .s-invoice .s-sec2 .s-in-del{
-        font-size: 1.1rem;
-        font-weight: 400;
+        font-size: 1rem;
+        font-weight: 300;
     }
     .s-con .s-cov .s-invoice .s-sec2 .s-in-sh{
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 200;
     }
     .s-con .s-cov .s-invoice .s-sec2 .s-in-btns .s-link .s-btn{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
 }

@@ -23,6 +23,9 @@ const ProductEditing = ({products, productType}) => {
                 setSuccess(true)
                 setError(false)
                 window.scrollTo(0, 0);
+                setInterval(() => {
+                    setSuccess(false)
+                },[5000])
             }else{
                 setSuccess(false)
                 setError(true)
@@ -38,8 +41,8 @@ const ProductEditing = ({products, productType}) => {
                 <h2 className="ep-he2">{productType}</h2>
             </div>
             {loading && <LoadingSpinner/>}
-            {success && <div className="ep-success">product successfully published</div>}
-            {error && <div className="ep-error">product unsuccessfully published</div>}
+            {success && <div className="ep-success">products successfully fetched</div>}
+            {error && <div className="ep-error">products successfully fetched</div>}
    
             <div className="ep-prod">
                 <div className="ep-grid">

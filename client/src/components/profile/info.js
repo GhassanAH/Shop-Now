@@ -56,6 +56,9 @@ const Info = ({updateTheInfo, profile, auth}) => {
                 setError(false)
                 setMessage(profile.message)
                 window.scrollTo(0, 0);
+                setInterval(() => {
+                    setSuccess(false)
+                },[5000])
             }else if(profile.success === false && profile.message === "information unsuccessfully added"){
                 setSuccess(false)
                 setError(true)

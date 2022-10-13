@@ -223,6 +223,12 @@
         width: 100%;
     
     }
+    .p-con .p-cov .p-msc .p-form .p-error{
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 10px;
+        width: 90%;
+    }
     .p-con .p-cov .p-msc .p-form .stat{
         font-size: 10px;
     }
@@ -273,6 +279,9 @@
     }
 }
 @media (max-width: 500px){
+    .p-con .p-cov .p-msc .p-form .p-error{
+        font-size: .8rem;
+    }
     .p-con .p-cov .p-msc .p-form .p-label{
         font-size: 1rem;
     }

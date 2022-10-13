@@ -38,6 +38,7 @@
     font-weight: 600;
     text-transform: capitalize;
 
+
 }
 .pa-con .pa-cov .pa-error{
     width: 80%;
@@ -51,8 +52,6 @@
     font-weight: 600;
     color: #fff;
     text-transform: capitalize;
-
-
 }
 .pa-con .pa-cov .pa-form{
     display: flex;

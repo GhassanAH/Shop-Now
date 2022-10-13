@@ -3,7 +3,6 @@ const Product = require("../models/Product")
 exports.isPaymentValid = async (req, res, next) => {
     const {amount, products, discountApplied, discountCode, quantity} = req.body;
     var total = 0;
-    var discountCounted = false;
     try {
       for(var i = 0; i < products.length; i++){
           const prod = await Product.findOne({_id:products[i]})
@@ -24,6 +23,9 @@ exports.isPaymentValid = async (req, res, next) => {
       if(total === amount){
         next();
       }else{      
+        console.log(quantity)
+        console.log(total);
+        console.log(amount);
         return res.status(401).send({message:`Sorry this service is not avaliable`, success:false})
       }
     } catch (err) {
