@@ -1,4 +1,4 @@
-import { UploadProduct, getProduct, updateProfile, updateProduct, loading, orders, userOrders } from './types'
+import { UploadProduct, getProduct, updateProfile, updateProduct, loading, orders, userOrders, setShipped } from './types'
 import axios from "axios"
 import ls from "local-storage"
 
@@ -137,7 +137,29 @@ export const getOrders = () => async dispatch => {
        dispatch({type:orders, payload:payload})
     }
 }
+export const setShipping = (id) => async dispatch => {
+    const token = ls.get("authToken")
 
+    try {
+        const res = await axios.post("/api/setShipped",
+        {id:id},
+        {
+           headers:{
+           authorization: 'Bearer ' + token
+           }
+       }
+       )
+       dispatch({type:setShipped, payload:res.data})
+    } catch (error) {
+        var payload = {
+            success:error.response.data.success,
+            message:error.response.data.message
+        }
+       dispatch({type:setShipped, payload:payload})
+    }
+
+
+}
 export const getUserOrders = () => async dispatch => {
     const token = ls.get("authToken")
     try {

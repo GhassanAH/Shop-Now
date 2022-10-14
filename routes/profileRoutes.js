@@ -192,6 +192,25 @@ module.exports = profileRoutes = (app) => {
             return res.status(400).send({success:false, message:"orders unsuccessfully fetched"})
         }
     })
+
+    app.post("/api/setShipped",isLogin,isAdmin, async (req,res) => {
+        const {id} = req.body;
+        try {
+            const order = await Order.findById({_id:id});
+            if(order){
+                order.shipped = true;
+                await order.save();
+                return res.status(200).send({success:true, message:"shipping has been added"})
+            }else{
+                return res.status(400).send({success:false, message:"Order has been not shipped"})
+            }
+        } catch (error) {
+            return res.status(500).send({success:false, message:"Order has been not shipped"})
+            
+        }
+
+    })
+
     app.get('/api/getMyOrders',isLogin, async (req,res) => {
 
         try {

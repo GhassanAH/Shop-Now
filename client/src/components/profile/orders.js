@@ -1,13 +1,13 @@
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useState, useRef} from 'react'
 import "../../css/profile/orders.css"
 import { connect } from 'react-redux' 
-import {getOrders} from '../../actions'
+import {getOrders, setShipping} from '../../actions'
 import LoadingSpinner from '../../components/loadingSpinner';
+import ReactToPrint from 'react-to-print';
 
 
 
-
-const Orders = ({getTheOrders, order}) => {
+const Orders = ({getTheOrders, order, setTheShippping}) => {
     const [loading, setLoading] = useState(true)
     const [success, setSuccess] = useState(false)
     const [error, setError] = useState(false)
@@ -16,6 +16,7 @@ const Orders = ({getTheOrders, order}) => {
     const [searchChoice, setSearchChoice] = useState("All")
     const [searchValue, setSearchValue] = useState("")
     const [allOrders, setAllOrders] = useState([])
+    let componentRef = useRef([]);
 
 
 
@@ -24,9 +25,14 @@ const Orders = ({getTheOrders, order}) => {
         if(order){
             setLoading(false)
             if(order.success){
-                setOrders(order.orders)
-                setAllOrders(order.orders);
-                console.log(order.orders)
+                if(order.message === "shipping has been added"){
+                    getTheOrders()
+                }else{
+                    setOrders(order.orders)
+                    setAllOrders(order.orders);
+                    setLoading(false)
+
+                }
                 setSuccess(true)
                 setError(false)
                 setMessage(order.message)
@@ -38,8 +44,8 @@ const Orders = ({getTheOrders, order}) => {
                 setMessage(order.message)
                 setError(true)
                 setSuccess(false)
+                setLoading(false)
             }
-            setLoading(false)
         }
     },[order])
 
@@ -110,6 +116,14 @@ const Orders = ({getTheOrders, order}) => {
         return months[ms.getMonth()] + " " + ms.getDate() + " " + ms.getFullYear() 
     }
 
+    const setShipped = (e, id) => {
+        e.preventDefault();
+        setLoading(true)
+        setTheShippping(id)
+    }
+
+    
+
     return (
         <div className="or-con">
             <div className="or-cov">
@@ -171,7 +185,12 @@ const Orders = ({getTheOrders, order}) => {
                 </div>
                 {orders && <div className="or-orders">
                     {orders.map((order, index) => {
-                        return <div className="or-order-list" key={index}>
+                        return <div className="or-order-list" key={index}  ref={(element) => {componentRef.current[index] = element}} >
+                                    <ReactToPrint
+                                        trigger={() => <button className="print-btn">Print this out!</button>}
+                                        content={() => componentRef.current[index]}
+                                    />
+                                    {!order.shipped && <button className="print-btn" onClick={(e) => setShipped(e, order.id)}>Set the shipping</button>}
                                     <div className="or-order"> 
                                         <div className="or-seller">
                                             <h2  className="or-he2">Customer Information</h2>
@@ -247,6 +266,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         getTheOrders: () => dispatch(getOrders()),
+        setTheShippping: (id) => dispatch(setShipping(id)),
 
 
     }
