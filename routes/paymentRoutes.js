@@ -76,18 +76,18 @@ module.exports = paymentRoutes = (app) => {
 
 
     app.post('/api/paypal', isPaymentValid, (req, res) => {
-        const {name, price, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage} = req.body
-        t = String(price)
+        const {name, amount, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage} = req.body
+        t = String(amount)
         products1 = products;
         seller1 = seller;
         discountApplied1 = discountApplied;
-        amount1 = price;
+        amount1 = amount;
         size1 = size;
         quantity1 = quantity;
         discountCode1 = discountCode;
         discountPercentage1 = discountPercentage;
 
-        const create_payment_json = payPal(name, price, description, keys.RETURN_URL, keys.CANCEL_URL)
+        const create_payment_json = payPal(name, amount, description, keys.RETURN_URL, keys.CANCEL_URL)
         try {
             paypal.payment.create(create_payment_json, function (error, payment) {
               if (error) {

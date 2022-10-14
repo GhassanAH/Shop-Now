@@ -32,10 +32,10 @@ export const payByMasterCard = (number,cardName, month, year, cvc, amount, descr
     
 }
 
-export const payByPayPal = (name, price, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage) => async dispatch => {
+export const payByPayPal = (name, amount, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage) => async dispatch => {
     try {
         await deduct(quantity, products);
-        const res = await axios.post("/api/paypal", {name, price, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage})
+        const res = await axios.post("/api/paypal", {name, amount, quantity, description, products, seller, discountApplied, size, discountCode, discountPercentage})
         
         dispatch({type:payPal, payload:res.data})
         

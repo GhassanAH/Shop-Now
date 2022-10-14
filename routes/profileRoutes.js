@@ -54,7 +54,7 @@ module.exports = profileRoutes = (app) => {
                 discountCode:information.discountCode
             })
             product.save()
-            return res.status(200).send({success:true, message:"Product Unsuccessfully Added"})
+            return res.status(200).send({success:true, message:"Product successfully Added"})
         } catch (error) {
             return res.status(400).send({success:false, message:"Product Unsuccessfully Added"}) 
             

@@ -57,7 +57,7 @@ const ProductAddition = ({UploadTheProduct, profile}) => {
     useEffect(() => {
         if(profile){
             setLoading(false)
-            if(profile.success && profile.message === "product successfully added"){
+            if(profile.success && profile.message === "Product successfully Added"){
                 setSuccess(true)
                 setError(false)
                 setMessage(profile.message)

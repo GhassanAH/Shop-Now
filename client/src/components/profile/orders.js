@@ -23,7 +23,6 @@ const Orders = ({getTheOrders, order, setTheShippping}) => {
 
     useEffect(() => {
         if(order){
-            setLoading(false)
             if(order.success){
                 if(order.message === "shipping has been added"){
                     getTheOrders()
@@ -103,6 +102,14 @@ const Orders = ({getTheOrders, order, setTheShippping}) => {
                 result = allOrders.filter((order) => order.totalPaid <= value)
                 setOrders(result)
                 break;
+            case "shipped":
+                result = allOrders.filter((order) => order.shipped === true)
+                setOrders(result)
+                break;
+            case "notShipped":
+                result = allOrders.filter((order) => order.shipped === false)
+                setOrders(result)
+                break;
             default:
                 setOrders(allOrders)
                 break;
@@ -120,6 +127,8 @@ const Orders = ({getTheOrders, order, setTheShippping}) => {
         e.preventDefault();
         setLoading(true)
         setTheShippping(id)
+        setOrders([])
+        window.scrollTo(0, 0);
     }
 
     
@@ -179,6 +188,14 @@ const Orders = ({getTheOrders, order, setTheShippping}) => {
                         <label className="or-label">
                             <input  type="radio" value="lTotal" checked={searchChoice ==="lTotal"}  onChange={(e) => setSearchChoice(e.target.value)}/>
                             X {"<="} Total       
+                        </label>
+                        <label className="or-label">
+                            <input  type="radio" value="shipped" checked={searchChoice ==="shipped"}  onChange={(e) => setSearchChoice(e.target.value)}/>
+                            Shipped       
+                        </label>
+                        <label className="or-label">
+                            <input  type="radio" value="notShipped" checked={searchChoice ==="notShipped"}  onChange={(e) => setSearchChoice(e.target.value)}/>
+                            Not Shipped       
                         </label>
                     </div>
         

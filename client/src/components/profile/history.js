@@ -59,20 +59,22 @@ const History = ({getTheOrders, order}) => {
                                             <div className="or-he3">City: {order.city}</div>
                                             <div className="or-he3">Postal Code: {order.postalCode}</div>
                                         </div>
-                                        <div className="or-payment">
-                                            <h2  className="or-he2">Payment Information</h2>
-                                            <div className="or-he3">{order.payment_method}</div>
-                                            {order.creditCardNumber &&<div className="or-he3">{order.creditCardNumber}</div>}
-                                            {order.cardName && <div className="or-he3">{order.cardName}</div>}
-                                            <div className="or-he3">{order.orderedAt}</div>
-                                        </div>
-                                        <div className="or-ordered">
-                                            <h2  className="or-he2">Order Information</h2>
-                                            <div className="or-he3">Discount: {order.discountApplied?"applied":"not applied"}</div>
-                                            {order.discountApplied && <div className="or-he3">Discount Code: {order.discountCode.join(" ")}</div>}
-                                            {order.discountApplied && <div className="or-he3">Discount Percentage: {order.discountPercentage.join("% ")}%</div>}
-                                            <div className="or-he3">Shipped: {order.shipped? "Yes":"No"}</div>
-                                            <div className="or-he3">Total: ${order.totalPaid}</div>
+                                        <div className="or-extra">
+                                            <div className="or-payment">
+                                                <h2  className="or-he2">Payment Information</h2>
+                                                <div className="or-he3">{order.payment_method}</div>
+                                                {order.creditCardNumber &&<div className="or-he3">{order.creditCardNumber}</div>}
+                                                {order.cardName && <div className="or-he3">{order.cardName}</div>}
+                                                <div className="or-he3">{order.orderedAt}</div>
+                                            </div>
+                                            <div className="or-ordered">
+                                                <h2  className="or-he2">Order Information</h2>
+                                                <div className="or-he3">Discount: {order.discountApplied?"applied":"not applied"}</div>
+                                                {order.discountApplied && <div className="or-he3">Discount Code: {order.discountCode.join(" ")}</div>}
+                                                {order.discountApplied && <div className="or-he3">Discount Percentage: {order.discountPercentage.join("% ")}%</div>}
+                                                <div className="or-he3">Shipped: {order.shipped? "Yes":"No"}</div>
+                                                <div className="or-he3">Total: ${order.totalPaid}</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="or-product">
