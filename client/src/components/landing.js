@@ -4,6 +4,7 @@ import ho1 from "../img/h7.jpg"
 import ho2 from "../img/h6.jpg"
 import AllProducts from './shop/allProducts'
 
+
 const Landing = () => {
     const [img, setImg] = useState("l-img")
     const [img1, setImg1] = useState("transparent")

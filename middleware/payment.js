@@ -23,9 +23,6 @@ exports.isPaymentValid = async (req, res, next) => {
       if(total === amount){
         next();
       }else{      
-        console.log(quantity)
-        console.log(total);
-        console.log(amount);
         return res.status(401).send({message:`Sorry this service is not avaliable`, success:false})
       }
     } catch (err) {

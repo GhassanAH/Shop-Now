@@ -33,6 +33,8 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
     const options = countryList().getData()
     const [dStatus, setDstatus] = useState(false)
     const [Error, setError] = useState("")
+    const [appliedCode, setAppliedCode] = useState([])
+    const [appliedDiscountValue, setAppliedDiscountValue] = useState([])
     const navigator = useNavigate();
 
     useEffect(() => {
@@ -53,11 +55,13 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
 
     const applyDiscount = () => {
         var t = total
-        for(var i = 0; i<code.length; i++){
+        for(var i = 0; i< code.length; i++){
             if(Discount === code[i]){
                 const discountValue = items[i].price * (discountVal[i] / 100)
                 t = t - discountValue
                 setDstatus(true)
+                setAppliedCode([...appliedCode, Discount])
+                setAppliedDiscountValue([...appliedDiscountValue, discountVal[i]])
 
             }
         }
@@ -80,8 +84,8 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
                 PostalCode:Postal,
                 items:items,
                 discountApplied:dStatus,
-                discountCode:code, 
-                discountPercentage:discountVal
+                discountCode:appliedCode, 
+                discountPercentage:appliedDiscountValue
             }
             if(dStatus){
                 const data = {
@@ -89,8 +93,8 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
                     shipping:shipping,
                     total:total,
                     discountApplied:dStatus,
-                    discount:discountVal,
-                    code:code,
+                    discount:appliedDiscountValue,
+                    code:appliedCode,
                     items:items
                 }
                 sendCheckOut(data)
