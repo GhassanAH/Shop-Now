@@ -24,7 +24,6 @@ import ProductEditing from "./profile/productEditing"
 import Editing from "./profile/editing"
 import History from "./profile/history"
 import Analysis from "./profile/analysis"
-import {Translator} from 'react-auto-translate';
 
 
 
@@ -51,12 +50,6 @@ function App({checkTheAuthorization, auth}) {
   return (
     <div className="app">
           <div>
-          <Translator
-            cacheProvider={cacheProvider}
-            from='en'
-            to='es'
-            googleApiKey='API_KEY'
-          >
               <Header/>
               <Routes>
                     <Route exact path="/" element={<Landing/>}></Route>
@@ -81,7 +74,6 @@ function App({checkTheAuthorization, auth}) {
                     <Route path="/cancel"  element={<Cancel />}></Route>
               </Routes>
               <Footer />
-          </Translator>
           </div>
      
     </div>

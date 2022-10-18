@@ -6,8 +6,6 @@ import {signIn, checkAuthorization} from '../../actions'
 import {useNavigate} from "react-router-dom"
 import Loading from 'react-loading-components';
 import logo from "../../img/logo.png"
-import {Translate} from 'react-auto-translate';
-import axios from "axios";
 
 
 
@@ -56,7 +54,7 @@ const SignIn = ({Login, auth, runCheck}) => {
                 <form className="i-form">
                     {Error && <div className="i-error">{Error}</div>}
                     <img src={logo} alt="logo" className="i-logo"/>
-                    <h1 className="i-he2"><Translate>Sign In</Translate></h1>
+                    <h1 className="i-he2">Sign In</h1>
                     <label className="i-label">Email</label>
                     <input type="email" placeholder="   john@gmail.com" className="i-input"  value={Email}  onChange={val => setEmail(val.target.value)}/>
                     <label className="i-label">Password</label>
