@@ -14,5 +14,6 @@ module.exports = {
     EMAIL_PASSWORD:process.env.EMAIL_PASSWORD,
     EMAIL_FROM:process.env.EMAIL_FROM,
     accessKeyAws:process.env.accessKeyAws,
-    secretKeyAws:process.env.secretKeyAws
+    secretKeyAws:process.env.secretKeyAws,
+    redirectedUrl:process.env.redirectedUrl
 }
