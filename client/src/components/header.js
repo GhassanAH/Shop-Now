@@ -77,8 +77,8 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts, getTheType, 
         <div className="h-con">
             <div className="h-navs2">
                     <Link to="/" className="h-nav"><div className="h-he3">Shop</div></Link>
-                    {!user && <Link to="/signIn" className="h-nav"><div className="h-he3">SignIn</div></Link>}
-                    {!user && <Link to="/signUp" className="h-nav"><div className="h-he3">SignUp</div></Link>}
+                    {!user && <Link to="/signIn" className="h-nav"><div className="h-he3">Sign In</div></Link>}
+                    {!user && <Link to="/signUp" className="h-nav"><div className="h-he3">Sign Up</div></Link>}
                     {user && <Link to="/profile/info" className="h-nav"><div className="h-he3">Info</div></Link>}
                     {user && auth.admin && <Link to="/profile/add_products" className="h-nav"><div className="h-he3">Add Product</div></Link>}
                     {user && auth.admin && <Link to="/profile/edit_products" className="h-nav"><div className="h-he3">Edit Product</div></Link>}
@@ -102,8 +102,8 @@ const Header = ({shop, auth, checkTheAuthorization, getTheProducts, getTheType, 
                         <option className="h-option">T-Shirts</option>
                         <option className="h-option">Accessories</option>
                     </select>
-                    {!user && <Link to="/signIn" className="h-nav">Sign in</Link>}
-                    {!user && <Link to="/signUp" className="h-nav">Sign up</Link>}
+                    {!user && <Link to="/signIn" className="h-nav">Sign In</Link>}
+                    {!user && <Link to="/signUp" className="h-nav">Sign Up</Link>}
                     {user && <Link to="/profile/info" className="h-nav"><CgProfile  className="h-icon"/></Link>}
                     <Link to="/cart" className="h-cart"><BsFillCartFill className="h-icon"/><span className="h-it">{itemSize}</span></Link>
                 </div>}

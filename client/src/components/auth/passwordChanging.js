@@ -4,6 +4,7 @@ import {connect} from "react-redux"
 import {resetPassword} from '../../actions'
 import Loading from 'react-loading-components';
 import { useParams } from "react-router-dom";
+import {useNavigate} from "react-router-dom"
 
 
 const PasswordChanging = ({resetThePassword, auth, match}) => {
@@ -12,6 +13,8 @@ const PasswordChanging = ({resetThePassword, auth, match}) => {
     const [Error, setError] = useState('')
     const [Success, setSuccess] = useState('')
     let { token } = useParams();
+    const navigator = useNavigate();
+
 
 
     const handleSubmmision = (e) => {
@@ -26,6 +29,7 @@ const PasswordChanging = ({resetThePassword, auth, match}) => {
             if(auth.success && auth.message === "Password Updated Success"){
                 setError("")
                 setSuccess("The password has been reset")
+                navigator("/signIn", { replace: true })
             }else if(auth.message === "Invalid Token"){
                 setError(auth.message)
                 setSuccess("")

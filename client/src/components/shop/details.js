@@ -128,7 +128,7 @@ const Details = ({addItemToCart, shop}) => {
                         </div>
                     </div>
                     <div className="d-add-cart">
-                        <button className="d-btn" onClick={(e) => addItem(e)}>Add to The Cart</button>
+                        <button className="d-btn" onClick={(e) => addItem(e)}>Add to Cart</button>
                     </div>
                 </div>
             </div>}

@@ -20,7 +20,7 @@
     height:50px;
 }
 .h-con .h-cov .h-title{
-    width: 50%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -49,7 +49,7 @@
     cursor: pointer;
 }
 .h-con .h-cov .h-navs{
-    width: 50%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -109,7 +109,7 @@
 }
 .h-con .h-cov .h-navs .h-sel{
     font-weight: bold;
-    width: 40%;
+    width: 60%;
     color:#222;
     text-decoration: none;
     background-color: #fff;

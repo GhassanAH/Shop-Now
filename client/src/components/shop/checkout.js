@@ -137,7 +137,7 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
                 <div className="c-first">
                     <div className="co-info">
                         <form className="co-form">
-                            <h2 className="co-he2">Personal Information</h2>
+                            <h2 className="co-he2">Personal Info</h2>
                             <label className="co-label">Name</label>
                             <input type="text" placeholder="John Smith" className="co-input" value={Name}  onChange={val => setName(val.target.value)}/>
                             <label className="co-label">Email</label>
@@ -152,7 +152,7 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
                     </div>
                     <div className="co-shipping">
                         <form className="co-form">
-                            <h2 className="co-he2">Shipping Information</h2>
+                            <h2 className="co-he2">Shipping Info</h2>
                             <label className="co-label">Country</label>
                             <Select defaultValue={country}   options={options} onChange={changeHandler}  className="co-input1"/>
                             <label className="co-label">Address</label>
@@ -169,7 +169,7 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
                 <div className="c-second">
                     <div className="co-discount">
                         <div className="co-form">
-                                <h2 className="co-he2">Discount Information</h2>
+                                <h2 className="co-he2">Discount Info</h2>
                                 <label className="co-label">Discount Code</label>
                                 <input type="text" placeholder="Discount Code" className="co-input"  value={Discount}  onChange={val => setDiscount(val.target.value)}/>
                                 <button className="co-btn" onClick={applyDiscount} disabled={dStatus}>Apply</button>
@@ -177,7 +177,7 @@ const Checkout = ({checkout, auth, sendCheckOut}) => {
                     </div>
                     <div className="co-btns">
                         <div className="co-subtotal">
-                            <h2 className="co-he2">Invoice Information</h2>
+                            <h2 className="co-he2">Invoice Info</h2>
                             <h4 className="co-he4">Subtotal</h4>
                             <h5 className="co-he5">$ {subtotal && subtotal}</h5>
                             <h4 className="co-he4">Shipping</h4>
