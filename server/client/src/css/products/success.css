@@ -1,0 +1,332 @@
+.s-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.s-con .s-cov{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+}
+.s-con .s-cov .s-success{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #e8e9eb;
+    padding: 1rem;
+    background-color: mediumseagreen;
+    margin-bottom: 2rem;
+}
+.s-con .s-cov .s-success .s-he1{
+    font-size: 2rem;
+    width: 100%;
+    font-weight: 600;
+    padding: 1rem;
+    margin-bottom: 1.4rem;
+    border-bottom: 1px solid #e8e9eb;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.s-con .s-cov .s-success .s-he1 .s-txt{
+    width: 90%;
+}
+.s-con .s-cov .s-success .s-he1 .s-icon{
+    width: 5%;
+}
+.s-con .s-cov .s-success .s-he2{
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: .6rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+
+}
+.s-con .s-cov .s-success .s-he2 .s-txt{
+    width: 90%;
+}
+.s-con .s-cov .s-success .s-he2 .s-icon{
+    width: 5%;
+}
+.s-con .s-cov .s-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid #e8e9eb;
+    padding: 1rem;
+}
+.s-con .s-cov .s-header .s-hd1{
+    font-size: 1.5rem;
+    width: 40%;
+    font-weight: 400;
+    text-align: center;
+}
+.s-con .s-cov .s-header .s-hd2{
+    font-size: 1.5rem;
+    width: 20%;
+    font-weight: 400;
+    text-align: center;
+
+}
+.s-con .s-cov .s-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #e8e9eb;
+}
+.s-con .s-cov  .s-item .s-img{
+    width: 20%;
+    height: 250px;
+}
+.s-con .s-cov  .s-item .s-pod{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+
+}
+.s-con .s-cov  .s-item .s-pod .s-pod-it{
+    display: flex;
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.s-con .s-cov  .s-item .s-pod .s-pod-it .s-pod-it-por{
+    margin-bottom: 20px;
+}
+.s-con .s-cov  .s-item .s-por{
+    font-size: 1.2rem;
+    width: 20%;
+    font-weight: 400;
+    text-align: center;
+
+
+}
+.s-con .s-cov .s-invoice{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 3rem;
+}
+.s-con .s-cov .s-invoice .s-sec1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 60%;
+}
+.s-con .s-cov .s-invoice .s-sec1 .s-in-del{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+.s-con .s-cov .s-invoice .s-sec1 .s-in-del span{
+    margin-left: 15px;
+}
+.s-con .s-cov .s-invoice .s-sec2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 40%;
+    
+}
+.s-con .s-cov .s-invoice .s-sec2 .s-in-del{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+.s-con .s-cov .s-invoice .s-sec2 .s-in-sh{
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.s-con .s-cov .s-invoice .s-sec2 .s-in-btns{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+    
+
+}
+.s-con .s-cov .s-invoice .s-sec2 .s-in-btns .s-link{
+    width: 80%;
+}
+.s-con .s-cov .s-invoice .s-sec2 .s-in-btns .s-link .s-btn{
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 100%;
+    
+
+}
+.s-con .s-cov .s-invoice .s-sec2 .s-in-btns .s-link .s-btn:hover{
+    cursor: pointer;
+}
+@media (max-width: 800px){
+    .s-con .s-cov .s-success{
+        padding: 1rem;
+    }
+    .s-con .s-cov .s-success .s-he1{
+        font-size: 1.7rem;
+        padding: 0.5rem;
+    }
+    .s-con .s-cov .s-success .s-he1 .s-icon{
+        width: 10%;
+    }
+    .s-con .s-cov .s-success .s-he2{
+        font-size: 1.4rem;
+        padding: 0.5rem;
+    }
+    .s-con .s-cov .s-success .s-he2 .s-icon{
+        width: 10%;
+    }
+    .s-con .s-cov .s-header .s-hd1{
+        font-size: 1.2rem;
+        width: 40%;
+    }
+    .s-con .s-cov .s-header .s-hd2{
+        font-size: 1.1rem;
+        width: 20%;
+    
+    }
+    .s-con .s-cov  .s-item .s-img{
+        width: 15%;
+        height: 100px;
+    }
+    .s-con .s-cov  .s-item .s-pod{
+        width: 25%;
+    }
+    .s-con .s-cov  .s-item .s-pod .s-pod-it{
+        width: 90%;
+        font-size: 1rem;
+        font-weight: 400;
+
+    }
+    .s-con .s-cov  .s-item .s-pod .s-pod-it .s-pod-it-por{
+        margin-bottom: 10px;
+    }
+    .s-con .s-cov  .s-item .s-por{
+        font-size: 1rem;
+    }
+    .s-con .s-cov .s-invoice{
+        justify-content: center;
+        flex-direction: column;
+        margin: 1rem;
+    }
+    .s-con .s-cov .s-invoice .s-sec1{
+        width: 100%;
+    }
+    .s-con .s-cov .s-invoice .s-sec1 .s-in-del{
+        font-size: 1.4rem;
+        font-weight: 600;
+    
+    }
+    .s-con .s-cov .s-invoice .s-sec2{
+        width: 100%;
+        
+    }
+    .s-con .s-cov .s-invoice .s-sec2 .s-in-del{
+        font-size: 1.4rem;
+        font-weight: 600;
+        width: 100%;
+    
+    }
+    .s-con .s-cov .s-invoice .s-sec2 .s-in-sh{
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    .s-con .s-cov .s-invoice .s-sec2 .s-in-btns{
+        align-items: center; 
+        justify-content: center;
+    }
+    .s-con .s-cov .s-invoice .s-sec2 .s-in-btns .s-link .s-btn{
+        padding: 10px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        width: 100%;
+    }
+
+}
+@media (max-width: 400px){
+    .s-con .s-cov .s-success{
+        padding: .8rem;
+    }
+    .s-con .s-cov .s-success .s-he1{
+        font-size: 1rem;
+        font-weight: 400;
+
+    }
+    .s-con .s-cov .s-success .s-he2{
+        font-size: .8rem;
+        font-weight: 200;
+
+    }
+    .s-con .s-cov .s-header .s-hd1{
+        font-size: 1rem;
+    }
+    .s-con .s-cov .s-header .s-hd2{
+        font-size: .8rem;
+
+    }
+    .s-con .s-cov  .s-item .s-pod .s-pod-it{
+        font-size: .6rem;
+    }
+    .s-con .s-cov  .s-item .s-por{
+        font-size: .6rem;
+    }
+    .s-con .s-cov .s-invoice .s-sec1 .s-in-del{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .s-con .s-cov .s-invoice .s-sec2 .s-in-del{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .s-con .s-cov .s-invoice .s-sec2 .s-in-sh{
+        font-size: .8rem;
+        font-weight: 200;
+    }
+    .s-con .s-cov .s-invoice .s-sec2 .s-in-btns .s-link .s-btn{
+        font-size: 1rem;
+    }
+
+}

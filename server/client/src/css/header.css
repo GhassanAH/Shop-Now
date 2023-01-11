@@ -1,0 +1,435 @@
+.h-con{
+    background-color: blue;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-image: linear-gradient(to right, #1488cc, #2b33b2);
+    position: relative;
+    height: 80px;
+}
+.h-con .h-cov{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    position: absolute;
+    z-index: 2;
+    height:50px;
+}
+.h-con .h-cov .h-title{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.h-con .h-cov .h-title .h-logo{
+    width: 60px;
+    height: 60px;
+}
+.h-con .h-cov .h-loader{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h-con .h-cov .h-loader .h-l{
+    font-size: 100px;
+    font-weight: bolder;
+}
+.h-con .h-cov .h-title .h-he1{
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.h-con .h-cov .h-title .h-he1:hover{
+    cursor: pointer;
+}
+.h-con .h-cov .h-navs{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.h-con .h-cov .h-navs .h-nav{
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 20%;
+    color:#fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: unset;
+    border: none;
+
+}
+.h-con .h-cov .h-navs .h-nav:hover{
+    cursor: pointer;
+}
+
+.h-con .h-cov .h-navs .h-cart{
+    font-size: 2.3rem;
+    font-weight: bold;
+    width: 5%;
+    color:#fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+.h-con .h-cov .h-navs .h-cart .h-it{
+    position: absolute;
+    top: 0%;
+    bottom:100%;
+    left: 60%;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1em;
+    height: 1em;
+    font-weight: 700;
+    font-size: 2rem;
+    z-index: 2;
+}
+.h-con .h-cov .h-cart .h-icon{
+    font-weight: bolder;
+    margin-right: 3px;
+    position: absolute;
+    font-size: 2rem;
+    z-index: 1;
+    left: 40%;
+}
+.h-con .h-cov .h-navs .h-sel{
+    font-weight: bold;
+    width: 60%;
+    color:#222;
+    text-decoration: none;
+    background-color: #fff;
+    border: none;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+
+
+
+}
+.h-con .h-cov .h-navs .h-sel .h-option{
+    outline: none;
+    color: #222;
+    padding: 16px;
+    font-size: 1.3rem;
+
+}
+
+select {
+    border: none;
+    outline: none;
+    padding-right: 10px;
+
+}
+.h-con .h-cov .h-navs .h-nav .h-icon{
+    font-size: 2rem;
+    font-weight: bolder;
+
+}
+.h-con .h-cov .h-ham{
+    font-size: 2rem;
+    background-color: unset;
+    border: none;
+    color:#fff;
+    display:none;
+    width: 10%;
+    display: none;
+
+
+}
+.h-con .h-cov .h-sel1{
+    font-weight: bold;
+    width: 30%;
+    color:#222;
+    text-decoration: none;
+    background-color: #fff;
+    border: none;
+    padding: 10px 10px;
+    display: none;
+    align-items: none;
+    justify-content: none;
+
+
+}
+.h-con .h-cov .h-sel1 .h-option{
+    outline: none;
+    color: #222;
+    padding: 16px;
+    font-size: 1.3rem;
+
+}
+.h-con .h-cov .h-cart1{
+    font-weight: bold;
+    width: 30%;
+    color:#fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    display: none;
+    position: relative;
+    height: 30px;
+
+}
+.h-con .h-cov .h-cart1 .h-icon1{
+    font-weight: bolder;
+    position: absolute;
+    font-size: 2rem;
+    z-index: 1;
+    left: 20%;
+}
+.h-con .h-cov .h-cart1 .h-it1{
+    position: absolute;
+    background-color: red;
+    top:0%;
+    bottom: 50%;
+    left: 30%;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1em;
+    height: 1em;
+    font-weight: 700;
+    font-size: 1.5rem;
+    z-index: 2;
+
+}
+.h-con .h-navs2{
+    width: 100%;
+    display: var(--display-nav1);
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+
+    
+}
+.h-con .h-navs2 .h-nav{
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 100%;
+    color:#fff;
+    text-decoration: none;
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: unset;
+    border: none;
+
+
+}
+.h-con .h-navs2 .h-nav:nth-child(2n + 1){
+    background-color: #1488cc;
+}
+.h-con .h-navs2 .h-nav:nth-child(2n){
+    background-image: linear-gradient(to right, #1488cc, #2b33b2 );
+}
+.h-con .h-navs2 .h-nav .h-icon{
+    font-size: 2rem;
+    font-weight: bolder;
+
+}
+.h-con .h-navs2 .h-nav .h-he3{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 1200px){
+    .h-con .h-cov .h-title{
+        width: 40%;
+    }
+    .h-con .h-cov .h-title .h-logo{
+        width: 50px;
+        height: 50px;
+    }
+    .h-con .h-cov .h-navs{
+        width: 60%;
+    }
+    .h-con .h-cov .h-navs .h-nav{
+        font-size: 1.1rem;
+        width: 20%;
+    
+    }
+    .h-con .h-cov .h-navs .h-sel{
+        font-size: 1.1rem;
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .h-con .h-cov .h-navs .h-nav .h-icon{
+        font-size: 1.5rem;
+    
+    }
+    .h-con .h-cov .h-navs .h-cart{
+        font-size: 2rem;
+    }
+    .h-con .h-cov .h-navs .h-cart .h-it{
+        font-weight: 600;
+        font-size: 1.6rem;
+        z-index: 2;
+    }
+
+
+}
+@media (max-width: 900px){
+    .h-con .h-cov{
+        justify-content: space-between;
+    }
+    .h-con .h-cov .h-title{
+        width: 30%;
+    }
+    .h-con .h-cov .h-title .h-logo{
+        width: 40px;
+        height: 40px;
+    }
+    .h-con .h-cov{
+        top:10px;
+
+    }
+    .h-con .h-cov .h-title{
+        width: 30%;
+    }
+    .h-con .h-cov .h-title .h-he1{
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        font-size: .8rem;
+        margin-left: 2px;
+    }
+    .h-con .h-cov .h-navs{
+        display: none;
+    }
+
+    .h-con .h-cov .h-ham{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1.5rem;
+    
+    }
+    .h-con .h-cov .h-sel1{
+        display:block;
+        
+    }
+    .h-con .h-cov .h-sel1 .h-option{
+        font-size: 1.3rem;
+    }
+    .h-con .h-navs2{
+        display: var(--display-nav);
+    }
+    .h-con .h-cov .h-cart1{
+        display: block;
+        margin-left: 0px;
+        width: 20%;
+    }
+
+    .h-con .h-cov .h-cart1 .h-icon1{
+        font-size: 1.8rem;
+        left: 40%;
+
+    }
+    .h-con .h-cov .h-cart1 .h-it1{
+        top: 10px;
+        left: 50%;
+        font-weight: 400;
+        font-size: 1.4rem;
+        z-index: 2;
+    
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .h-con .h-cov .h-title{
+        width: 50%;
+    }
+    .h-con .h-cov .h-ham{
+        font-size: 1.4rem;
+    }
+    .h-con .h-cov .h-sel1{
+        display:block;   
+        padding: 8px 8px;
+        font-size: .8rem;
+
+
+    }
+    .h-con .h-cov .h-sel1 .h-option{
+        font-size: .8rem;
+    }
+    .h-con .h-cov .h-cart1 .h-icon1{
+        left: 30%;
+
+    }
+    .h-con .h-cov .h-cart1 .h-it1{
+        top: 10px;
+        left: 50%;
+        font-weight: 400;
+        font-size: 1.1rem;
+        z-index: 2;
+    
+    }
+
+}
+@media (max-width: 350px){
+    .h-con .h-cov .h-title{
+        width: 40%;
+    }
+    .h-con .h-cov .h-title .h-logo{
+        width: 25px;
+        height: 25px;
+    }
+    .h-con .h-cov .h-title .h-he1{
+        font-size: .55rem;
+        
+    }
+    .h-con .h-cov .h-ham{
+        font-size: 1.5rem;
+    }
+    .h-con .h-cov .h-sel1{
+        display:block;  
+        font-size: .6rem; 
+        padding: 5px 5px;
+
+    }
+    .h-con .h-cov .h-sel1 .h-option{
+        font-size: .6rem;
+    }
+    .h-con .h-cov .h-cart1 .h-icon1{
+        left: 30%;
+
+    }
+    .h-con .h-cov .h-cart1 .h-it1{
+        top: 10px;
+        left: 50%;
+        font-weight: 400;
+        font-size: 1.1rem;
+        z-index: 2;
+    }
+
+}

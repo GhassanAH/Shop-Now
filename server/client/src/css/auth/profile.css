@@ -1,0 +1,78 @@
+.pe-con{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    min-height: 50vh;
+}
+.pe-con .pe-cov{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.pe-con .pe-cov .pe-tabs{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: unset;
+    width: 100%;
+
+}
+.pe-con .pe-cov .pe-tabs .pe-tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #1489cc25;
+    background-image: linear-gradient(to right, #1489cc25, #303df793);
+}
+.pe-con .pe-cov .pe-tabs .pe-tabed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #1489cc25;
+    background-image: linear-gradient(to right, #00993b93, #27dd3625);
+}
+.pe-con .pe-cov .pe-tabs .pe-tab .pe-nav{
+    font-size: 1rem;
+    margin: 1rem 0rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: unset;
+    border: none;
+}
+.pe-con .pe-cov .pe-tabs .pe-tab .pe-nav:hover{
+    cursor: pointer;
+
+}
+.pe-con .pe-cov .pe-tabs .pe-tab:hover{
+    background-color: rgba(32, 178, 171, 0.63);
+    cursor: pointer;
+
+}
+.pe-con .pe-cov .pe-pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+@media (max-width: 1200px){
+    .pe-con .pe-cov .pe-tabs .pe-tab .pe-nav{
+        font-size: .8rem;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 900px){
+    .pe-con .pe-cov .pe-tabs{
+       display: none;
+
+    }
+
+}

@@ -1,0 +1,577 @@
+.css-b62m3t-container {
+    position:relative;
+    box-sizing:unset;
+}
+.co-con{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: aliceblue;
+    background-image: linear-gradient(to right, rgb(202, 228, 250), #fff );
+    padding: 3rem 0rem;
+    flex-direction: column;
+    
+}
+.co-con .co-error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+.co-con .co-error .co-he3{
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: capitalize;
+}
+.co-con .co-cov{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+}
+.co-con .co-cov .c-first{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.co-con .co-cov .c-first .co-info{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    background-color: beige;
+    box-shadow: 10px 10px 5px lightblue;
+    padding: 1rem;
+
+
+}
+.co-con .co-cov .c-first .co-info .co-form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.co-con .co-cov .c-first .co-info .co-form .co-he2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 100%;
+    margin: 2rem 0rem;
+    color: blue;
+    border-bottom: 1px solid #e8e9eb;
+
+}
+.co-con .co-cov .c-first .co-info .co-form .co-label{
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 100%;
+}
+.co-con .co-cov .c-first .co-info .co-form .co-label::after{
+    content: "*";
+    font-size: 1.3rem;
+    color: red;
+    margin-left: 10px;
+}
+.co-con .co-cov .c-first .co-info .co-form  .PhoneInput {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.co-con .co-cov .c-first .co-info .co-form  .PhoneInput .PhoneInputCountry{
+    background-color: #fff;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+    position: unset;
+    margin-right: 0rem;
+    align-self: unset;
+    position: relative;
+
+
+}
+.co-con .co-cov .c-first .co-info .co-form  .PhoneInput .PhoneInputCountry .PhoneInputCountrySelect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    
+
+
+}
+.co-con .co-cov .c-first .co-info .co-form  .PhoneInput .PhoneInputCountry .PhoneInputCountryIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    box-shadow: unset;
+}
+.co-con .co-cov .c-first .co-info .co-form  .PhoneInput .PhoneInputCountry .PhoneInputCountrySelectArrow{
+    margin-left: 10px;
+    width: 10%;
+
+
+
+}
+.co-con .co-cov .c-first .co-info .co-form  .PhoneInput  .PhoneInputInput{
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1rem 0rem;
+    border: 1px solid #e8e9eb;
+
+}
+.co-con .co-cov .c-first .co-info .co-form  .react-tel-input .form-control {
+    padding: 1.9rem;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 0rem;
+    position: unset;
+    height: 0;
+    line-height: 0;
+    letter-spacing: 0;
+
+}
+.co-con .co-cov .c-first .co-info .co-form .react-tel-input .flag-dropdown{
+    position: relative;
+    width: 10%;
+    padding: 1.9rem 1rem;
+
+}
+.co-con .co-cov .c-first .co-info .co-form .co-input{
+    padding: 1rem;
+    width: 96%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1rem 0rem;
+    border: 1px solid #e8e9eb;
+
+}
+.co-con .co-cov .c-first .co-shipping{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    background-color: beige;
+    box-shadow: 10px 10px 5px lightblue;
+    padding: 1rem;
+
+
+
+
+}
+
+.co-con .co-cov .c-first .co-shipping .co-form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+
+}
+.co-con .co-cov .c-first .co-shipping .co-form .co-input1{
+    padding: 1rem 0rem;
+    width: 96%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1rem 0rem;
+}
+.co-con .co-cov .c-first .co-shipping .co-form .css-319lph-ValueContainer{
+    padding: 1rem;
+}
+.co-con .co-cov .c-first .co-shipping .co-form .co-he2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 100%;
+    margin: 2rem 0rem;
+    color: blue;
+    border-bottom: 1px solid #e8e9eb;
+
+}
+.co-con .co-cov .c-first .co-shipping .co-form .co-label{
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 100%;
+}
+.co-con .co-cov .c-first .co-shipping .co-form .co-label::after{
+    content: "*";
+    font-size: 1.3rem;
+    color: red;
+    margin-left: 10px;
+}
+.co-con .co-cov .c-first .co-shipping .co-form .co-input{
+    padding: 1rem;
+    padding-right: 0rem;
+    width: 96%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1rem 0rem;
+    border: 1px solid #e8e9eb;
+}
+.co-con .co-cov .c-second{
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0rem;
+
+}
+.co-con .co-cov .c-second .co-discount{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+    background-color: beige;
+    box-shadow: 10px 10px 5px lightblue;
+    padding: 1rem;
+
+
+
+
+}
+
+.co-con .co-cov .c-second .co-discount .co-form{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+
+
+}
+.co-con .co-cov .c-second .co-discount .co-form .co-he2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 100%;
+    margin: 2rem 0rem;
+    color: blue;
+    border-bottom: 1px solid #e8e9eb;
+
+}
+.co-con .co-cov .c-second .co-discount .co-form .co-label{
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 100%;
+}
+.co-con .co-cov .c-second .co-discount .co-form .co-input{
+    padding: 1rem;
+    width: 96%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1rem 0rem;
+    border: 1px solid #e8e9eb;
+
+}
+
+.co-con .co-cov .c-second .co-discount .co-form .co-btn{
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 30%;
+}
+.co-con .co-cov .c-second .co-discount .co-form .co-btn:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.co-con .co-cov .c-second .co-btns{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    background-color: beige;
+    box-shadow: 10px 10px 5px lightblue;
+    padding: 1rem;
+
+}
+.co-con .co-cov .c-second .co-btns .co-subtotal{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+}
+.co-con .co-cov .c-second .co-btns .co-subtotal .co-he2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 100%;
+    margin: 1rem 0rem;
+    color: blue;
+    border-bottom: 1px solid #e8e9eb;
+
+}
+.co-con .co-cov .c-second .co-btns .co-subtotal .co-he4{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1px;
+    color: blue;
+}
+.co-con .co-cov .c-second .co-btns .co-subtotal .co-he5{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    border-bottom:1px solid #e8e9eb;
+    width: 100%;
+}
+.co-con .co-cov .c-second .co-btns .co-btn{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem 0rem;
+}
+.co-con .co-cov .c-second .co-btns .co-btn .co-pay{
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: 80%;
+}
+.co-con .co-cov .c-second .co-btns .co-btn .co-pay:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.co-con .co-cov .c-second .co-btns .co-btn .f-icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 90%;
+    margin-top: 1rem;
+
+}
+.co-con .co-cov .c-second .co-btns .co-btn .f-icons .f-icon{
+    width: 40px;
+    margin-right: 10px;
+    
+}
+@media (max-width: 1000px){
+    .co-con .co-cov{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem;
+    }
+    .co-con .co-error{
+        padding: 0rem 0rem;
+        width: 90%;
+    }
+    .co-con .co-error .co-he3{
+        font-size: 1rem;
+        font-weight: 600;
+
+    }
+    .co-con .co-cov .c-first{
+        width: 100%;
+    }
+    .co-con .co-cov .c-second{
+        width: 100%;
+        align-items: center;
+        margin: 2rem;   
+
+
+    }
+    .co-con .co-cov .c-first .co-info{
+        width: 80%;
+        box-shadow: none;
+        align-items: center;    
+
+    }
+    .co-con .co-cov .c-first .co-shipping{
+        width: 80%;
+        box-shadow: none;
+        align-items: center;    
+
+
+    }
+    .co-con .co-cov .c-second .co-discount{
+        width: 80%;
+        box-shadow: none;
+        align-items: center;    
+
+
+    }
+    .co-con .co-cov .c-second .co-btns{
+        width: 80%;
+        box-shadow: none;
+        align-items: center;    
+
+
+    }
+    .co-con .co-cov .c-first .co-info .co-form{
+        align-items: center;
+        width: 80%;
+    }
+    .co-con .co-cov .c-first .co-info .co-form .co-he2{
+        font-size: 1.6rem;
+        font-weight: 400;
+    
+    }
+    .co-con .co-cov .c-first .co-info .co-form .co-label{
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+    .co-con .co-cov .c-first .co-info .co-form .co-label::after{
+        content: "*";
+        font-size: 1.1rem;
+    }
+    .co-con .co-cov .c-first .co-info .co-form  .PhoneInput .PhoneInputCountry{
+        width: 20%;
+    }
+    .co-con .co-cov .c-first .co-info .co-form .co-input{
+        padding: .8rem;
+        width: 90%;
+        font-size: 1rem;
+    
+    }
+    .co-con .co-cov .c-first .co-shipping .co-form{
+        align-items: center;
+        width: 80%;
+    }
+    .co-con .co-cov .c-first .co-shipping .co-form .co-input1{
+        font-size: 1rem;
+    }
+    .co-con .co-cov .c-first .co-shipping .co-form .co-he2{
+        font-size: 1.6rem;
+        font-weight: 400;
+    
+    }
+    .co-con .co-cov .c-first .co-shipping .co-form .co-label{
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+    .co-con .co-cov .c-first .co-shipping .co-form .co-label::after{
+        font-size: 1.1rem;
+    }
+    .co-con .co-cov .c-first .co-shipping .co-form .co-input{
+        padding: .8rem;
+        font-size: 1rem;
+    
+
+    }
+    .co-con .co-cov .c-second .co-discount .co-form{
+        align-items: center;
+        width: 80%;
+    }
+    .co-con .co-cov .c-second .co-discount .co-form .co-he2{
+        font-size: 1.6rem;
+        font-weight: 400;
+    
+    }
+    .co-con .co-cov .c-second .co-discount .co-form .co-label{
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+    .co-con .co-cov .c-second .co-discount .co-form .co-input{
+        width: 90%;
+        padding: .8rem;
+        font-size: 1rem;
+    
+    }
+    
+    .co-con .co-cov .c-second .co-discount .co-form .co-btn{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .co-con .co-cov .c-second .co-btns .co-subtotal{
+        width: 80%;
+
+    }
+    .co-con .co-cov .c-second .co-btns .co-subtotal .co-he2{
+        font-size: 1.6rem;
+        font-weight: 400;
+    
+    }
+    .co-con .co-cov .c-second .co-btns .co-subtotal .co-he4{
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+    .co-con .co-cov .c-second .co-btns .co-subtotal .co-he5{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .co-con .co-cov .c-second .co-btns .co-btn{
+        align-items: center;
+        width: 90%;
+
+    }
+    .co-con .co-cov .c-second .co-btns .co-btn .co-pay{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .co-con .co-cov .c-second .co-btns .co-btn .f-icons{
+        justify-content: center;
+        width: 100%;
+    
+    }
+    .co-con .co-cov .c-second .co-btns .co-btn .f-icons .f-icon{
+        width: 30px;
+        margin-right: 4px;
+        
+    }
+}
+@media (max-width: 600px){
+    .co-con .co-cov .c-first .co-info{
+        width: 95%;
+        padding: 0rem;
+    }
+    .co-con .co-cov .c-first .co-shipping{
+        width: 95%;
+        padding: 0rem;
+
+    }
+    .co-con .co-cov .c-second .co-discount{
+        width: 95%;
+        padding: 0rem;
+
+    }
+    .co-con .co-cov .c-second .co-btns{
+        width: 95%;
+        padding: 0rem;
+
+    }
+}

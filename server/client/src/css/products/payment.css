@@ -1,0 +1,321 @@
+.p-con{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: aliceblue;
+    background-image: linear-gradient(to right, rgb(202, 228, 250), #fff );
+    padding: 3rem 0rem;
+    flex-direction: column;
+}
+.p-con .p-cov{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.p-con .p-cov .p-msc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+.p-con .p-cov .p-msc .p-c-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 1px solid #e8e9eb;
+    background-color: #fff;
+}
+.p-con .p-cov .p-msc .p-c-header .p-he2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 20%;
+    margin: 2rem 0rem;
+    color: blue;
+
+}
+.p-con .p-cov .p-msc .p-c-header  .p-pay-icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 70%;
+}
+.p-con .p-cov .p-msc .p-c-header  .p-pay-icons .p-icon{
+    width: 60px;
+    margin-right: 20px;
+    
+}
+.p-con .p-cov .p-msc .p-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    background-color: #fafafa;
+    border: 1px solid #e8e9eb;
+
+}
+.p-con .p-cov .p-msc .p-form .p-error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    width: 80%;
+}
+.p-con .p-cov .p-msc .p-form .p-label{
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 90%;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+
+
+
+}
+.p-con .p-cov .p-msc .p-form .p-field{
+    padding: 1rem;
+    width: 90%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: .4rem 0rem;
+    border: 1px solid #e8e9eb;
+}
+.p-con .p-cov .p-msc .p-form .alert{
+    border: 1px solid red;
+
+}
+.p-con .p-cov .p-msc .p-form .stat{
+    width: 90%;
+    color: red;
+    margin-top: 0px;
+    font-size: 20px;
+}
+.p-con .p-cov .p-msc .p-form .p-dual{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+}
+.p-con .p-cov .p-msc .p-form .p-dual .p-dual-col{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%; 
+}
+.p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .p-label{
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 90%;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+
+}
+.p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .p-field{
+    padding: 1rem;
+    width: 95%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: .4rem 0rem;
+}
+.p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .alert{
+    border: 1px solid red;
+
+}
+.p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .stat{
+    width: 98%;
+    color: red;
+    margin-top: 0px;
+    font-size: 20px;
+}
+.p-con .p-cov .p-msc .p-form .p-btns{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 98%;
+    
+}
+.p-con .p-cov .p-msc .p-form .p-btns .p-btn{
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 50%;
+    margin: 2rem 0rem;
+}
+.p-con .p-cov .p-msc .p-form .p-btns .p-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.p-con .p-cov .p-msc .p-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    border: 1px solid #e8e9eb;
+    background-color: #fff;
+}
+.p-con .p-cov .p-msc .p-footer .p-btns{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.p-con .p-cov .p-msc .p-footer .p-btns .p-btn{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: unset;
+    border: none;
+    margin: 10px;
+    width: 50%;
+
+}
+.p-con .p-cov .p-msc .p-footer .p-btns .p-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.p-con .p-cov .p-msc .p-footer .p-btns .p-btn .p-img{
+    width: 100%;
+    height: 60px;
+    border-radius: 2%;
+
+}
+@media (max-width: 1200px){
+    .p-con .p-cov .p-msc{
+        width: 90%;
+    }
+    .p-con .p-cov .p-msc .p-c-header{
+        width: 100%;
+        align-items: center;
+    }
+    .p-con .p-cov .p-msc .p-c-header .p-he2{
+        font-size: 1.7rem;
+        font-weight: 700;
+        width: 90%;
+        margin: 1rem 1rem;
+    }
+    .p-con .p-cov .p-msc .p-c-header  .p-pay-icons{
+        width: 80%;
+    }
+    .p-con .p-cov .p-msc .p-c-header  .p-pay-icons .p-icon{
+        width: 40px;
+        margin-right: 10px;
+        
+    }
+    .p-con .p-cov .p-msc .p-form{
+        width: 100%;
+    
+    }
+    .p-con .p-cov .p-msc .p-form .p-error{
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 10px;
+        width: 90%;
+    }
+    .p-con .p-cov .p-msc .p-form .stat{
+        font-size: 10px;
+    }
+    .p-con .p-cov .p-msc .p-form .p-label{
+        font-size: 1.1rem;
+    }
+    .p-con .p-cov .p-msc .p-form .p-field{
+        font-size: 1.1rem;
+        padding: .7rem;
+
+    }
+    .p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .p-label{
+        font-size: 1.1rem;
+    }
+    .p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .p-field{
+        padding: .7rem;
+        font-size: 1.1rem;
+
+    }
+    .p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .stat{
+        font-size: 10px;
+    }
+    .p-con .p-cov .p-msc .p-form .p-btns{
+        justify-content: center;
+        width: 90%;
+    }
+    .p-con .p-cov .p-msc .p-form .p-btns .p-btn{
+        font-size: 1.3rem;
+        width: 100%;
+
+    }
+    .p-con .p-cov .p-msc .p-footer{
+        width: 100%;
+
+    }
+    .p-con .p-cov .p-msc .p-footer .p-btns {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .p-con .p-cov .p-msc .p-footer .p-btns .p-btn{
+        width: 100%;
+    
+    }
+    .p-con .p-cov .p-msc .p-footer .p-btns .p-btn .p-img{
+        height: 45px;
+    }
+}
+@media (max-width: 500px){
+    .p-con .p-cov .p-msc .p-form .p-error{
+        font-size: .8rem;
+    }
+    .p-con .p-cov .p-msc .p-form .p-label{
+        font-size: 1rem;
+    }
+    .p-con .p-cov .p-msc .p-form .p-field{
+        padding: .5rem;
+        font-size: 1rem;
+
+    }
+    .p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .p-label{
+        font-size: 1rem;
+    }
+    .p-con .p-cov .p-msc .p-form .p-dual .p-dual-col .p-field{
+        padding: .5rem;
+        font-size: 1rem;
+
+    }
+    .p-con .p-cov .p-msc .p-c-header .p-he2{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .p-con .p-cov .p-msc .p-c-header  .p-pay-icons .p-icon{
+        width: 30px;
+        margin-right: 3px;
+        
+    }
+}
+@media (max-width: 320px){
+    .p-con .p-cov .p-msc .p-c-header .p-he2{
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+    .p-con .p-cov .p-msc .p-c-header  .p-pay-icons .p-icon{
+        width: 20px;
+
+        
+    }
+}

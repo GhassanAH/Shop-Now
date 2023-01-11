@@ -1,0 +1,252 @@
+.c-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.c-con .c-empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    font-size: 2rem;
+    font-weight: 900;
+    height: 800px;
+}
+.c-con .c-cov{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+
+}
+.c-con .c-cov .c-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid #e8e9eb;
+    padding: 1rem;
+}
+.c-con .c-cov .c-header .c-hd1{
+    font-size: 1.5rem;
+    width: 40%;
+    font-weight: 400;
+    text-align: center;
+    
+
+}
+.c-con .c-cov .c-header .c-hd2{
+    font-size: 1.5rem;
+    width: 20%;
+    font-weight: 400;
+    text-align: center;
+
+
+}
+.c-con .c-cov .c-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #e8e9eb;
+}
+.c-con .c-cov .c-item .c-img{
+    width: 20%;
+    height: 250px;
+}
+.c-con .c-cov .c-item .c-pod{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+
+}
+.c-con .c-cov .c-item .c-pod .c-pod-it{
+    display: flex;
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.c-con .c-cov .c-item .c-pod .c-pod-it .c-pod-it-por{
+    margin-bottom: 20px;
+}
+.c-con .c-cov .c-item .c-pod .c-pod-it .c-btn{
+    background-color: unset;
+    border: none;
+    color: blue;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.c-con .c-cov .c-item .c-pod .c-pod-it .c-btn:hover{
+    color: red;
+    cursor: pointer;
+}
+.c-con .c-cov .c-item .c-por{
+    font-size: 1.2rem;
+    width: 20%;
+    font-weight: 400;
+    text-align: center;
+
+
+}
+.c-con .c-cov .c-invoice{
+    display: flex;
+    width: 80%;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3rem;
+}
+.c-con .c-cov .c-invoice .c-in-del{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 40%;
+    margin-bottom: 1rem;
+
+}
+.c-con .c-cov .c-invoice .c-in-sh{
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 40%;
+    margin-bottom: 1rem;
+}
+.c-con .c-cov .c-invoice .c-in-btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 1rem;
+
+}
+.c-con .c-cov .c-invoice .c-in-btns .c-link{
+    width: 100%;
+}
+.c-con .c-cov .c-invoice .c-in-btns .c-link .c-btn{
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 50%;
+    
+
+}
+.c-con .c-cov .c-invoice .c-in-btns .c-link .c-btn:hover{
+    cursor: pointer;
+}
+@media (max-width: 1000px){
+    .c-con .c-empty{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .c-con .c-cov{
+        width: 90%;
+        padding: 0rem;
+    
+    }
+    .c-con .c-cov .c-header{
+        padding: .5rem;
+    }
+    .c-con .c-cov .c-header .c-hd1{
+        font-size: 1rem;
+        width: 40%;
+        font-weight: 600;
+    
+    }
+    .c-con .c-cov .c-header .c-hd2{
+        font-size: 1rem;
+        width: 20%;
+        font-weight: 600;
+    
+    
+    }
+    .c-con .c-cov .c-item{
+        padding: .5rem;
+    }
+    .c-con .c-cov .c-item .c-img{
+        width: 15%;
+        height: 100px;
+    }
+    .c-con .c-cov .c-item .c-pod{
+        width: 25%;
+    
+    }
+    .c-con .c-cov .c-item .c-pod .c-pod-it{
+        width: 90%;
+        font-size: .8rem;
+        font-weight: 400;
+    }
+    .c-con .c-cov .c-item .c-pod .c-pod-it .c-pod-it-por{
+        margin-bottom: 10px;
+    }
+    .c-con .c-cov .c-item .c-pod .c-pod-it .c-btn{
+        font-size: .8rem;
+
+    }
+    .c-con .c-cov .c-item .c-por{
+        font-size: .8rem;
+    
+    }
+    .c-con .c-cov .c-invoice{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .c-con .c-cov .c-invoice .c-in-del{
+        font-size: 1.5rem;
+        width: 80%;
+    
+    }
+    .c-con .c-cov .c-invoice .c-in-sh{
+        font-size: 1.1rem;
+        width: 100%;
+
+    }
+    .c-con .c-cov .c-invoice .c-in-btns{
+        width: 100%;
+        justify-content: center;
+
+    }
+    .c-con .c-cov .c-invoice .c-in-btns .c-link .c-btn{
+        padding: 10px;
+        font-size: 1.2rem;
+        width: 100%;
+        
+    
+    }
+    .c-con .c-cov .c-invoice .c-in-btns .c-link .c-btn:hover{
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 300px){
+    .c-con .c-empty{
+        font-size: .7rem;
+    }
+    .c-con .c-cov .c-header .c-hd1{
+        font-size: .7rem;
+        font-weight: 400;
+    
+    }
+    .c-con .c-cov .c-header .c-hd2{
+        font-size: .7rem;
+        font-weight: 400;
+    
+    
+    }
+}

@@ -1,0 +1,41 @@
+.ca-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 6rem 0rem;
+
+}
+.ca-con .ca-error{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    background-color: rgba(255, 235, 235, 0.568);
+    border: 3px solid red;
+    padding: 2rem;
+}
+.ca-con .ca-error .ca-he1{
+    margin-bottom:10px;
+    color: red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.ca-con .ca-error .ca-he1 .ca-icon{
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}  
+.ca-con .ca-error .ca-he1 .ca-txt{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}    

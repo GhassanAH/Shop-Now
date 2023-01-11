@@ -1,0 +1,241 @@
+h1,h2,h3,h4,h5,h6, p{
+    margin: 0;
+}
+.d-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.d-con .d-cov{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 90%;
+    margin: 3rem 0rem;
+
+}
+.d-con .d-cov .d-s-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+.d-con .d-cov .d-detal{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: justify;
+    width: 50%;
+    padding-left: 200px;
+
+}
+.d-con .d-cov .d-detal .d-he2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: lightseagreen;
+
+}
+.d-con .d-cov .d-detal .d-he3{
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.d-con .d-cov .d-detal .d-size{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0rem;
+
+}
+.d-con .d-cov .d-detal .d-size .d-he2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.d-con .d-cov .d-detal .d-size .d-form{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.d-con .d-cov .d-detal .d-size .d-form .d-label{
+    font-size: 1.3rem;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0rem;
+
+
+
+}
+.d-con .d-cov .d-detal .d-size .d-form .d-label input[type="radio"]{
+    font: inherit;
+    margin: 0;
+    margin-right:5px;
+    color: lightseagreen;
+    width: 30px;
+    height: 30px;
+    border: 0.15em solid lightseagreen;
+    border-radius: 50%;
+}
+.d-con .d-cov .d-detal .d-desc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.3rem;
+    color: black;
+
+}
+.d-con .d-cov .d-detal .d-count{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0rem;
+
+}
+.d-con .d-cov .d-detal .d-count .d-he2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.d-con .d-cov .d-detal .d-count .d-count-box{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.d-con .d-cov .d-detal .d-count .d-count-box .d-btn{
+    width: 20%;
+    background-color: lightseagreen;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d-con .d-cov .d-detal .d-count .d-count-box .d-btn:hover{
+    cursor: pointer;
+    opacity: .6;
+
+}
+.d-con .d-cov .d-detal .d-count .d-count-box .d-box{
+    width: 20%;
+    background-color: #fff;
+    color: lightseagreen;
+    padding: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+
+}
+.d-con .d-cov .d-detal .d-add-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 2rem 0rem;
+}
+.d-con .d-cov .d-detal .d-add-cart .d-btn{
+    width: 80%;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: lightseagreen;
+    text-transform: capitalize;
+    border: none;
+
+}
+.d-con .d-cov .d-detal .d-add-cart .d-btn:hover{
+    cursor: pointer;
+    opacity: .6;
+}
+@media (max-width: 1100px){
+    input[type="radio"]{
+        width: 30px;
+        height: 30px;
+        margin-right:5px;
+    }
+    .d-con .d-cov{
+        align-items: flex-start;
+        flex-direction: column;
+    
+    }
+    .d-con .d-cov .d-s-img{
+        width: 100%;
+    
+    }
+    .d-con .d-cov .d-detal{
+        width: 100%;
+        padding-left: 0px;
+    
+    }
+    .d-con .d-cov .d-detal .d-he2{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .d-con .d-cov .d-detal .d-he3{
+        font-size: 1rem;
+        width: 100%;
+    }
+    .d-con .d-cov .d-detal .d-desc{
+        font-size: 1rem;
+
+    
+    }
+    .d-con .d-cov .d-detal .d-size .d-he2{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .d-con .d-cov .d-detal .d-size .d-form{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .d-con .d-cov .d-detal .d-size .d-form .d-label{
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+
+    
+    }
+    .d-con .d-cov .d-detal .d-desc .d-list{
+        font-size: 1rem;
+    }
+    .d-con .d-cov .d-detal .d-count .d-he2{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .d-con .d-cov .d-detal .d-count .d-count-box .d-box{
+        font-size: 1.5rem;
+        width: 20%;
+    }
+    .d-con .d-cov .d-detal .d-count .d-count-box .d-btn{
+        width: 15%;
+        font-size: 1.5rem;
+
+    }
+    .d-con .d-cov .d-detal .d-add-cart .d-btn{
+        width: 100%;
+        padding: 10px;
+        font-size: 1.5rem;
+    
+    }
+}
